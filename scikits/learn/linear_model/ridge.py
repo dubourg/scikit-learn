@@ -6,9 +6,6 @@ Ridge regression
 # License: Simplified BSD
 
 import numpy as np
-import scipy.sparse as sp
-from scipy import linalg
-from scipy.sparse import linalg as sp_linalg
 
 from .base import LinearModel
 from ..utils.extmath import safe_sparse_dot
@@ -85,6 +82,7 @@ class Ridge(LinearModel):
         X, y, Xmean, ymean = \
            LinearModel._center_data(X, y, self.fit_intercept)
 
+        import scipy.sparse as sp
         if sp.issparse(X):
             self._solve_sparse(X, y, sample_weight)
         else:
@@ -116,6 +114,7 @@ class Ridge(LinearModel):
     def _solve_sparse(self, X, y, sample_weight):
         n_samples, n_features = X.shape
 
+        import scipy.sparse as sp
         if n_features > n_samples or \
            isinstance(sample_weight, np.ndarray) or \
            sample_weight != 1.0:
@@ -132,14 +131,17 @@ class Ridge(LinearModel):
     def _solve(self, A, b):
         if self.solver == "cg":
             # this solver cannot handle a 2-d b.
+            from scipy.sparse import linalg as sp_linalg
             sol, error = sp_linalg.cg(A, b)
             if error:
                 raise ValueError("Failed with error code %d" % error)
             return sol
         else:
+            import scipy.sparse as sp
             # we are working with dense symmetric positive A
             if sp.issparse(A):
                 A = A.todense()
+            from scipy import linalg
             return linalg.solve(A, b, sym_pos=True, overwrite_a=True)
 
 
@@ -241,12 +243,13 @@ class _RidgeGCV(LinearModel):
     Reference
     ---------
 
+    http://cbcl.mit.edu/projects/cbcl/publications/ps/MIT-CSAIL-TR-2007-025.pdf
     http://www.mit.edu/~9.520/spring07/Classes/rlsslides.pdf
     """
 
-    def __init__(self, alphas=np.array([0.1, 1.0, 10.0]), fit_intercept=True,
+    def __init__(self, alphas=[0.1, 1.0, 10.0], fit_intercept=True,
                        score_func=None, loss_func=None):
-        self.alphas = alphas
+        self.alphas = np.asanyarray(alphas)
         self.fit_intercept = fit_intercept
         self.score_func = score_func
         self.loss_func = loss_func
@@ -254,6 +257,7 @@ class _RidgeGCV(LinearModel):
     def _pre_compute(self, X, y):
         # even if X is very sparse, K is usually very dense
         K = safe_sparse_dot(X, X.T, dense_output=True)
+        from scipy import linalg
         v, Q = linalg.eigh(K)
         return K, v, Q
 
@@ -302,6 +306,9 @@ class _RidgeGCV(LinearModel):
         -------
         self : Returns self.
         """
+        X = safe_asanyarray(X, dtype=np.float)
+        y = np.asanyarray(y, dtype=np.float)
+
         n_samples = X.shape[0]
 
         X, y, Xmean, ymean = LinearModel._center_data(X, y, self.fit_intercept)
@@ -410,6 +417,7 @@ class RidgeCV(LinearModel):
             estimator = _RidgeGCV(self.alphas, self.fit_intercept,
                                   self.score_func, self.loss_func)
             estimator.fit(X, y, sample_weight=sample_weight)
+            self.best_alpha = estimator.best_alpha
         else:
             parameters = {'alpha': self.alphas}
             # FIXME: sample_weight must be split into training/validation data
@@ -420,6 +428,7 @@ class RidgeCV(LinearModel):
                               parameters, fit_params=fit_params, cv=self.cv)
             gs.fit(X, y)
             estimator = gs.best_estimator
+            self.best_alpha = gs.best_estimator.alpha
 
         self.coef_ = estimator.coef_
         self.intercept_ = estimator.intercept_

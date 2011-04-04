@@ -79,6 +79,7 @@ def lars_path(X, y, Xy=None, Gram=None, max_features=None,
     # holds the sign of covariance
     sign_active = np.empty(max_features, dtype=np.int8)
     drop = False
+    eps = np.finfo(X.dtype).eps
 
     # will hold the cholesky factorization. Only lower part is
     # referenced.
@@ -119,7 +120,17 @@ def lars_path(X, y, Xy=None, Gram=None, max_features=None,
 
         alphas[n_iter] = C / n_samples
 
-        if (C < alpha_min) or (n_active == max_features):
+        # Check for early stopping
+        if alphas[n_iter] < alpha_min: # interpolate
+            # interpolation factor 0 <= ss < 1
+            ss = (alphas[n_iter-1] - alpha_min) / (alphas[n_iter-1] -
+                                                   alphas[n_iter])
+            coefs[n_iter] = coefs[n_iter-1] + ss*(coefs[n_iter] -
+                            coefs[n_iter-1])
+            alphas[n_iter] = alpha_min
+            break
+
+        if n_active == max_features:
             break
 
         if not drop:
@@ -156,7 +167,8 @@ def lars_path(X, y, Xy=None, Gram=None, max_features=None,
             arrayfuncs.solve_triangular(L[:n_active, :n_active],
                                         L[n_active, :n_active])
             v = np.dot(L[n_active, :n_active], L[n_active, :n_active])
-            L[n_active,  n_active] = np.sqrt(c - v)
+            diag = max(np.sqrt(np.abs(c - v)), eps)
+            L[n_active,  n_active] = diag
 
             active.append(indices[n_active])
             n_active += 1
@@ -268,13 +280,6 @@ def lars_path(X, y, Xy=None, Gram=None, max_features=None,
             if verbose:
                 print "%s\t\t%s\t\t%s\t\t%s\t\t%s" % (n_iter, '', drop_idx,
                                                       n_active, abs(temp))
-    if alphas[n_iter] < alpha_min: # interpolate
-        # interpolation factor 0 <= ss < 1
-        ss = (alphas[n_iter-1] - alpha_min) / (alphas[n_iter-1] -
-                                               alphas[n_iter])
-        coefs[n_iter] = coefs[n_iter-1] + ss*(coefs[n_iter] - coefs[n_iter-1])
-        alphas[n_iter] = alpha_min
-        
 
     # resize coefs in case of early stop
     alphas = alphas[:n_iter+1]
@@ -419,11 +424,11 @@ class LassoLARS (LARS):
     Examples
     --------
     >>> from scikits.learn import linear_model
-    >>> clf = linear_model.LassoLARS(alpha=0.1)
+    >>> clf = linear_model.LassoLARS(alpha=0.01)
     >>> clf.fit([[-1,1], [0, 0], [1, 1]], [-1, 0, -1])
-    LassoLARS(alpha=0.1, verbose=False, fit_intercept=True)
+    LassoLARS(alpha=0.01, verbose=False, fit_intercept=True)
     >>> print clf.coef_
-    [ 0.          0.08350342]
+    [ 0.         -0.72649658]
 
     References
     ----------

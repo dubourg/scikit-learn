@@ -123,6 +123,20 @@ def test_precomputed():
     clf.fit(iris.data, iris.target)
     assert_almost_equal(np.mean(pred == iris.target), .99, decimal=2)
 
+def test_sanity_checks_fit():
+    clf = svm.SVC(kernel='precomputed')
+    assert_raises(ValueError, clf.fit, X, Y)
+
+def test_sanity_checks_predict():
+    Xt = np.array(X).T
+
+    clf = svm.SVC(kernel='precomputed')
+    clf.fit(np.dot(X, Xt), Y)
+    assert_raises(ValueError, clf.predict, X)
+
+    clf = svm.SVC()
+    clf.fit(X, Y)
+    assert_raises(ValueError, clf.predict, Xt)
 
 def test_SVR():
     """
@@ -198,21 +212,14 @@ def test_probability():
     clf = svm.SVC(probability=True)
     clf.fit(iris.data, iris.target)
 
-    # predict on a simple dataset
-    T = [[0, 0, 0, 0],
-         [2, 2, 2, 2]]
-    assert_array_almost_equal(clf.predict_proba(T),
-                [[0.993, 0.003, 0.002],
-                 [0.740, 0.223, 0.035]],
-                 decimal=2)
+    prob_predict = clf.predict_proba(iris.data)
+    assert_array_almost_equal(
+        np.sum(prob_predict, 1), np.ones(iris.data.shape[0]))
+    assert np.mean(np.argmax(prob_predict, 1) 
+                   == clf.predict(iris.data)) > 0.9
 
-    assert_almost_equal(clf.predict_proba(T),
-                        np.exp(clf.predict_log_proba(T)), 8)
-
-    # make sure probabilities sum to one
-    pprob = clf.predict_proba(X)
-    assert_array_almost_equal(pprob.sum(axis=1),
-                               np.ones(len(X)))
+    assert_almost_equal(clf.predict_proba(iris.data),
+                        np.exp(clf.predict_log_proba(iris.data)), 8)
 
 
 def test_decision_function():
@@ -272,6 +279,7 @@ def test_sample_weights():
     """
     Test weights on individual samples
     """
+    # TODO: check on NuSVR, OneClass, etc.
     clf = svm.SVC()
     clf.fit(X, Y)
     assert_array_equal(clf.predict(X[2]), [1.])
@@ -283,35 +291,21 @@ def test_sample_weights():
 
 def test_auto_weight():
     """Test class weights for imbalanced data"""
-    # compute reference metrics on iris dataset that is quite balanced by
-    # default
-    X, y = iris.data, iris.target
-    clf = svm.SVC(kernel="linear").fit(X, y)
-    assert_almost_equal(metrics.f1_score(y, clf.predict(X)), 0.99, 2)
+    from scikits.learn.linear_model import LogisticRegression
+    # we take as dataset a the two-dimensional projection of iris so
+    # that it is not separable and remove half of predictors from
+    # class 1
+    X, y = iris.data[:, :2], iris.target
+    unbalanced = np.delete(np.arange(y.size), np.where(y > 1)[0][::2])
 
-    # make the same prediction using automated class_weight
-    clf_auto = svm.SVC(kernel="linear").fit(X, y, class_weight="auto")
-    assert_almost_equal(metrics.f1_score(y, clf_auto.predict(X)), 0.99, 2)
-
-    # Make sure that in the balanced case it does not change anything
-    # to use "auto"
-    assert_array_almost_equal(clf.coef_, clf_auto.coef_, 6)
-
-    # build an very very imbalanced dataset out of iris data
-    X_0 = X[y == 0, :]
-    y_0 = y[y == 0]
-
-    X_imbalanced = np.vstack([X] + [X_0] * 10)
-    y_imbalanced = np.concatenate([y] + [y_0] * 10)
-
-    # fit a model on the imbalanced data without class weight info
-    y_pred = svm.SVC().fit(X_imbalanced, y_imbalanced).predict(X)
-    assert_almost_equal(metrics.f1_score(y, y_pred), 0.88, 2)
-
-    # fit a model with auto class_weight enabled
-    clf = svm.SVC().fit(X_imbalanced, y_imbalanced, class_weight="auto")
-    y_pred = clf.predict(X)
-    assert_almost_equal(metrics.f1_score(y, y_pred), 0.92, 2)
+    for clf in (svm.SVC(kernel='linear'), svm.LinearSVC(), LogisticRegression()):
+        # check that score is better when class='auto' is set.
+        y_pred = clf.fit(X[unbalanced], y[unbalanced],
+                         class_weight={}).predict(X)
+        y_pred_balanced = clf.fit(X[unbalanced], y[unbalanced],
+                                  class_weight='auto').predict(X)
+        assert np.argmin(clf.class_weight) == 0
+        assert metrics.f1_score(y, y_pred) <= metrics.f1_score(y, y_pred_balanced)
 
 
 def test_error():
@@ -388,7 +382,7 @@ def test_dense_liblinear_intercept_handling(classifier=svm.LinearSVC):
          [2, 3]]
     y = [0, 0, 1, 1]
     clf = classifier(fit_intercept=True, penalty='l1', loss='l2',
-                     dual=False, C=1, eps=1e-7)
+                     dual=False, C=1, tol=1e-7)
     assert clf.intercept_scaling == 1, clf.intercept_scaling
     assert clf.fit_intercept
 
@@ -403,7 +397,7 @@ def test_dense_liblinear_intercept_handling(classifier=svm.LinearSVC):
     clf.intercept_scaling = 100
     clf.fit(X, y)
     intercept1 = clf.intercept_
-    assert intercept1 > 1
+    assert intercept1 < -1
 
     # when intercept_scaling is sufficiently high, the intercept value
     # doesn't depend on intercept_scaling value
@@ -421,15 +415,25 @@ def test_liblinear_predict():
     returns the same as the one in libliblinear
 
     """
+    # multi-class case
     clf = svm.LinearSVC().fit(iris.data, iris.target)
-
     weights = clf.coef_.T
     bias = clf.intercept_
     H = np.dot(iris.data, weights) + bias
-
     assert_array_equal(clf.predict(iris.data), H.argmax(axis=1))
 
+    # binary-class case
+    X = [[2, 1],
+         [3, 1],
+         [1, 3],
+         [2, 3]]
+    y = [0, 0, 1, 1]
 
+    clf = svm.LinearSVC().fit(X, y)
+    weights = np.ravel(clf.coef_)
+    bias = clf.intercept_
+    H = np.dot(X, weights) + bias
+    assert_array_equal(clf.predict(X), (H > 0).astype(int))
 
 if __name__ == '__main__':
     import nose
