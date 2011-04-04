@@ -399,7 +399,7 @@ class GaussianProcess(BaseEstimator, RegressorMixin):
         eval_MSE : boolean, optional
             A boolean specifying whether the Mean Squared Error should be
             evaluated or not.
-            Default assumes evalMSE = False and evaluates only the BLUP (mean
+            Default assumes eval_MSE = False and evaluates only the BLUP (mean
             prediction).
 
         batch_size : integer, optional
@@ -867,3 +867,69 @@ class GaussianProcess(BaseEstimator, RegressorMixin):
 
         # Force random_start type to int
         self.random_start = int(self.random_start)
+
+    def predict_leaveoneout(self, eval_MSE=False, theta=None):
+        """This function evaluates the leave-one-out predictions of the model
+        from its built-in set of (X, y).
+
+        Parameters
+        ----------
+        eval_MSE : boolean, optional
+            A boolean specifying whether the Mean Squared Error should be
+            evaluated or not.
+            Default assumes eval_MSE = False and evaluates only the BLUP (mean
+            prediction).
+
+        theta : array_like, optional
+            An array of float containing the parameters in the autocorrelation
+            function.
+
+        Returns
+        -------
+        y : array_like
+            An array with shape (n_samples, ) with the leave-one-out
+            predictions.
+
+        MSE : array_like, optional (if eval_MSE == True)
+            An array with shape (n_samples, ) with the leave-one-out values of
+            the mean squared errors.
+
+        References
+        ----------
+        [1] O. Dubrule (1983). Cross validation of kriging in a unique
+            neighborhood. Mathematical Geology, 15(6) 687--699.
+        """
+
+        # Retrieve data
+        n_samples = self.X.shape[0]
+        p = self.F.shape[1]
+        if self.C is None or theta is not None:
+            if theta is None:
+                theta = self.theta
+            reduced_likelihood_function_value, par = \
+                self.reduced_likelihood_function(theta=theta)
+            self.C = par['C']
+            self.Ft = par['Ft']
+            self.G = par['G']
+
+        # Solve the large system associated with the constrained optimization
+        # problem once for all
+        K = self.sigma2 / self.y_std ** 2. * np.dot(self.C, self.C.T)
+        F = self.F
+        Z = np.zeros((p, p))
+        S = np.vstack([np.hstack([K, F]),
+                       np.hstack([F.T, Z])])
+        S_inv = linalg.inv(S)
+
+        B = S_inv[:n_samples:, :n_samples:]
+        B_but_its_diag = B * (np.ones(B.shape) - np.eye(n_samples))
+        B_diag = np.atleast_2d(np.diag(B)).T
+
+        y_ = - np.dot(B_but_its_diag / B_diag, self.y)
+        y = (self.y_mean + self.y_std * y_).ravel()
+
+        if eval_MSE:
+            MSE = 1. / B_diag
+            return y, MSE
+        else:
+            return y
