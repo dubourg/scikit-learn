@@ -288,7 +288,7 @@ static CYTHON_INLINE size_t __Pyx_PyInt_AsSize_t(PyObject*);
 #define likely(x)   (x)
 #define unlikely(x) (x)
 #endif /* __GNUC__ */
-    
+
 static PyObject *__pyx_m;
 static PyObject *__pyx_b;
 static PyObject *__pyx_empty_tuple;
@@ -849,8 +849,8 @@ static PyObject *__pyx_k_tuple_17;
 static PyObject *__pyx_k_tuple_19;
 
 /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":59
- * 
- * 
+ *
+ *
  * def train_wrap ( np.ndarray[np.float64_t, ndim=2, mode='c'] X,             # <<<<<<<<<<<<<<
  *                  np.ndarray[np.int32_t, ndim=1, mode='c'] Y, int
  *                  solver_type, double eps, double bias, double C,
@@ -1048,25 +1048,25 @@ static PyObject *__pyx_pf_10_liblinear_0train_wrap(PyObject *__pyx_self, PyObjec
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":73
  *     cdef int len_w
- * 
+ *
  *     problem = set_problem(X.data, Y.data, X.shape, bias)             # <<<<<<<<<<<<<<
- * 
+ *
  *     param = set_parameter(solver_type, eps, C, weight.shape[0], weight_label.data, weight.data)
  */
   __pyx_v_problem = set_problem(__pyx_v_X->data, __pyx_v_Y->data, __pyx_v_X->dimensions, __pyx_v_bias);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":75
  *     problem = set_problem(X.data, Y.data, X.shape, bias)
- * 
+ *
  *     param = set_parameter(solver_type, eps, C, weight.shape[0], weight_label.data, weight.data)             # <<<<<<<<<<<<<<
- * 
+ *
  *     error_msg = check_parameter(problem, param)
  */
   __pyx_v_param = set_parameter(__pyx_v_solver_type, __pyx_v_eps, __pyx_v_C, (__pyx_v_weight->dimensions[0]), __pyx_v_weight_label->data, __pyx_v_weight->data);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":77
  *     param = set_parameter(solver_type, eps, C, weight.shape[0], weight_label.data, weight.data)
- * 
+ *
  *     error_msg = check_parameter(problem, param)             # <<<<<<<<<<<<<<
  *     if error_msg:
  *         free_problem(problem)
@@ -1074,7 +1074,7 @@ static PyObject *__pyx_pf_10_liblinear_0train_wrap(PyObject *__pyx_self, PyObjec
   __pyx_v_error_msg = check_parameter(__pyx_v_problem, __pyx_v_param);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":78
- * 
+ *
  *     error_msg = check_parameter(problem, param)
  *     if error_msg:             # <<<<<<<<<<<<<<
  *         free_problem(problem)
@@ -1097,7 +1097,7 @@ static PyObject *__pyx_pf_10_liblinear_0train_wrap(PyObject *__pyx_self, PyObjec
  *         free_problem(problem)
  *         free_parameter(param)             # <<<<<<<<<<<<<<
  *         raise ValueError(error_msg)
- * 
+ *
  */
     free_parameter(__pyx_v_param);
 
@@ -1105,7 +1105,7 @@ static PyObject *__pyx_pf_10_liblinear_0train_wrap(PyObject *__pyx_self, PyObjec
  *         free_problem(problem)
  *         free_parameter(param)
  *         raise ValueError(error_msg)             # <<<<<<<<<<<<<<
- * 
+ *
  *     # early return
  */
     __pyx_t_2 = PyBytes_FromString(__pyx_v_error_msg); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -1126,10 +1126,10 @@ static PyObject *__pyx_pf_10_liblinear_0train_wrap(PyObject *__pyx_self, PyObjec
   __pyx_L6:;
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":84
- * 
+ *
  *     # early return
  *     model = train(problem, param)             # <<<<<<<<<<<<<<
- * 
+ *
  *     # coef matrix holder created as fortran since that's what's used in liblinear
  */
   __pyx_v_model = train(__pyx_v_problem, __pyx_v_param);
@@ -1261,7 +1261,7 @@ static PyObject *__pyx_pf_10_liblinear_0train_wrap(PyObject *__pyx_self, PyObjec
  *         len_w = (nr_class) * nr_feature
  *         w = np.empty((nr_class, nr_feature),order='F')             # <<<<<<<<<<<<<<
  *         copy_w(w.data, model, len_w)
- * 
+ *
  */
     __pyx_t_5 = __Pyx_GetName(__pyx_m, __pyx_n_s__np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
@@ -1321,7 +1321,7 @@ static PyObject *__pyx_pf_10_liblinear_0train_wrap(PyObject *__pyx_self, PyObjec
  *         len_w = (nr_class) * nr_feature
  *         w = np.empty((nr_class, nr_feature),order='F')
  *         copy_w(w.data, model, len_w)             # <<<<<<<<<<<<<<
- * 
+ *
  *     cdef np.ndarray[np.int32_t, ndim=1, mode='c'] label
  */
     copy_w(__pyx_v_w->data, __pyx_v_model, __pyx_v_len_w);
@@ -1329,11 +1329,11 @@ static PyObject *__pyx_pf_10_liblinear_0train_wrap(PyObject *__pyx_self, PyObjec
   __pyx_L8:;
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":100
- * 
+ *
  *     cdef np.ndarray[np.int32_t, ndim=1, mode='c'] label
  *     label = np.empty(nr_class, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     copy_label(label.data, model, nr_class)
- * 
+ *
  */
   __pyx_t_5 = __Pyx_GetName(__pyx_m, __pyx_n_s__np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
@@ -1389,13 +1389,13 @@ static PyObject *__pyx_pf_10_liblinear_0train_wrap(PyObject *__pyx_self, PyObjec
  *     cdef np.ndarray[np.int32_t, ndim=1, mode='c'] label
  *     label = np.empty(nr_class, dtype=np.int32)
  *     copy_label(label.data, model, nr_class)             # <<<<<<<<<<<<<<
- * 
+ *
  *     ### FREE
  */
   copy_label(__pyx_v_label->data, __pyx_v_model, __pyx_v_nr_class);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":104
- * 
+ *
  *     ### FREE
  *     free_and_destroy_model(&model)             # <<<<<<<<<<<<<<
  *     free_problem(problem)
@@ -1417,15 +1417,15 @@ static PyObject *__pyx_pf_10_liblinear_0train_wrap(PyObject *__pyx_self, PyObjec
  *     free_problem(problem)
  *     free_parameter(param)             # <<<<<<<<<<<<<<
  *     # destroy_param(param)  don't call this or it will destroy weight_label and weight
- * 
+ *
  */
   free_parameter(__pyx_v_param);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":109
  *     # destroy_param(param)  don't call this or it will destroy weight_label and weight
- * 
+ *
  *     return w, label             # <<<<<<<<<<<<<<
- * 
+ *
  * def csr_train_wrap ( int n_features,
  */
   __Pyx_XDECREF(__pyx_r);
@@ -1478,7 +1478,7 @@ static PyObject *__pyx_pf_10_liblinear_0train_wrap(PyObject *__pyx_self, PyObjec
 
 /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":111
  *     return w, label
- * 
+ *
  * def csr_train_wrap ( int n_features,             # <<<<<<<<<<<<<<
  *                  np.ndarray[np.float64_t, ndim=1, mode='c'] X_values,
  *                  np.ndarray[np.int32_t,   ndim=1, mode='c'] X_indices,
@@ -1725,26 +1725,26 @@ static PyObject *__pyx_pf_10_liblinear_1csr_train_wrap(PyObject *__pyx_self, PyO
   __pyx_bshape_0_weight = __pyx_bstruct_weight.shape[0];
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":131
- * 
+ *
  *     problem = csr_set_problem(X_values.data, X_indices.shape,
  *               X_indices.data, X_indptr.shape, X_indptr.data, Y.data, n_features, bias)             # <<<<<<<<<<<<<<
- * 
+ *
  *     param = set_parameter(solver_type, eps, C, weight.shape[0], weight_label.data, weight.data)
  */
   __pyx_v_problem = csr_set_problem(__pyx_v_X_values->data, __pyx_v_X_indices->dimensions, __pyx_v_X_indices->data, __pyx_v_X_indptr->dimensions, __pyx_v_X_indptr->data, __pyx_v_Y->data, __pyx_v_n_features, __pyx_v_bias);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":133
  *               X_indices.data, X_indptr.shape, X_indptr.data, Y.data, n_features, bias)
- * 
+ *
  *     param = set_parameter(solver_type, eps, C, weight.shape[0], weight_label.data, weight.data)             # <<<<<<<<<<<<<<
- * 
+ *
  *     error_msg = check_parameter(problem, param)
  */
   __pyx_v_param = set_parameter(__pyx_v_solver_type, __pyx_v_eps, __pyx_v_C, (__pyx_v_weight->dimensions[0]), __pyx_v_weight_label->data, __pyx_v_weight->data);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":135
  *     param = set_parameter(solver_type, eps, C, weight.shape[0], weight_label.data, weight.data)
- * 
+ *
  *     error_msg = check_parameter(problem, param)             # <<<<<<<<<<<<<<
  *     if error_msg:
  *         free_problem(problem)
@@ -1752,7 +1752,7 @@ static PyObject *__pyx_pf_10_liblinear_1csr_train_wrap(PyObject *__pyx_self, PyO
   __pyx_v_error_msg = check_parameter(__pyx_v_problem, __pyx_v_param);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":136
- * 
+ *
  *     error_msg = check_parameter(problem, param)
  *     if error_msg:             # <<<<<<<<<<<<<<
  *         free_problem(problem)
@@ -1775,7 +1775,7 @@ static PyObject *__pyx_pf_10_liblinear_1csr_train_wrap(PyObject *__pyx_self, PyO
  *         free_problem(problem)
  *         free_parameter(param)             # <<<<<<<<<<<<<<
  *         raise ValueError(error_msg)
- * 
+ *
  */
     free_parameter(__pyx_v_param);
 
@@ -1783,7 +1783,7 @@ static PyObject *__pyx_pf_10_liblinear_1csr_train_wrap(PyObject *__pyx_self, PyO
  *         free_problem(problem)
  *         free_parameter(param)
  *         raise ValueError(error_msg)             # <<<<<<<<<<<<<<
- * 
+ *
  *     # early return
  */
     __pyx_t_2 = PyBytes_FromString(__pyx_v_error_msg); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 139; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -1804,10 +1804,10 @@ static PyObject *__pyx_pf_10_liblinear_1csr_train_wrap(PyObject *__pyx_self, PyO
   __pyx_L6:;
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":142
- * 
+ *
  *     # early return
  *     model = train(problem, param)             # <<<<<<<<<<<<<<
- * 
+ *
  *     # fortran order since that's what liblinear does
  */
   __pyx_v_model = train(__pyx_v_problem, __pyx_v_param);
@@ -1939,7 +1939,7 @@ static PyObject *__pyx_pf_10_liblinear_1csr_train_wrap(PyObject *__pyx_self, PyO
  *         len_w = (nr_class * nr_feature)
  *         w = np.empty((nr_class, nr_feature),order='F')             # <<<<<<<<<<<<<<
  *         copy_w(w.data, model, len_w)
- * 
+ *
  */
     __pyx_t_5 = __Pyx_GetName(__pyx_m, __pyx_n_s__np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 154; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
@@ -1999,7 +1999,7 @@ static PyObject *__pyx_pf_10_liblinear_1csr_train_wrap(PyObject *__pyx_self, PyO
  *         len_w = (nr_class * nr_feature)
  *         w = np.empty((nr_class, nr_feature),order='F')
  *         copy_w(w.data, model, len_w)             # <<<<<<<<<<<<<<
- * 
+ *
  *     cdef np.ndarray[np.int32_t, ndim=1, mode='c'] label
  */
     copy_w(__pyx_v_w->data, __pyx_v_model, __pyx_v_len_w);
@@ -2007,11 +2007,11 @@ static PyObject *__pyx_pf_10_liblinear_1csr_train_wrap(PyObject *__pyx_self, PyO
   __pyx_L8:;
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":158
- * 
+ *
  *     cdef np.ndarray[np.int32_t, ndim=1, mode='c'] label
  *     label = np.empty((nr_class), dtype=np.int32)             # <<<<<<<<<<<<<<
  *     copy_label(label.data, model, nr_class)
- * 
+ *
  */
   __pyx_t_5 = __Pyx_GetName(__pyx_m, __pyx_n_s__np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 158; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
@@ -2067,13 +2067,13 @@ static PyObject *__pyx_pf_10_liblinear_1csr_train_wrap(PyObject *__pyx_self, PyO
  *     cdef np.ndarray[np.int32_t, ndim=1, mode='c'] label
  *     label = np.empty((nr_class), dtype=np.int32)
  *     copy_label(label.data, model, nr_class)             # <<<<<<<<<<<<<<
- * 
+ *
  *     ### FREE
  */
   copy_label(__pyx_v_label->data, __pyx_v_model, __pyx_v_nr_class);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":162
- * 
+ *
  *     ### FREE
  *     free_and_destroy_model(&model)             # <<<<<<<<<<<<<<
  *     free_problem(problem)
@@ -2095,16 +2095,16 @@ static PyObject *__pyx_pf_10_liblinear_1csr_train_wrap(PyObject *__pyx_self, PyO
  *     free_problem(problem)
  *     free_parameter(param)             # <<<<<<<<<<<<<<
  *     # destroy_param(param)  don't call this or it will destroy weight_label and weight
- * 
+ *
  */
   free_parameter(__pyx_v_param);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":167
  *     # destroy_param(param)  don't call this or it will destroy weight_label and weight
- * 
+ *
  *     return w, label             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_11 = PyTuple_New(2); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 167; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2159,8 +2159,8 @@ static PyObject *__pyx_pf_10_liblinear_1csr_train_wrap(PyObject *__pyx_self, PyO
 }
 
 /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":170
- * 
- * 
+ *
+ *
  * def decision_function_wrap(             # <<<<<<<<<<<<<<
  *     np.ndarray[np.float64_t, ndim=2, mode='c'] T,
  *     np.ndarray[np.float64_t, ndim=2, mode='fortran'] coef_,
@@ -2368,26 +2368,26 @@ static PyObject *__pyx_pf_10_liblinear_2decision_function_wrap(PyObject *__pyx_s
   __pyx_bshape_0_label = __pyx_bstruct_label.shape[0];
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":184
- * 
+ *
  *     param = set_parameter(
  *         solver_type, eps, C, weight.shape[0], weight_label.data, weight.data)             # <<<<<<<<<<<<<<
- * 
+ *
  *     model = set_model(param, coef_.data, coef_.shape, label.data, bias)
  */
   __pyx_v_param = set_parameter(__pyx_v_solver_type, __pyx_v_eps, __pyx_v_C, (__pyx_v_weight->dimensions[0]), __pyx_v_weight_label->data, __pyx_v_weight->data);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":186
  *         solver_type, eps, C, weight.shape[0], weight_label.data, weight.data)
- * 
+ *
  *     model = set_model(param, coef_.data, coef_.shape, label.data, bias)             # <<<<<<<<<<<<<<
- * 
+ *
  *     n_class = label.shape[0]
  */
   __pyx_v_model = set_model(__pyx_v_param, __pyx_v_coef_->data, __pyx_v_coef_->dimensions, __pyx_v_label->data, __pyx_v_bias);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":188
  *     model = set_model(param, coef_.data, coef_.shape, label.data, bias)
- * 
+ *
  *     n_class = label.shape[0]             # <<<<<<<<<<<<<<
  *     if n_class <= 2: n_class = 1
  *     dec_values = np.empty((T.shape[0], n_class), dtype=np.float64)
@@ -2395,11 +2395,11 @@ static PyObject *__pyx_pf_10_liblinear_2decision_function_wrap(PyObject *__pyx_s
   __pyx_v_n_class = (__pyx_v_label->dimensions[0]);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":189
- * 
+ *
  *     n_class = label.shape[0]
  *     if n_class <= 2: n_class = 1             # <<<<<<<<<<<<<<
  *     dec_values = np.empty((T.shape[0], n_class), dtype=np.float64)
- * 
+ *
  */
   __pyx_t_1 = (__pyx_v_n_class <= 2);
   if (__pyx_t_1) {
@@ -2412,7 +2412,7 @@ static PyObject *__pyx_pf_10_liblinear_2decision_function_wrap(PyObject *__pyx_s
  *     n_class = label.shape[0]
  *     if n_class <= 2: n_class = 1
  *     dec_values = np.empty((T.shape[0], n_class), dtype=np.float64)             # <<<<<<<<<<<<<<
- * 
+ *
  *     if copy_predict_values(T.data, model, T.shape, dec_values.data, n_class) < 0:
  */
   __pyx_t_2 = __Pyx_GetName(__pyx_m, __pyx_n_s__np); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 190; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2477,19 +2477,19 @@ static PyObject *__pyx_pf_10_liblinear_2decision_function_wrap(PyObject *__pyx_s
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":192
  *     dec_values = np.empty((T.shape[0], n_class), dtype=np.float64)
- * 
+ *
  *     if copy_predict_values(T.data, model, T.shape, dec_values.data, n_class) < 0:             # <<<<<<<<<<<<<<
  *         raise MemoryError("We've run out of of memory")
- * 
+ *
  */
   __pyx_t_1 = (copy_predict_values(__pyx_v_T->data, __pyx_v_model, __pyx_v_T->dimensions, __pyx_v_dec_values->data, __pyx_v_n_class) < 0);
   if (__pyx_t_1) {
 
     /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":193
- * 
+ *
  *     if copy_predict_values(T.data, model, T.shape, dec_values.data, n_class) < 0:
  *         raise MemoryError("We've run out of of memory")             # <<<<<<<<<<<<<<
- * 
+ *
  *     ### FREE
  */
     __pyx_t_6 = PyObject_Call(__pyx_builtin_MemoryError, ((PyObject *)__pyx_k_tuple_2), NULL); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 193; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2502,7 +2502,7 @@ static PyObject *__pyx_pf_10_liblinear_2decision_function_wrap(PyObject *__pyx_s
   __pyx_L7:;
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":196
- * 
+ *
  *     ### FREE
  *     free_parameter(param)             # <<<<<<<<<<<<<<
  *     free_and_destroy_model(&model)
@@ -2515,7 +2515,7 @@ static PyObject *__pyx_pf_10_liblinear_2decision_function_wrap(PyObject *__pyx_s
  *     free_parameter(param)
  *     free_and_destroy_model(&model)             # <<<<<<<<<<<<<<
  *     return dec_values
- * 
+ *
  */
   free_and_destroy_model((&__pyx_v_model));
 
@@ -2523,8 +2523,8 @@ static PyObject *__pyx_pf_10_liblinear_2decision_function_wrap(PyObject *__pyx_s
  *     free_parameter(param)
  *     free_and_destroy_model(&model)
  *     return dec_values             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(((PyObject *)__pyx_v_dec_values));
@@ -2566,8 +2566,8 @@ static PyObject *__pyx_pf_10_liblinear_2decision_function_wrap(PyObject *__pyx_s
 }
 
 /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":202
- * 
- * 
+ *
+ *
  * def csr_decision_function_wrap(             # <<<<<<<<<<<<<<
  *     int n_features,
  *     np.ndarray[np.float64_t, ndim=1, mode='c'] T_values,
@@ -2826,37 +2826,37 @@ static PyObject *__pyx_pf_10_liblinear_3csr_decision_function_wrap(PyObject *__p
   __pyx_bshape_0_label = __pyx_bstruct_label.shape[0];
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":224
- * 
+ *
  *     param = set_parameter(
  *         solver_type, eps, C, weight.shape[0], weight_label.data, weight.data)             # <<<<<<<<<<<<<<
- * 
+ *
  *     model = set_model(param, coef_.data, coef_.shape, label.data, bias)
  */
   __pyx_v_param = set_parameter(__pyx_v_solver_type, __pyx_v_eps, __pyx_v_C, (__pyx_v_weight->dimensions[0]), __pyx_v_weight_label->data, __pyx_v_weight->data);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":226
  *         solver_type, eps, C, weight.shape[0], weight_label.data, weight.data)
- * 
+ *
  *     model = set_model(param, coef_.data, coef_.shape, label.data, bias)             # <<<<<<<<<<<<<<
- * 
+ *
  *     n_class = label.shape[0]
  */
   __pyx_v_model = set_model(__pyx_v_param, __pyx_v_coef_->data, __pyx_v_coef_->dimensions, __pyx_v_label->data, __pyx_v_bias);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":228
  *     model = set_model(param, coef_.data, coef_.shape, label.data, bias)
- * 
+ *
  *     n_class = label.shape[0]             # <<<<<<<<<<<<<<
  *     if n_class <= 2: n_class = 1
- * 
+ *
  */
   __pyx_v_n_class = (__pyx_v_label->dimensions[0]);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":229
- * 
+ *
  *     n_class = label.shape[0]
  *     if n_class <= 2: n_class = 1             # <<<<<<<<<<<<<<
- * 
+ *
  *     dec_values = np.empty((T_indptr.shape[0] - 1, n_class), dtype=np.float64)
  */
   __pyx_t_1 = (__pyx_v_n_class <= 2);
@@ -2868,9 +2868,9 @@ static PyObject *__pyx_pf_10_liblinear_3csr_decision_function_wrap(PyObject *__p
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":231
  *     if n_class <= 2: n_class = 1
- * 
+ *
  *     dec_values = np.empty((T_indptr.shape[0] - 1, n_class), dtype=np.float64)             # <<<<<<<<<<<<<<
- * 
+ *
  *     if csr_copy_predict_values(
  */
   __pyx_t_2 = __Pyx_GetName(__pyx_m, __pyx_n_s__np); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 231; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2938,7 +2938,7 @@ static PyObject *__pyx_pf_10_liblinear_3csr_decision_function_wrap(PyObject *__p
  *         T_indices.data, T_indptr.shape, T_indptr.data, model,
  *         dec_values.data, n_class) < 0:             # <<<<<<<<<<<<<<
  *         raise MemoryError("We've run out of of memory")
- * 
+ *
  */
   __pyx_t_1 = (csr_copy_predict_values(__pyx_v_n_features, __pyx_v_T_values->dimensions, __pyx_v_T_values->data, __pyx_v_T_indices->dimensions, __pyx_v_T_indices->data, __pyx_v_T_indptr->dimensions, __pyx_v_T_indptr->data, __pyx_v_model, __pyx_v_dec_values->data, __pyx_v_n_class) < 0);
   if (__pyx_t_1) {
@@ -2947,7 +2947,7 @@ static PyObject *__pyx_pf_10_liblinear_3csr_decision_function_wrap(PyObject *__p
  *         T_indices.data, T_indptr.shape, T_indptr.data, model,
  *         dec_values.data, n_class) < 0:
  *         raise MemoryError("We've run out of of memory")             # <<<<<<<<<<<<<<
- * 
+ *
  *     ### FREE
  */
     __pyx_t_6 = PyObject_Call(__pyx_builtin_MemoryError, ((PyObject *)__pyx_k_tuple_3), NULL); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 237; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2960,7 +2960,7 @@ static PyObject *__pyx_pf_10_liblinear_3csr_decision_function_wrap(PyObject *__p
   __pyx_L7:;
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":240
- * 
+ *
  *     ### FREE
  *     free_parameter(param)             # <<<<<<<<<<<<<<
  *     free_and_destroy_model(&model)
@@ -2973,7 +2973,7 @@ static PyObject *__pyx_pf_10_liblinear_3csr_decision_function_wrap(PyObject *__p
  *     free_parameter(param)
  *     free_and_destroy_model(&model)             # <<<<<<<<<<<<<<
  *     return dec_values
- * 
+ *
  */
   free_and_destroy_model((&__pyx_v_model));
 
@@ -2981,8 +2981,8 @@ static PyObject *__pyx_pf_10_liblinear_3csr_decision_function_wrap(PyObject *__p
  *     free_parameter(param)
  *     free_and_destroy_model(&model)
  *     return dec_values             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(((PyObject *)__pyx_v_dec_values));
@@ -3028,8 +3028,8 @@ static PyObject *__pyx_pf_10_liblinear_3csr_decision_function_wrap(PyObject *__p
 }
 
 /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":245
- * 
- * 
+ *
+ *
  * def predict_wrap(             # <<<<<<<<<<<<<<
  *     np.ndarray[np.float64_t, ndim=2, mode='c'] T,
  *     np.ndarray[np.float64_t, ndim=2, mode='fortran'] coef_,
@@ -3235,25 +3235,25 @@ static PyObject *__pyx_pf_10_liblinear_4predict_wrap(PyObject *__pyx_self, PyObj
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":258
  *     cdef model *model
- * 
+ *
  *     param = set_parameter(solver_type, eps, C, weight.shape[0], weight_label.data, weight.data)             # <<<<<<<<<<<<<<
- * 
+ *
  *     model = set_model(param, coef_.data, coef_.shape, label.data, bias)
  */
   __pyx_v_param = set_parameter(__pyx_v_solver_type, __pyx_v_eps, __pyx_v_C, (__pyx_v_weight->dimensions[0]), __pyx_v_weight_label->data, __pyx_v_weight->data);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":260
  *     param = set_parameter(solver_type, eps, C, weight.shape[0], weight_label.data, weight.data)
- * 
+ *
  *     model = set_model(param, coef_.data, coef_.shape, label.data, bias)             # <<<<<<<<<<<<<<
- * 
+ *
  *     dec_values = np.empty(T.shape[0], dtype=np.int32)
  */
   __pyx_v_model = set_model(__pyx_v_param, __pyx_v_coef_->data, __pyx_v_coef_->dimensions, __pyx_v_label->data, __pyx_v_bias);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":262
  *     model = set_model(param, coef_.data, coef_.shape, label.data, bias)
- * 
+ *
  *     dec_values = np.empty(T.shape[0], dtype=np.int32)             # <<<<<<<<<<<<<<
  *     if copy_predict(T.data, model, T.shape, dec_values.data) < 0:
  *         raise MemoryError("We've run out of of memory")
@@ -3309,11 +3309,11 @@ static PyObject *__pyx_pf_10_liblinear_4predict_wrap(PyObject *__pyx_self, PyObj
   __pyx_t_5 = 0;
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":263
- * 
+ *
  *     dec_values = np.empty(T.shape[0], dtype=np.int32)
  *     if copy_predict(T.data, model, T.shape, dec_values.data) < 0:             # <<<<<<<<<<<<<<
  *         raise MemoryError("We've run out of of memory")
- * 
+ *
  */
   __pyx_t_11 = (copy_predict(__pyx_v_T->data, __pyx_v_model, __pyx_v_T->dimensions, __pyx_v_dec_values->data) < 0);
   if (__pyx_t_11) {
@@ -3322,7 +3322,7 @@ static PyObject *__pyx_pf_10_liblinear_4predict_wrap(PyObject *__pyx_self, PyObj
  *     dec_values = np.empty(T.shape[0], dtype=np.int32)
  *     if copy_predict(T.data, model, T.shape, dec_values.data) < 0:
  *         raise MemoryError("We've run out of of memory")             # <<<<<<<<<<<<<<
- * 
+ *
  *     ### FREE
  */
     __pyx_t_5 = PyObject_Call(__pyx_builtin_MemoryError, ((PyObject *)__pyx_k_tuple_4), NULL); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 264; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3335,7 +3335,7 @@ static PyObject *__pyx_pf_10_liblinear_4predict_wrap(PyObject *__pyx_self, PyObj
   __pyx_L6:;
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":267
- * 
+ *
  *     ### FREE
  *     free_parameter(param)             # <<<<<<<<<<<<<<
  *     free_and_destroy_model(&model)
@@ -3348,7 +3348,7 @@ static PyObject *__pyx_pf_10_liblinear_4predict_wrap(PyObject *__pyx_self, PyObj
  *     free_parameter(param)
  *     free_and_destroy_model(&model)             # <<<<<<<<<<<<<<
  *     return dec_values
- * 
+ *
  */
   free_and_destroy_model((&__pyx_v_model));
 
@@ -3356,8 +3356,8 @@ static PyObject *__pyx_pf_10_liblinear_4predict_wrap(PyObject *__pyx_self, PyObj
  *     free_parameter(param)
  *     free_and_destroy_model(&model)
  *     return dec_values             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(((PyObject *)__pyx_v_dec_values));
@@ -3399,8 +3399,8 @@ static PyObject *__pyx_pf_10_liblinear_4predict_wrap(PyObject *__pyx_self, PyObj
 }
 
 /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":272
- * 
- * 
+ *
+ *
  * def csr_predict_wrap(             # <<<<<<<<<<<<<<
  *         int n_features,
  *         np.ndarray[np.float64_t, ndim=1, mode='c'] T_values,
@@ -3657,25 +3657,25 @@ static PyObject *__pyx_pf_10_liblinear_5csr_predict_wrap(PyObject *__pyx_self, P
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":293
  *     cdef model *model
- * 
+ *
  *     param = set_parameter(solver_type, eps, C, weight.shape[0], weight_label.data, weight.data)             # <<<<<<<<<<<<<<
- * 
+ *
  *     model = set_model(param, coef_.data, coef_.shape, label.data, bias)
  */
   __pyx_v_param = set_parameter(__pyx_v_solver_type, __pyx_v_eps, __pyx_v_C, (__pyx_v_weight->dimensions[0]), __pyx_v_weight_label->data, __pyx_v_weight->data);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":295
  *     param = set_parameter(solver_type, eps, C, weight.shape[0], weight_label.data, weight.data)
- * 
+ *
  *     model = set_model(param, coef_.data, coef_.shape, label.data, bias)             # <<<<<<<<<<<<<<
- * 
+ *
  *     dec_values = np.empty(T_indptr.shape[0] - 1, dtype=np.int32)
  */
   __pyx_v_model = set_model(__pyx_v_param, __pyx_v_coef_->data, __pyx_v_coef_->dimensions, __pyx_v_label->data, __pyx_v_bias);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":297
  *     model = set_model(param, coef_.data, coef_.shape, label.data, bias)
- * 
+ *
  *     dec_values = np.empty(T_indptr.shape[0] - 1, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     if csr_copy_predict(n_features, T_values.shape, T_values.data,
  *                         T_indices.shape, T_indices.data,
@@ -3735,7 +3735,7 @@ static PyObject *__pyx_pf_10_liblinear_5csr_predict_wrap(PyObject *__pyx_self, P
  *                         T_indptr.shape, T_indptr.data,
  *                         model, dec_values.data) < 0:             # <<<<<<<<<<<<<<
  *         raise MemoryError("We've run out of of memory")
- * 
+ *
  */
   __pyx_t_11 = (csr_copy_predict(__pyx_v_n_features, __pyx_v_T_values->dimensions, __pyx_v_T_values->data, __pyx_v_T_indices->dimensions, __pyx_v_T_indices->data, __pyx_v_T_indptr->dimensions, __pyx_v_T_indptr->data, __pyx_v_model, __pyx_v_dec_values->data) < 0);
   if (__pyx_t_11) {
@@ -3744,7 +3744,7 @@ static PyObject *__pyx_pf_10_liblinear_5csr_predict_wrap(PyObject *__pyx_self, P
  *                         T_indptr.shape, T_indptr.data,
  *                         model, dec_values.data) < 0:
  *         raise MemoryError("We've run out of of memory")             # <<<<<<<<<<<<<<
- * 
+ *
  *     ### FREE
  */
     __pyx_t_5 = PyObject_Call(__pyx_builtin_MemoryError, ((PyObject *)__pyx_k_tuple_5), NULL); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 302; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3757,7 +3757,7 @@ static PyObject *__pyx_pf_10_liblinear_5csr_predict_wrap(PyObject *__pyx_self, P
   __pyx_L6:;
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":305
- * 
+ *
  *     ### FREE
  *     free_parameter(param)             # <<<<<<<<<<<<<<
  *     free_and_destroy_model(&model)
@@ -3770,7 +3770,7 @@ static PyObject *__pyx_pf_10_liblinear_5csr_predict_wrap(PyObject *__pyx_self, P
  *     free_parameter(param)
  *     free_and_destroy_model(&model)             # <<<<<<<<<<<<<<
  *     return dec_values
- * 
+ *
  */
   free_and_destroy_model((&__pyx_v_model));
 
@@ -3778,8 +3778,8 @@ static PyObject *__pyx_pf_10_liblinear_5csr_predict_wrap(PyObject *__pyx_self, P
  *     free_parameter(param)
  *     free_and_destroy_model(&model)
  *     return dec_values             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(((PyObject *)__pyx_v_dec_values));
@@ -3825,8 +3825,8 @@ static PyObject *__pyx_pf_10_liblinear_5csr_predict_wrap(PyObject *__pyx_self, P
 }
 
 /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":312
- * 
- * 
+ *
+ *
  * def predict_prob_wrap(np.ndarray[np.float64_t, ndim=2, mode='c'] T,             # <<<<<<<<<<<<<<
  *                  np.ndarray[np.float64_t, ndim=2, mode='fortran'] coef_,
  *                  int solver_type, double eps, double C,
@@ -4036,25 +4036,25 @@ static PyObject *__pyx_pf_10_liblinear_6predict_prob_wrap(PyObject *__pyx_self, 
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":349
  *     cdef model *model
- * 
+ *
  *     param = set_parameter(solver_type, eps, C, weight.shape[0], weight_label.data, weight.data)             # <<<<<<<<<<<<<<
- * 
+ *
  *     model = set_model(param, coef_.data, coef_.shape, label.data, bias)
  */
   __pyx_v_param = set_parameter(__pyx_v_solver_type, __pyx_v_eps, __pyx_v_C, (__pyx_v_weight->dimensions[0]), __pyx_v_weight_label->data, __pyx_v_weight->data);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":351
  *     param = set_parameter(solver_type, eps, C, weight.shape[0], weight_label.data, weight.data)
- * 
+ *
  *     model = set_model(param, coef_.data, coef_.shape, label.data, bias)             # <<<<<<<<<<<<<<
- * 
+ *
  *     cdef int nr_class = get_nr_class(model)
  */
   __pyx_v_model = set_model(__pyx_v_param, __pyx_v_coef_->data, __pyx_v_coef_->dimensions, __pyx_v_label->data, __pyx_v_bias);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":353
  *     model = set_model(param, coef_.data, coef_.shape, label.data, bias)
- * 
+ *
  *     cdef int nr_class = get_nr_class(model)             # <<<<<<<<<<<<<<
  *     dec_values = np.empty((T.shape[0], nr_class), dtype=np.float64)
  *     if copy_prob_predict(T.data, model, T.shape, dec_values.data) < 0:
@@ -4062,7 +4062,7 @@ static PyObject *__pyx_pf_10_liblinear_6predict_prob_wrap(PyObject *__pyx_self, 
   __pyx_v_nr_class = get_nr_class(__pyx_v_model);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":354
- * 
+ *
  *     cdef int nr_class = get_nr_class(model)
  *     dec_values = np.empty((T.shape[0], nr_class), dtype=np.float64)             # <<<<<<<<<<<<<<
  *     if copy_prob_predict(T.data, model, T.shape, dec_values.data) < 0:
@@ -4133,7 +4133,7 @@ static PyObject *__pyx_pf_10_liblinear_6predict_prob_wrap(PyObject *__pyx_self, 
  *     dec_values = np.empty((T.shape[0], nr_class), dtype=np.float64)
  *     if copy_prob_predict(T.data, model, T.shape, dec_values.data) < 0:             # <<<<<<<<<<<<<<
  *         raise MemoryError("We've run out of of memory")
- * 
+ *
  */
   __pyx_t_11 = (copy_prob_predict(__pyx_v_T->data, __pyx_v_model, __pyx_v_T->dimensions, __pyx_v_dec_values->data) < 0);
   if (__pyx_t_11) {
@@ -4142,7 +4142,7 @@ static PyObject *__pyx_pf_10_liblinear_6predict_prob_wrap(PyObject *__pyx_self, 
  *     dec_values = np.empty((T.shape[0], nr_class), dtype=np.float64)
  *     if copy_prob_predict(T.data, model, T.shape, dec_values.data) < 0:
  *         raise MemoryError("We've run out of of memory")             # <<<<<<<<<<<<<<
- * 
+ *
  *     ### FREE
  */
     __pyx_t_5 = PyObject_Call(__pyx_builtin_MemoryError, ((PyObject *)__pyx_k_tuple_6), NULL); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 356; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -4155,11 +4155,11 @@ static PyObject *__pyx_pf_10_liblinear_6predict_prob_wrap(PyObject *__pyx_self, 
   __pyx_L6:;
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":359
- * 
+ *
  *     ### FREE
  *     free_parameter(param)             # <<<<<<<<<<<<<<
  *     free_and_destroy_model(&model)
- * 
+ *
  */
   free_parameter(__pyx_v_param);
 
@@ -4167,17 +4167,17 @@ static PyObject *__pyx_pf_10_liblinear_6predict_prob_wrap(PyObject *__pyx_self, 
  *     ### FREE
  *     free_parameter(param)
  *     free_and_destroy_model(&model)             # <<<<<<<<<<<<<<
- * 
+ *
  *     return dec_values
  */
   free_and_destroy_model((&__pyx_v_model));
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":362
  *     free_and_destroy_model(&model)
- * 
+ *
  *     return dec_values             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(((PyObject *)__pyx_v_dec_values));
@@ -4219,8 +4219,8 @@ static PyObject *__pyx_pf_10_liblinear_6predict_prob_wrap(PyObject *__pyx_self, 
 }
 
 /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":366
- * 
- * 
+ *
+ *
  * def csr_predict_prob(             # <<<<<<<<<<<<<<
  *         int n_features,
  *         np.ndarray[np.float64_t, ndim=1, mode='c'] T_values,
@@ -4479,17 +4479,17 @@ static PyObject *__pyx_pf_10_liblinear_7csr_predict_prob(PyObject *__pyx_self, P
   __pyx_bshape_0_label = __pyx_bstruct_label.shape[0];
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":388
- * 
+ *
  *     param = set_parameter(solver_type, eps, C, weight.shape[0],
  *                           weight_label.data, weight.data)             # <<<<<<<<<<<<<<
- * 
+ *
  *     model = set_model(param, coef_.data, coef_.shape, label.data, bias)
  */
   __pyx_v_param = set_parameter(__pyx_v_solver_type, __pyx_v_eps, __pyx_v_C, (__pyx_v_weight->dimensions[0]), __pyx_v_weight_label->data, __pyx_v_weight->data);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":390
  *                           weight_label.data, weight.data)
- * 
+ *
  *     model = set_model(param, coef_.data, coef_.shape, label.data, bias)             # <<<<<<<<<<<<<<
  *     cdef int nr_class = get_nr_class(model)
  *     dec_values = np.empty((T_indptr.shape[0]-1, nr_class), dtype=np.float64)
@@ -4497,11 +4497,11 @@ static PyObject *__pyx_pf_10_liblinear_7csr_predict_prob(PyObject *__pyx_self, P
   __pyx_v_model = set_model(__pyx_v_param, __pyx_v_coef_->data, __pyx_v_coef_->dimensions, __pyx_v_label->data, __pyx_v_bias);
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":391
- * 
+ *
  *     model = set_model(param, coef_.data, coef_.shape, label.data, bias)
  *     cdef int nr_class = get_nr_class(model)             # <<<<<<<<<<<<<<
  *     dec_values = np.empty((T_indptr.shape[0]-1, nr_class), dtype=np.float64)
- * 
+ *
  */
   __pyx_v_nr_class = get_nr_class(__pyx_v_model);
 
@@ -4509,7 +4509,7 @@ static PyObject *__pyx_pf_10_liblinear_7csr_predict_prob(PyObject *__pyx_self, P
  *     model = set_model(param, coef_.data, coef_.shape, label.data, bias)
  *     cdef int nr_class = get_nr_class(model)
  *     dec_values = np.empty((T_indptr.shape[0]-1, nr_class), dtype=np.float64)             # <<<<<<<<<<<<<<
- * 
+ *
  *     if csr_copy_predict_proba(n_features, T_values.shape, T_values.data,
  */
   __pyx_t_1 = __Pyx_GetName(__pyx_m, __pyx_n_s__np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 392; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -4577,7 +4577,7 @@ static PyObject *__pyx_pf_10_liblinear_7csr_predict_prob(PyObject *__pyx_self, P
  *                         T_indptr.shape, T_indptr.data,
  *                         model, dec_values.data) < 0:             # <<<<<<<<<<<<<<
  *         raise MemoryError("We've run out of of memory")
- * 
+ *
  */
   __pyx_t_11 = (csr_copy_predict_proba(__pyx_v_n_features, __pyx_v_T_values->dimensions, __pyx_v_T_values->data, __pyx_v_T_indices->dimensions, __pyx_v_T_indices->data, __pyx_v_T_indptr->dimensions, __pyx_v_T_indptr->data, __pyx_v_model, __pyx_v_dec_values->data) < 0);
   if (__pyx_t_11) {
@@ -4586,7 +4586,7 @@ static PyObject *__pyx_pf_10_liblinear_7csr_predict_prob(PyObject *__pyx_self, P
  *                         T_indptr.shape, T_indptr.data,
  *                         model, dec_values.data) < 0:
  *         raise MemoryError("We've run out of of memory")             # <<<<<<<<<<<<<<
- * 
+ *
  *     ### FREE
  */
     __pyx_t_5 = PyObject_Call(__pyx_builtin_MemoryError, ((PyObject *)__pyx_k_tuple_7), NULL); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 398; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -4599,7 +4599,7 @@ static PyObject *__pyx_pf_10_liblinear_7csr_predict_prob(PyObject *__pyx_self, P
   __pyx_L6:;
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":401
- * 
+ *
  *     ### FREE
  *     free_parameter(param)             # <<<<<<<<<<<<<<
  *     free_and_destroy_model(&model)
@@ -4703,7 +4703,7 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
  *             cdef int copy_shape, i, ndim
  *             cdef int endian_detector = 1             # <<<<<<<<<<<<<<
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)
- * 
+ *
  */
   __pyx_v_endian_detector = 1;
 
@@ -4711,23 +4711,23 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
  *             cdef int copy_shape, i, ndim
  *             cdef int endian_detector = 1
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
- * 
+ *
  *             ndim = PyArray_NDIM(self)
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":197
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)
- * 
+ *
  *             ndim = PyArray_NDIM(self)             # <<<<<<<<<<<<<<
- * 
+ *
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  */
   __pyx_v_ndim = PyArray_NDIM(((PyArrayObject *)__pyx_v_self));
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":199
  *             ndim = PyArray_NDIM(self)
- * 
+ *
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
  *                 copy_shape = 1
  *             else:
@@ -4736,7 +4736,7 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
   if (__pyx_t_1) {
 
     /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":200
- * 
+ *
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 copy_shape = 1             # <<<<<<<<<<<<<<
  *             else:
@@ -4751,7 +4751,7 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
  *                 copy_shape = 1
  *             else:
  *                 copy_shape = 0             # <<<<<<<<<<<<<<
- * 
+ *
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  */
     __pyx_v_copy_shape = 0;
@@ -4760,7 +4760,7 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":204
  *                 copy_shape = 0
- * 
+ *
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")
@@ -4769,11 +4769,11 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
   if (__pyx_t_1) {
 
     /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":205
- * 
+ *
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):             # <<<<<<<<<<<<<<
  *                 raise ValueError(u"ndarray is not C contiguous")
- * 
+ *
  */
     __pyx_t_2 = (!PyArray_CHKFLAGS(((PyArrayObject *)__pyx_v_self), NPY_C_CONTIGUOUS));
     __pyx_t_3 = __pyx_t_2;
@@ -4786,7 +4786,7 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")             # <<<<<<<<<<<<<<
- * 
+ *
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  */
     __pyx_t_4 = PyObject_Call(__pyx_builtin_ValueError, ((PyObject *)__pyx_k_tuple_9), NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 206; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -4800,7 +4800,7 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":208
  *                 raise ValueError(u"ndarray is not C contiguous")
- * 
+ *
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")
@@ -4809,11 +4809,11 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
   if (__pyx_t_3) {
 
     /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":209
- * 
+ *
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):             # <<<<<<<<<<<<<<
  *                 raise ValueError(u"ndarray is not Fortran contiguous")
- * 
+ *
  */
     __pyx_t_1 = (!PyArray_CHKFLAGS(((PyArrayObject *)__pyx_v_self), NPY_F_CONTIGUOUS));
     __pyx_t_2 = __pyx_t_1;
@@ -4826,7 +4826,7 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")             # <<<<<<<<<<<<<<
- * 
+ *
  *             info.buf = PyArray_DATA(self)
  */
     __pyx_t_4 = PyObject_Call(__pyx_builtin_ValueError, ((PyObject *)__pyx_k_tuple_11), NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 210; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -4840,7 +4840,7 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":212
  *                 raise ValueError(u"ndarray is not Fortran contiguous")
- * 
+ *
  *             info.buf = PyArray_DATA(self)             # <<<<<<<<<<<<<<
  *             info.ndim = ndim
  *             if copy_shape:
@@ -4848,7 +4848,7 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
   __pyx_v_info->buf = PyArray_DATA(((PyArrayObject *)__pyx_v_self));
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":213
- * 
+ *
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim             # <<<<<<<<<<<<<<
  *             if copy_shape:
@@ -4950,7 +4950,7 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)             # <<<<<<<<<<<<<<
  *             info.readonly = not PyArray_ISWRITEABLE(self)
- * 
+ *
  */
   __pyx_v_info->itemsize = PyArray_ITEMSIZE(((PyArrayObject *)__pyx_v_self));
 
@@ -4958,13 +4958,13 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)
  *             info.readonly = not PyArray_ISWRITEABLE(self)             # <<<<<<<<<<<<<<
- * 
+ *
  *             cdef int t
  */
   __pyx_v_info->readonly = (!PyArray_ISWRITEABLE(((PyArrayObject *)__pyx_v_self)));
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":230
- * 
+ *
  *             cdef int t
  *             cdef char* f = NULL             # <<<<<<<<<<<<<<
  *             cdef dtype descr = self.descr
@@ -4984,16 +4984,16 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":235
  *             cdef int offset
- * 
+ *
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)             # <<<<<<<<<<<<<<
- * 
+ *
  *             if not hasfields and not copy_shape:
  */
   __pyx_v_hasfields = PyDataType_HASFIELDS(__pyx_v_descr);
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":237
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)
- * 
+ *
  *             if not hasfields and not copy_shape:             # <<<<<<<<<<<<<<
  *                 # do not call releasebuffer
  *                 info.obj = None
@@ -5027,7 +5027,7 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
  *             else:
  *                 # need to call releasebuffer
  *                 info.obj = self             # <<<<<<<<<<<<<<
- * 
+ *
  *             if not hasfields:
  */
     __Pyx_INCREF(__pyx_v_self);
@@ -5040,7 +5040,7 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":244
  *                 info.obj = self
- * 
+ *
  *             if not hasfields:             # <<<<<<<<<<<<<<
  *                 t = descr.type_num
  *                 if ((descr.byteorder == '>' and little_endian) or
@@ -5049,7 +5049,7 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
   if (__pyx_t_1) {
 
     /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":245
- * 
+ *
  *             if not hasfields:
  *                 t = descr.type_num             # <<<<<<<<<<<<<<
  *                 if ((descr.byteorder == '>' and little_endian) or
@@ -5410,7 +5410,7 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
  *                                       info.format + _buffer_format_string_len,
  *                                       &offset)             # <<<<<<<<<<<<<<
  *                 f[0] = 0 # Terminate format string
- * 
+ *
  */
     __pyx_t_9 = __pyx_f_5numpy__util_dtypestring(__pyx_v_descr, (__pyx_v_info->format + 1), (__pyx_v_info->format + 255), (&__pyx_v_offset)); if (unlikely(__pyx_t_9 == NULL)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 274; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_v_f = __pyx_t_9;
@@ -5419,7 +5419,7 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
  *                                       info.format + _buffer_format_string_len,
  *                                       &offset)
  *                 f[0] = 0 # Terminate format string             # <<<<<<<<<<<<<<
- * 
+ *
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  */
     (__pyx_v_f[0]) = 0;
@@ -5449,7 +5449,7 @@ static CYTHON_UNUSED int __pyx_pf_5numpy_7ndarray_0__getbuffer__(PyObject *__pyx
 
 /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":279
  *                 f[0] = 0 # Terminate format string
- * 
+ *
  *         def __releasebuffer__(ndarray self, Py_buffer* info):             # <<<<<<<<<<<<<<
  *             if PyArray_HASFIELDS(self):
  *                 stdlib.free(info.format)
@@ -5461,7 +5461,7 @@ static CYTHON_UNUSED void __pyx_pf_5numpy_7ndarray_1__releasebuffer__(PyObject *
   __Pyx_RefNannySetupContext("__releasebuffer__");
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":280
- * 
+ *
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):             # <<<<<<<<<<<<<<
  *                 stdlib.free(info.format)
@@ -5497,7 +5497,7 @@ static CYTHON_UNUSED void __pyx_pf_5numpy_7ndarray_1__releasebuffer__(PyObject *
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 stdlib.free(info.strides)             # <<<<<<<<<<<<<<
  *                 # info.shape was stored after info.strides in the same block
- * 
+ *
  */
     free(__pyx_v_info->strides);
     goto __pyx_L6;
@@ -5509,10 +5509,10 @@ static CYTHON_UNUSED void __pyx_pf_5numpy_7ndarray_1__releasebuffer__(PyObject *
 
 /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":756
  * ctypedef npy_cdouble     complex_t
- * 
+ *
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
  *     return PyArray_MultiIterNew(1, <void*>a)
- * 
+ *
  */
 
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__pyx_v_a) {
@@ -5521,10 +5521,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1");
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":757
- * 
+ *
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef inline object PyArray_MultiIterNew2(a, b):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -5548,10 +5548,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
 
 /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":759
  *     return PyArray_MultiIterNew(1, <void*>a)
- * 
+ *
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
- * 
+ *
  */
 
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__pyx_v_a, PyObject *__pyx_v_b) {
@@ -5560,10 +5560,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2");
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":760
- * 
+ *
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -5587,10 +5587,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
 
 /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":762
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
- * 
+ *
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
- * 
+ *
  */
 
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__pyx_v_a, PyObject *__pyx_v_b, PyObject *__pyx_v_c) {
@@ -5599,10 +5599,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3");
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":763
- * 
+ *
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -5626,10 +5626,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
 
 /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":765
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
- * 
+ *
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
- * 
+ *
  */
 
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__pyx_v_a, PyObject *__pyx_v_b, PyObject *__pyx_v_c, PyObject *__pyx_v_d) {
@@ -5638,10 +5638,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4");
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":766
- * 
+ *
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -5665,10 +5665,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
 
 /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":768
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
- * 
+ *
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
- * 
+ *
  */
 
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__pyx_v_a, PyObject *__pyx_v_b, PyObject *__pyx_v_c, PyObject *__pyx_v_d, PyObject *__pyx_v_e) {
@@ -5677,10 +5677,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5");
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":769
- * 
+ *
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:
  */
   __Pyx_XDECREF(__pyx_r);
@@ -5704,7 +5704,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
 
 /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":771
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
- * 
+ *
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:             # <<<<<<<<<<<<<<
  *     # Recursive utility function used in __getbuffer__ to get format
  *     # string. The new location in the format string is returned.
@@ -5751,19 +5751,19 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *     cdef int endian_detector = 1
  *     cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
  *     cdef tuple fields
- * 
+ *
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":782
  *     cdef tuple fields
- * 
+ *
  *     for childname in descr.names:             # <<<<<<<<<<<<<<
  *         fields = descr.fields[childname]
  *         child, new_offset = fields
  */
   if (unlikely(__pyx_v_descr->names == Py_None)) {
-    PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable"); {__pyx_filename = __pyx_f[1]; __pyx_lineno = 782; __pyx_clineno = __LINE__; goto __pyx_L1_error;} 
+    PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable"); {__pyx_filename = __pyx_f[1]; __pyx_lineno = 782; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   __pyx_t_1 = 0; __pyx_t_2 = ((PyObject *)__pyx_v_descr->names); __Pyx_INCREF(__pyx_t_2);
   for (;;) {
@@ -5774,11 +5774,11 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_3 = 0;
 
     /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":783
- * 
+ *
  *     for childname in descr.names:
  *         fields = descr.fields[childname]             # <<<<<<<<<<<<<<
  *         child, new_offset = fields
- * 
+ *
  */
     __pyx_t_3 = PyObject_GetItem(__pyx_v_descr->fields, __pyx_v_childname); if (!__pyx_t_3) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 783; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
@@ -5791,7 +5791,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *     for childname in descr.names:
  *         fields = descr.fields[childname]
  *         child, new_offset = fields             # <<<<<<<<<<<<<<
- * 
+ *
  *         if (end - f) - (new_offset - offset[0]) < 15:
  */
     if (likely(((PyObject *)__pyx_v_fields) != Py_None) && likely(PyTuple_GET_SIZE(((PyObject *)__pyx_v_fields)) == 2)) {
@@ -5812,10 +5812,10 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
 
     /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":786
  *         child, new_offset = fields
- * 
+ *
  *         if (end - f) - (new_offset - offset[0]) < 15:             # <<<<<<<<<<<<<<
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
- * 
+ *
  */
     __pyx_t_4 = PyInt_FromLong((__pyx_v_end - __pyx_v_f)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 786; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
@@ -5836,10 +5836,10 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     if (__pyx_t_6) {
 
       /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":787
- * 
+ *
  *         if (end - f) - (new_offset - offset[0]) < 15:
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")             # <<<<<<<<<<<<<<
- * 
+ *
  *         if ((child.byteorder == '>' and little_endian) or
  */
       __pyx_t_5 = PyObject_Call(__pyx_builtin_RuntimeError, ((PyObject *)__pyx_k_tuple_16), NULL); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 787; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -5853,7 +5853,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
 
     /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":789
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
- * 
+ *
  *         if ((child.byteorder == '>' and little_endian) or             # <<<<<<<<<<<<<<
  *             (child.byteorder == '<' and not little_endian)):
  *             raise ValueError(u"Non-native byte order not supported")
@@ -5867,7 +5867,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     if (!__pyx_t_7) {
 
       /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":790
- * 
+ *
  *         if ((child.byteorder == '>' and little_endian) or
  *             (child.byteorder == '<' and not little_endian)):             # <<<<<<<<<<<<<<
  *             raise ValueError(u"Non-native byte order not supported")
@@ -5903,7 +5903,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_L6:;
 
     /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":801
- * 
+ *
  *         # Output padding bytes
  *         while offset[0] < new_offset:             # <<<<<<<<<<<<<<
  *             f[0] = 120 # "x"; pad byte
@@ -5933,7 +5933,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *             f[0] = 120 # "x"; pad byte
  *             f += 1             # <<<<<<<<<<<<<<
  *             offset[0] += 1
- * 
+ *
  */
       __pyx_v_f = (__pyx_v_f + 1);
 
@@ -5941,7 +5941,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *             f[0] = 120 # "x"; pad byte
  *             f += 1
  *             offset[0] += 1             # <<<<<<<<<<<<<<
- * 
+ *
  *         offset[0] += child.itemsize
  */
       __pyx_t_10 = 0;
@@ -5950,9 +5950,9 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
 
     /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":806
  *             offset[0] += 1
- * 
+ *
  *         offset[0] += child.itemsize             # <<<<<<<<<<<<<<
- * 
+ *
  *         if not PyDataType_HASFIELDS(child):
  */
     __pyx_t_10 = 0;
@@ -5960,7 +5960,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
 
     /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":808
  *         offset[0] += child.itemsize
- * 
+ *
  *         if not PyDataType_HASFIELDS(child):             # <<<<<<<<<<<<<<
  *             t = child.type_num
  *             if end - f < 5:
@@ -5969,7 +5969,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     if (__pyx_t_6) {
 
       /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":809
- * 
+ *
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num             # <<<<<<<<<<<<<<
  *             if end - f < 5:
@@ -5986,7 +5986,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *             t = child.type_num
  *             if end - f < 5:             # <<<<<<<<<<<<<<
  *                 raise RuntimeError(u"Format string allocated too short.")
- * 
+ *
  */
       __pyx_t_6 = ((__pyx_v_end - __pyx_v_f) < 5);
       if (__pyx_t_6) {
@@ -5995,7 +5995,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *             t = child.type_num
  *             if end - f < 5:
  *                 raise RuntimeError(u"Format string allocated too short.")             # <<<<<<<<<<<<<<
- * 
+ *
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  */
         __pyx_t_3 = PyObject_Call(__pyx_builtin_RuntimeError, ((PyObject *)__pyx_k_tuple_19), NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 811; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -6008,7 +6008,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __pyx_L10:;
 
       /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":814
- * 
+ *
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"             # <<<<<<<<<<<<<<
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"
@@ -6377,7 +6377,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)             # <<<<<<<<<<<<<<
  *     return f
- * 
+ *
  */
       __pyx_t_11 = __pyx_f_5numpy__util_dtypestring(__pyx_v_child, __pyx_v_f, __pyx_v_end, __pyx_v_offset); if (unlikely(__pyx_t_11 == NULL)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 837; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __pyx_v_f = __pyx_t_11;
@@ -6390,8 +6390,8 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)
  *     return f             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __pyx_r = __pyx_v_f;
   goto __pyx_L0;
@@ -6416,8 +6416,8 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
 }
 
 /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":953
- * 
- * 
+ *
+ *
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
  *      cdef PyObject* baseptr
  *      if base is None:
@@ -6475,7 +6475,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  *          baseptr = <PyObject*>base
  *      Py_XDECREF(arr.base)             # <<<<<<<<<<<<<<
  *      arr.base = baseptr
- * 
+ *
  */
   Py_XDECREF(__pyx_v_arr->base);
 
@@ -6483,7 +6483,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  *          baseptr = <PyObject*>base
  *      Py_XDECREF(arr.base)
  *      arr.base = baseptr             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef inline object get_array_base(ndarray arr):
  */
   __pyx_v_arr->base = __pyx_v_baseptr;
@@ -6493,7 +6493,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
 
 /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":963
  *      arr.base = baseptr
- * 
+ *
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
  *     if arr.base is NULL:
  *         return None
@@ -6505,7 +6505,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __Pyx_RefNannySetupContext("get_array_base");
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":964
- * 
+ *
  * cdef inline object get_array_base(ndarray arr):
  *     if arr.base is NULL:             # <<<<<<<<<<<<<<
  *         return None
@@ -6647,10 +6647,10 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants");
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":193
- * 
+ *
  *     if copy_predict_values(T.data, model, T.shape, dec_values.data, n_class) < 0:
  *         raise MemoryError("We've run out of of memory")             # <<<<<<<<<<<<<<
- * 
+ *
  *     ### FREE
  */
   __pyx_k_tuple_2 = PyTuple_New(1); if (unlikely(!__pyx_k_tuple_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 193; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -6664,7 +6664,7 @@ static int __Pyx_InitCachedConstants(void) {
  *         T_indices.data, T_indptr.shape, T_indptr.data, model,
  *         dec_values.data, n_class) < 0:
  *         raise MemoryError("We've run out of of memory")             # <<<<<<<<<<<<<<
- * 
+ *
  *     ### FREE
  */
   __pyx_k_tuple_3 = PyTuple_New(1); if (unlikely(!__pyx_k_tuple_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 237; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -6678,7 +6678,7 @@ static int __Pyx_InitCachedConstants(void) {
  *     dec_values = np.empty(T.shape[0], dtype=np.int32)
  *     if copy_predict(T.data, model, T.shape, dec_values.data) < 0:
  *         raise MemoryError("We've run out of of memory")             # <<<<<<<<<<<<<<
- * 
+ *
  *     ### FREE
  */
   __pyx_k_tuple_4 = PyTuple_New(1); if (unlikely(!__pyx_k_tuple_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 264; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -6692,7 +6692,7 @@ static int __Pyx_InitCachedConstants(void) {
  *                         T_indptr.shape, T_indptr.data,
  *                         model, dec_values.data) < 0:
  *         raise MemoryError("We've run out of of memory")             # <<<<<<<<<<<<<<
- * 
+ *
  *     ### FREE
  */
   __pyx_k_tuple_5 = PyTuple_New(1); if (unlikely(!__pyx_k_tuple_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 302; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -6706,7 +6706,7 @@ static int __Pyx_InitCachedConstants(void) {
  *     dec_values = np.empty((T.shape[0], nr_class), dtype=np.float64)
  *     if copy_prob_predict(T.data, model, T.shape, dec_values.data) < 0:
  *         raise MemoryError("We've run out of of memory")             # <<<<<<<<<<<<<<
- * 
+ *
  *     ### FREE
  */
   __pyx_k_tuple_6 = PyTuple_New(1); if (unlikely(!__pyx_k_tuple_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 356; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -6720,7 +6720,7 @@ static int __Pyx_InitCachedConstants(void) {
  *                         T_indptr.shape, T_indptr.data,
  *                         model, dec_values.data) < 0:
  *         raise MemoryError("We've run out of of memory")             # <<<<<<<<<<<<<<
- * 
+ *
  *     ### FREE
  */
   __pyx_k_tuple_7 = PyTuple_New(1); if (unlikely(!__pyx_k_tuple_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 398; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -6734,7 +6734,7 @@ static int __Pyx_InitCachedConstants(void) {
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")             # <<<<<<<<<<<<<<
- * 
+ *
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  */
   __pyx_k_tuple_9 = PyTuple_New(1); if (unlikely(!__pyx_k_tuple_9)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 206; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -6748,7 +6748,7 @@ static int __Pyx_InitCachedConstants(void) {
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")             # <<<<<<<<<<<<<<
- * 
+ *
  *             info.buf = PyArray_DATA(self)
  */
   __pyx_k_tuple_11 = PyTuple_New(1); if (unlikely(!__pyx_k_tuple_11)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 210; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -6773,10 +6773,10 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(((PyObject *)__pyx_k_tuple_13));
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":787
- * 
+ *
  *         if (end - f) - (new_offset - offset[0]) < 15:
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")             # <<<<<<<<<<<<<<
- * 
+ *
  *         if ((child.byteorder == '>' and little_endian) or
  */
   __pyx_k_tuple_16 = PyTuple_New(1); if (unlikely(!__pyx_k_tuple_16)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 787; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -6804,7 +6804,7 @@ static int __Pyx_InitCachedConstants(void) {
  *             t = child.type_num
  *             if end - f < 5:
  *                 raise RuntimeError(u"Format string allocated too short.")             # <<<<<<<<<<<<<<
- * 
+ *
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  */
   __pyx_k_tuple_19 = PyTuple_New(1); if (unlikely(!__pyx_k_tuple_19)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 811; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -6897,10 +6897,10 @@ PyMODINIT_FUNC PyInit__liblinear(void)
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":7
  * """
- * 
+ *
  * import  numpy as np             # <<<<<<<<<<<<<<
  * cimport numpy as np
- * 
+ *
  */
   __pyx_t_1 = __Pyx_Import(((PyObject *)__pyx_n_s__numpy), 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 7; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
@@ -6908,8 +6908,8 @@ PyMODINIT_FUNC PyInit__liblinear(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":59
- * 
- * 
+ *
+ *
  * def train_wrap ( np.ndarray[np.float64_t, ndim=2, mode='c'] X,             # <<<<<<<<<<<<<<
  *                  np.ndarray[np.int32_t, ndim=1, mode='c'] Y, int
  *                  solver_type, double eps, double bias, double C,
@@ -6921,7 +6921,7 @@ PyMODINIT_FUNC PyInit__liblinear(void)
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":111
  *     return w, label
- * 
+ *
  * def csr_train_wrap ( int n_features,             # <<<<<<<<<<<<<<
  *                  np.ndarray[np.float64_t, ndim=1, mode='c'] X_values,
  *                  np.ndarray[np.int32_t,   ndim=1, mode='c'] X_indices,
@@ -6932,8 +6932,8 @@ PyMODINIT_FUNC PyInit__liblinear(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":170
- * 
- * 
+ *
+ *
  * def decision_function_wrap(             # <<<<<<<<<<<<<<
  *     np.ndarray[np.float64_t, ndim=2, mode='c'] T,
  *     np.ndarray[np.float64_t, ndim=2, mode='fortran'] coef_,
@@ -6944,8 +6944,8 @@ PyMODINIT_FUNC PyInit__liblinear(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":202
- * 
- * 
+ *
+ *
  * def csr_decision_function_wrap(             # <<<<<<<<<<<<<<
  *     int n_features,
  *     np.ndarray[np.float64_t, ndim=1, mode='c'] T_values,
@@ -6956,8 +6956,8 @@ PyMODINIT_FUNC PyInit__liblinear(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":245
- * 
- * 
+ *
+ *
  * def predict_wrap(             # <<<<<<<<<<<<<<
  *     np.ndarray[np.float64_t, ndim=2, mode='c'] T,
  *     np.ndarray[np.float64_t, ndim=2, mode='fortran'] coef_,
@@ -6968,8 +6968,8 @@ PyMODINIT_FUNC PyInit__liblinear(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":272
- * 
- * 
+ *
+ *
  * def csr_predict_wrap(             # <<<<<<<<<<<<<<
  *         int n_features,
  *         np.ndarray[np.float64_t, ndim=1, mode='c'] T_values,
@@ -6980,8 +6980,8 @@ PyMODINIT_FUNC PyInit__liblinear(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":312
- * 
- * 
+ *
+ *
  * def predict_prob_wrap(np.ndarray[np.float64_t, ndim=2, mode='c'] T,             # <<<<<<<<<<<<<<
  *                  np.ndarray[np.float64_t, ndim=2, mode='fortran'] coef_,
  *                  int solver_type, double eps, double C,
@@ -6992,8 +6992,8 @@ PyMODINIT_FUNC PyInit__liblinear(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":366
- * 
- * 
+ *
+ *
  * def csr_predict_prob(             # <<<<<<<<<<<<<<
  *         int n_features,
  *         np.ndarray[np.float64_t, ndim=1, mode='c'] T_values,
@@ -7006,7 +7006,7 @@ PyMODINIT_FUNC PyInit__liblinear(void)
   /* "/Users/dyamins/scikit-learn-dy/scikits/learn/svm/src/liblinear/_liblinear.pyx":1
  * """             # <<<<<<<<<<<<<<
  * Wrapper for liblinear
- * 
+ *
  */
   __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(((PyObject *)__pyx_t_1));
@@ -7015,7 +7015,7 @@ PyMODINIT_FUNC PyInit__liblinear(void)
 
   /* "/usr/local/Cellar/python/2.7/lib/python2.7/site-packages/Cython/Includes/numpy.pxd":963
  *      arr.base = baseptr
- * 
+ *
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
  *     if arr.base is NULL:
  *         return None

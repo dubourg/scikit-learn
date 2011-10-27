@@ -165,7 +165,7 @@
   #elif defined(_MSC_VER)
     #define CYTHON_INLINE __inline
   #else
-    #define CYTHON_INLINE 
+    #define CYTHON_INLINE
   #endif
 #endif
 
@@ -262,7 +262,7 @@ static CYTHON_INLINE size_t __Pyx_PyInt_AsSize_t(PyObject*);
 
 #ifdef __GNUC__
 /* Test for GCC > 2.95 */
-#if __GNUC__ > 2 ||               (__GNUC__ == 2 && (__GNUC_MINOR__ > 95)) 
+#if __GNUC__ > 2 ||               (__GNUC__ == 2 && (__GNUC_MINOR__ > 95))
 #define likely(x)   __builtin_expect(!!(x), 1)
 #define unlikely(x) __builtin_expect(!!(x), 0)
 #else /* __GNUC__ > 2 ... */
@@ -273,7 +273,7 @@ static CYTHON_INLINE size_t __Pyx_PyInt_AsSize_t(PyObject*);
 #define likely(x)   (x)
 #define unlikely(x) (x)
 #endif /* __GNUC__ */
-    
+
 static PyObject *__pyx_m;
 static PyObject *__pyx_b;
 static PyObject *__pyx_empty_tuple;
@@ -382,7 +382,7 @@ typedef npy_cdouble __pyx_t_5numpy_complex_t;
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pxd":19
  * # -----------------------------------------
- * 
+ *
  * cdef class LossFunction:             # <<<<<<<<<<<<<<
  *     cpdef double loss(self, double p, double y)
  *     cpdef double dloss(self, double p, double y)
@@ -395,7 +395,7 @@ struct __pyx_obj_7scikits_5learn_12linear_model_8sgd_fast_LossFunction {
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pxd":23
  *     cpdef double dloss(self, double p, double y)
- * 
+ *
  * cdef class Regression(LossFunction):             # <<<<<<<<<<<<<<
  *     cpdef double loss(self,double p, double y)
  *     cpdef double dloss(self,double p, double y)
@@ -407,7 +407,7 @@ struct __pyx_obj_7scikits_5learn_12linear_model_8sgd_fast_Regression {
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pxd":43
  *     cpdef double dloss(self, double p, double y)
- * 
+ *
  * cdef class SquaredLoss(Regression):             # <<<<<<<<<<<<<<
  *     cpdef double loss(self, double p, double y)
  *     cpdef double dloss(self, double p, double y)
@@ -419,7 +419,7 @@ struct __pyx_obj_7scikits_5learn_12linear_model_8sgd_fast_SquaredLoss {
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pxd":27
  *     cpdef double dloss(self,double p, double y)
- * 
+ *
  * cdef class Classification(LossFunction):             # <<<<<<<<<<<<<<
  *     cpdef double loss(self, double p, double y)
  *     cpdef double dloss(self, double p, double y)
@@ -431,7 +431,7 @@ struct __pyx_obj_7scikits_5learn_12linear_model_8sgd_fast_Classification {
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pxd":35
  *     cpdef double dloss(self, double p, double y)
- * 
+ *
  * cdef class Hinge(Classification):             # <<<<<<<<<<<<<<
  *     cpdef double loss(self, double p, double y)
  *     cpdef double dloss(self, double p, double y)
@@ -443,7 +443,7 @@ struct __pyx_obj_7scikits_5learn_12linear_model_8sgd_fast_Hinge {
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pxd":47
  *     cpdef double dloss(self, double p, double y)
- * 
+ *
  * cdef class Huber(Regression):             # <<<<<<<<<<<<<<
  *     cdef double c
  *     cpdef double loss(self, double p, double y)
@@ -456,7 +456,7 @@ struct __pyx_obj_7scikits_5learn_12linear_model_8sgd_fast_Huber {
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pxd":31
  *     cpdef double dloss(self, double p, double y)
- * 
+ *
  * cdef class ModifiedHuber(Classification):             # <<<<<<<<<<<<<<
  *     cpdef double loss(self, double p, double y)
  *     cpdef double dloss(self, double p, double y)
@@ -468,7 +468,7 @@ struct __pyx_obj_7scikits_5learn_12linear_model_8sgd_fast_ModifiedHuber {
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pxd":39
  *     cpdef double dloss(self, double p, double y)
- * 
+ *
  * cdef class Log(Classification):             # <<<<<<<<<<<<<<
  *     cpdef double loss(self, double p, double y)
  *     cpdef double dloss(self, double p, double y)
@@ -481,10 +481,10 @@ struct __pyx_obj_7scikits_5learn_12linear_model_8sgd_fast_Log {
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":25
  * # ----------------------------------------
- * 
+ *
  * cdef class LossFunction:             # <<<<<<<<<<<<<<
  *     """Base class for convex loss functions"""
- * 
+ *
  */
 
 struct __pyx_vtabstruct_7scikits_5learn_12linear_model_8sgd_fast_LossFunction {
@@ -495,11 +495,11 @@ static struct __pyx_vtabstruct_7scikits_5learn_12linear_model_8sgd_fast_LossFunc
 
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":49
- * 
- * 
+ *
+ *
  * cdef class Regression(LossFunction):             # <<<<<<<<<<<<<<
  *     """Base class for loss functions for regression"""
- * 
+ *
  */
 
 struct __pyx_vtabstruct_7scikits_5learn_12linear_model_8sgd_fast_Regression {
@@ -509,11 +509,11 @@ static struct __pyx_vtabstruct_7scikits_5learn_12linear_model_8sgd_fast_Regressi
 
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":154
- * 
- * 
+ *
+ *
  * cdef class Huber(Regression):             # <<<<<<<<<<<<<<
  *     """Huber regression loss
- * 
+ *
  */
 
 struct __pyx_vtabstruct_7scikits_5learn_12linear_model_8sgd_fast_Huber {
@@ -523,11 +523,11 @@ static struct __pyx_vtabstruct_7scikits_5learn_12linear_model_8sgd_fast_Huber *_
 
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":59
- * 
- * 
+ *
+ *
  * cdef class Classification(LossFunction):             # <<<<<<<<<<<<<<
  *     """Base class for loss functions for classification"""
- * 
+ *
  */
 
 struct __pyx_vtabstruct_7scikits_5learn_12linear_model_8sgd_fast_Classification {
@@ -537,8 +537,8 @@ static struct __pyx_vtabstruct_7scikits_5learn_12linear_model_8sgd_fast_Classifi
 
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":99
- * 
- * 
+ *
+ *
  * cdef class Hinge(Classification):             # <<<<<<<<<<<<<<
  *     """SVM loss for binary classification tasks with y in {-1,1}"""
  *     cpdef double loss(self, double p, double y):
@@ -551,11 +551,11 @@ static struct __pyx_vtabstruct_7scikits_5learn_12linear_model_8sgd_fast_Hinge *_
 
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":117
- * 
- * 
+ *
+ *
  * cdef class Log(Classification):             # <<<<<<<<<<<<<<
  *     """Logistic regression loss for binary classification with y in {-1, 1}"""
- * 
+ *
  */
 
 struct __pyx_vtabstruct_7scikits_5learn_12linear_model_8sgd_fast_Log {
@@ -565,11 +565,11 @@ static struct __pyx_vtabstruct_7scikits_5learn_12linear_model_8sgd_fast_Log *__p
 
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":69
- * 
- * 
+ *
+ *
  * cdef class ModifiedHuber(Classification):             # <<<<<<<<<<<<<<
  *     """Modified Huber loss for binary classification with y in {-1, 1}
- * 
+ *
  */
 
 struct __pyx_vtabstruct_7scikits_5learn_12linear_model_8sgd_fast_ModifiedHuber {
@@ -579,8 +579,8 @@ static struct __pyx_vtabstruct_7scikits_5learn_12linear_model_8sgd_fast_Modified
 
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":142
- * 
- * 
+ *
+ *
  * cdef class SquaredLoss(Regression):             # <<<<<<<<<<<<<<
  *     """Squared loss traditional used in linear regression."""
  *     cpdef double loss(self, double p, double y):
@@ -1114,10 +1114,10 @@ static PyObject *__pyx_int_15;
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":28
  *     """Base class for convex loss functions"""
- * 
+ *
  *     cpdef double loss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         """Evaluate the loss function.
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_12LossFunction_loss(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -1164,7 +1164,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_12LossFunction_l
  *         :type y: double
  *         :returns: double"""
  *         raise NotImplementedError()             # <<<<<<<<<<<<<<
- * 
+ *
  *     cpdef double dloss(self, double p, double y):
  */
   __pyx_t_1 = PyObject_Call(__pyx_builtin_NotImplementedError, ((PyObject *)__pyx_empty_tuple), NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -1189,10 +1189,10 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_12LossFunction_l
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":28
  *     """Base class for convex loss functions"""
- * 
+ *
  *     cpdef double loss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         """Evaluate the loss function.
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_12LossFunction_loss(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -1264,10 +1264,10 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_12LossFunctio
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":38
  *         raise NotImplementedError()
- * 
+ *
  *     cpdef double dloss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         """Evaluate the derivative of the loss function.
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_12LossFunction_dloss(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -1314,8 +1314,8 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_12LossFunction_d
  *         :type y: double
  *         :returns: double"""
  *         raise NotImplementedError()             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __pyx_t_1 = PyObject_Call(__pyx_builtin_NotImplementedError, ((PyObject *)__pyx_empty_tuple), NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
@@ -1339,10 +1339,10 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_12LossFunction_d
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":38
  *         raise NotImplementedError()
- * 
+ *
  *     cpdef double dloss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         """Evaluate the derivative of the loss function.
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_12LossFunction_dloss(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -1414,10 +1414,10 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_12LossFunctio
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":52
  *     """Base class for loss functions for regression"""
- * 
+ *
  *     cpdef double loss(self,double p, double y):             # <<<<<<<<<<<<<<
  *         raise NotImplementedError()
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_10Regression_loss(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -1461,10 +1461,10 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_10Regression_los
   }
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":53
- * 
+ *
  *     cpdef double loss(self,double p, double y):
  *         raise NotImplementedError()             # <<<<<<<<<<<<<<
- * 
+ *
  *     cpdef double dloss(self,double p, double y):
  */
   __pyx_t_1 = PyObject_Call(__pyx_builtin_NotImplementedError, ((PyObject *)__pyx_empty_tuple), NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -1489,10 +1489,10 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_10Regression_los
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":52
  *     """Base class for loss functions for regression"""
- * 
+ *
  *     cpdef double loss(self,double p, double y):             # <<<<<<<<<<<<<<
  *         raise NotImplementedError()
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_10Regression_loss(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -1563,10 +1563,10 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_10Regression_
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":55
  *         raise NotImplementedError()
- * 
+ *
  *     cpdef double dloss(self,double p, double y):             # <<<<<<<<<<<<<<
  *         raise NotImplementedError()
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_10Regression_dloss(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -1610,11 +1610,11 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_10Regression_dlo
   }
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":56
- * 
+ *
  *     cpdef double dloss(self,double p, double y):
  *         raise NotImplementedError()             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __pyx_t_1 = PyObject_Call(__pyx_builtin_NotImplementedError, ((PyObject *)__pyx_empty_tuple), NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
@@ -1638,10 +1638,10 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_10Regression_dlo
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":55
  *         raise NotImplementedError()
- * 
+ *
  *     cpdef double dloss(self,double p, double y):             # <<<<<<<<<<<<<<
  *         raise NotImplementedError()
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_10Regression_dloss(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -1712,10 +1712,10 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_10Regression_
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":62
  *     """Base class for loss functions for classification"""
- * 
+ *
  *     cpdef double loss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         raise NotImplementedError()
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_14Classification_loss(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -1759,10 +1759,10 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_14Classification
   }
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":63
- * 
+ *
  *     cpdef double loss(self, double p, double y):
  *         raise NotImplementedError()             # <<<<<<<<<<<<<<
- * 
+ *
  *     cpdef double dloss(self, double p, double y):
  */
   __pyx_t_1 = PyObject_Call(__pyx_builtin_NotImplementedError, ((PyObject *)__pyx_empty_tuple), NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -1787,10 +1787,10 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_14Classification
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":62
  *     """Base class for loss functions for classification"""
- * 
+ *
  *     cpdef double loss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         raise NotImplementedError()
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_14Classification_loss(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -1861,10 +1861,10 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_14Classificat
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":65
  *         raise NotImplementedError()
- * 
+ *
  *     cpdef double dloss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         raise NotImplementedError()
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_14Classification_dloss(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -1908,11 +1908,11 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_14Classification
   }
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":66
- * 
+ *
  *     cpdef double dloss(self, double p, double y):
  *         raise NotImplementedError()             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __pyx_t_1 = PyObject_Call(__pyx_builtin_NotImplementedError, ((PyObject *)__pyx_empty_tuple), NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 66; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
@@ -1936,10 +1936,10 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_14Classification
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":65
  *         raise NotImplementedError()
- * 
+ *
  *     cpdef double dloss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         raise NotImplementedError()
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_14Classification_dloss(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -2117,7 +2117,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_13ModifiedHuber_
  *             return (1.0 - z) * (1.0 - z)
  *         else:
  *             return -4.0 * z             # <<<<<<<<<<<<<<
- * 
+ *
  *     cpdef double dloss(self, double p, double y):
  */
     __pyx_r = ((-4.0) * __pyx_v_z);
@@ -2216,7 +2216,7 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_13ModifiedHub
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":86
  *             return -4.0 * z
- * 
+ *
  *     cpdef double dloss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         cdef double z = p * y
  *         if z >= 1.0:
@@ -2266,7 +2266,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_13ModifiedHuber_
   }
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":87
- * 
+ *
  *     cpdef double dloss(self, double p, double y):
  *         cdef double z = p * y             # <<<<<<<<<<<<<<
  *         if z >= 1.0:
@@ -2323,7 +2323,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_13ModifiedHuber_
  *             return 2.0 * (1.0 - z) * y
  *         else:
  *             return 4.0 * y             # <<<<<<<<<<<<<<
- * 
+ *
  *     def __reduce__(self):
  */
     __pyx_r = (4.0 * __pyx_v_y);
@@ -2348,7 +2348,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_13ModifiedHuber_
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":86
  *             return -4.0 * z
- * 
+ *
  *     cpdef double dloss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         cdef double z = p * y
  *         if z >= 1.0:
@@ -2422,10 +2422,10 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_13ModifiedHub
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":95
  *             return 4.0 * y
- * 
+ *
  *     def __reduce__(self):             # <<<<<<<<<<<<<<
  *         return ModifiedHuber, ()
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_13ModifiedHuber___reduce__(PyObject *__pyx_v_self, PyObject *unused); /*proto*/
@@ -2435,11 +2435,11 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_13ModifiedHub
   __Pyx_RefNannySetupContext("__reduce__");
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":96
- * 
+ *
  *     def __reduce__(self):
  *         return ModifiedHuber, ()             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2541,7 +2541,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_5Hinge_loss(stru
  *         if z < 1.0:
  *             return (1 - z)             # <<<<<<<<<<<<<<
  *         return 0.0
- * 
+ *
  */
     __pyx_r = (1 - __pyx_v_z);
     goto __pyx_L0;
@@ -2553,7 +2553,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_5Hinge_loss(stru
  *         if z < 1.0:
  *             return (1 - z)
  *         return 0.0             # <<<<<<<<<<<<<<
- * 
+ *
  *     cpdef double dloss(self, double p, double y):
  */
   __pyx_r = 0.0;
@@ -2650,7 +2650,7 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_5Hinge_loss(P
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":107
  *         return 0.0
- * 
+ *
  *     cpdef double dloss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         cdef double z = p * y
  *         if z < 1.0:
@@ -2700,7 +2700,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_5Hinge_dloss(str
   }
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":108
- * 
+ *
  *     cpdef double dloss(self, double p, double y):
  *         cdef double z = p * y             # <<<<<<<<<<<<<<
  *         if z < 1.0:
@@ -2723,7 +2723,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_5Hinge_dloss(str
  *         if z < 1.0:
  *             return y             # <<<<<<<<<<<<<<
  *         return 0.0
- * 
+ *
  */
     __pyx_r = __pyx_v_y;
     goto __pyx_L0;
@@ -2735,7 +2735,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_5Hinge_dloss(str
  *         if z < 1.0:
  *             return y
  *         return 0.0             # <<<<<<<<<<<<<<
- * 
+ *
  *     def __reduce__(self):
  */
   __pyx_r = 0.0;
@@ -2758,7 +2758,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_5Hinge_dloss(str
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":107
  *         return 0.0
- * 
+ *
  *     cpdef double dloss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         cdef double z = p * y
  *         if z < 1.0:
@@ -2832,10 +2832,10 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_5Hinge_dloss(
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":113
  *         return 0.0
- * 
+ *
  *     def __reduce__(self):             # <<<<<<<<<<<<<<
  *         return Hinge, ()
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_5Hinge___reduce__(PyObject *__pyx_v_self, PyObject *unused); /*proto*/
@@ -2845,11 +2845,11 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_5Hinge___redu
   __Pyx_RefNannySetupContext("__reduce__");
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":114
- * 
+ *
  *     def __reduce__(self):
  *         return Hinge, ()             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 114; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2878,7 +2878,7 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_5Hinge___redu
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":120
  *     """Logistic regression loss for binary classification with y in {-1, 1}"""
- * 
+ *
  *     cpdef double loss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         cdef double z = p * y
  *         # approximately equal and saves the computation of the log
@@ -2928,7 +2928,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_3Log_loss(struct
   }
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":121
- * 
+ *
  *     cpdef double loss(self, double p, double y):
  *         cdef double z = p * y             # <<<<<<<<<<<<<<
  *         # approximately equal and saves the computation of the log
@@ -2974,7 +2974,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_3Log_loss(struct
  *         if z < -18:
  *             return -z * y             # <<<<<<<<<<<<<<
  *         return log(1.0 + exp(-z))
- * 
+ *
  */
     __pyx_r = ((-__pyx_v_z) * __pyx_v_y);
     goto __pyx_L0;
@@ -2986,7 +2986,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_3Log_loss(struct
  *         if z < -18:
  *             return -z * y
  *         return log(1.0 + exp(-z))             # <<<<<<<<<<<<<<
- * 
+ *
  *     cpdef double dloss(self, double p, double y):
  */
   __pyx_r = log((1.0 + exp((-__pyx_v_z))));
@@ -3009,7 +3009,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_3Log_loss(struct
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":120
  *     """Logistic regression loss for binary classification with y in {-1, 1}"""
- * 
+ *
  *     cpdef double loss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         cdef double z = p * y
  *         # approximately equal and saves the computation of the log
@@ -3083,7 +3083,7 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_3Log_loss(PyO
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":129
  *         return log(1.0 + exp(-z))
- * 
+ *
  *     cpdef double dloss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         cdef double z = p * y
  *         # approximately equal and saves the computation of the log
@@ -3133,7 +3133,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_3Log_dloss(struc
   }
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":130
- * 
+ *
  *     cpdef double dloss(self, double p, double y):
  *         cdef double z = p * y             # <<<<<<<<<<<<<<
  *         # approximately equal and saves the computation of the log
@@ -3179,7 +3179,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_3Log_dloss(struc
  *         if z < -18.0:
  *             return y             # <<<<<<<<<<<<<<
  *         return y / (exp(z) + 1.0)
- * 
+ *
  */
     __pyx_r = __pyx_v_y;
     goto __pyx_L0;
@@ -3191,7 +3191,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_3Log_dloss(struc
  *         if z < -18.0:
  *             return y
  *         return y / (exp(z) + 1.0)             # <<<<<<<<<<<<<<
- * 
+ *
  *     def __reduce__(self):
  */
   __pyx_r = (__pyx_v_y / (exp(__pyx_v_z) + 1.0));
@@ -3214,7 +3214,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_3Log_dloss(struc
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":129
  *         return log(1.0 + exp(-z))
- * 
+ *
  *     cpdef double dloss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         cdef double z = p * y
  *         # approximately equal and saves the computation of the log
@@ -3288,10 +3288,10 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_3Log_dloss(Py
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":138
  *         return y / (exp(z) + 1.0)
- * 
+ *
  *     def __reduce__(self):             # <<<<<<<<<<<<<<
  *         return Log, ()
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_3Log___reduce__(PyObject *__pyx_v_self, PyObject *unused); /*proto*/
@@ -3301,11 +3301,11 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_3Log___reduce
   __Pyx_RefNannySetupContext("__reduce__");
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":139
- * 
+ *
  *     def __reduce__(self):
  *         return Log, ()             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 139; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3337,7 +3337,7 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_3Log___reduce
  *     """Squared loss traditional used in linear regression."""
  *     cpdef double loss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         return 0.5 * (p - y) * (p - y)
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_11SquaredLoss_loss(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -3384,7 +3384,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_11SquaredLoss_lo
  *     """Squared loss traditional used in linear regression."""
  *     cpdef double loss(self, double p, double y):
  *         return 0.5 * (p - y) * (p - y)             # <<<<<<<<<<<<<<
- * 
+ *
  *     cpdef double dloss(self, double p, double y):
  */
   __pyx_r = ((0.5 * (__pyx_v_p - __pyx_v_y)) * (__pyx_v_p - __pyx_v_y));
@@ -3409,7 +3409,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_11SquaredLoss_lo
  *     """Squared loss traditional used in linear regression."""
  *     cpdef double loss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         return 0.5 * (p - y) * (p - y)
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_11SquaredLoss_loss(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -3480,10 +3480,10 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_11SquaredLoss
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":147
  *         return 0.5 * (p - y) * (p - y)
- * 
+ *
  *     cpdef double dloss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         return y - p
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_11SquaredLoss_dloss(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -3527,10 +3527,10 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_11SquaredLoss_dl
   }
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":148
- * 
+ *
  *     cpdef double dloss(self, double p, double y):
  *         return y - p             # <<<<<<<<<<<<<<
- * 
+ *
  *     def __reduce__(self):
  */
   __pyx_r = (__pyx_v_y - __pyx_v_p);
@@ -3552,10 +3552,10 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_11SquaredLoss_dl
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":147
  *         return 0.5 * (p - y) * (p - y)
- * 
+ *
  *     cpdef double dloss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         return y - p
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_11SquaredLoss_dloss(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -3626,10 +3626,10 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_11SquaredLoss
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":150
  *         return y - p
- * 
+ *
  *     def __reduce__(self):             # <<<<<<<<<<<<<<
  *         return SquaredLoss, ()
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_11SquaredLoss___reduce__(PyObject *__pyx_v_self, PyObject *unused); /*proto*/
@@ -3639,11 +3639,11 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_11SquaredLoss
   __Pyx_RefNannySetupContext("__reduce__");
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":151
- * 
+ *
  *     def __reduce__(self):
  *         return SquaredLoss, ()             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 151; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3672,10 +3672,10 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_11SquaredLoss
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":166
  *     """
- * 
+ *
  *     def __init__(self,c):             # <<<<<<<<<<<<<<
  *         self.c = c
- * 
+ *
  */
 
 static int __pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_5Huber___init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -3717,10 +3717,10 @@ static int __pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_5Huber___init__(PyO
   __pyx_L4_argument_unpacking_done:;
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":167
- * 
+ *
  *     def __init__(self,c):
  *         self.c = c             # <<<<<<<<<<<<<<
- * 
+ *
  *     cpdef double loss(self, double p, double y):
  */
   __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_c); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 167; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3738,7 +3738,7 @@ static int __pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_5Huber___init__(PyO
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":169
  *         self.c = c
- * 
+ *
  *     cpdef double loss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         cdef double r = p - y
  *         cdef double abs_r = abs(r)
@@ -3789,7 +3789,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_5Huber_loss(stru
   }
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":170
- * 
+ *
  *     cpdef double loss(self, double p, double y):
  *         cdef double r = p - y             # <<<<<<<<<<<<<<
  *         cdef double abs_r = abs(r)
@@ -3840,7 +3840,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_5Huber_loss(stru
  *             return 0.5 * r * r
  *         else:
  *             return self.c * abs_r - (0.5 * self.c * self.c)             # <<<<<<<<<<<<<<
- * 
+ *
  *     cpdef double dloss(self, double p, double y):
  */
     __pyx_r = ((__pyx_v_self->c * __pyx_v_abs_r) - ((0.5 * __pyx_v_self->c) * __pyx_v_self->c));
@@ -3865,7 +3865,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_5Huber_loss(stru
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":169
  *         self.c = c
- * 
+ *
  *     cpdef double loss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         cdef double r = p - y
  *         cdef double abs_r = abs(r)
@@ -3939,7 +3939,7 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_5Huber_loss(P
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":177
  *             return self.c * abs_r - (0.5 * self.c * self.c)
- * 
+ *
  *     cpdef double dloss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         cdef double r = y - p
  *         cdef double abs_r = abs(r)
@@ -3990,7 +3990,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_5Huber_dloss(str
   }
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":178
- * 
+ *
  *     cpdef double dloss(self, double p, double y):
  *         cdef double r = y - p             # <<<<<<<<<<<<<<
  *         cdef double abs_r = abs(r)
@@ -4063,7 +4063,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_5Huber_dloss(str
  *             return self.c
  *         else:
  *             return -self.c             # <<<<<<<<<<<<<<
- * 
+ *
  *     def __reduce__(self):
  */
     __pyx_r = (-__pyx_v_self->c);
@@ -4088,7 +4088,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_5Huber_dloss(str
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":177
  *             return self.c * abs_r - (0.5 * self.c * self.c)
- * 
+ *
  *     cpdef double dloss(self, double p, double y):             # <<<<<<<<<<<<<<
  *         cdef double r = y - p
  *         cdef double abs_r = abs(r)
@@ -4162,10 +4162,10 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_5Huber_dloss(
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":187
  *             return -self.c
- * 
+ *
  *     def __reduce__(self):             # <<<<<<<<<<<<<<
  *         return Huber,(self.c,)
- * 
+ *
  */
 
 static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_5Huber___reduce__(PyObject *__pyx_v_self, PyObject *unused); /*proto*/
@@ -4176,11 +4176,11 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_5Huber___redu
   __Pyx_RefNannySetupContext("__reduce__");
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":188
- * 
+ *
  *     def __reduce__(self):
  *         return Huber,(self.c,)             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_obj_7scikits_5learn_12linear_model_8sgd_fast_Huber *)__pyx_v_self)->c); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 188; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -4492,11 +4492,11 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
   __pyx_bshape_0_Y = __pyx_bstruct_Y.shape[0];
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":249
- * 
+ *
  *     # get the data information into easy vars
  *     cdef unsigned int n_samples = Y.shape[0]             # <<<<<<<<<<<<<<
  *     cdef unsigned int n_features = w.shape[0]
- * 
+ *
  */
   __pyx_v_n_samples = (__pyx_v_Y->dimensions[0]);
 
@@ -4504,17 +4504,17 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
  *     # get the data information into easy vars
  *     cdef unsigned int n_samples = Y.shape[0]
  *     cdef unsigned int n_features = w.shape[0]             # <<<<<<<<<<<<<<
- * 
+ *
  *     # Array strides to get to next feature or example
  */
   __pyx_v_n_features = (__pyx_v_w->dimensions[0]);
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":253
- * 
+ *
  *     # Array strides to get to next feature or example
  *     cdef int row_stride = X.strides[0]             # <<<<<<<<<<<<<<
  *     cdef int elem_stride = X.strides[1]
- * 
+ *
  */
   __pyx_v_row_stride = (__pyx_v_X->strides[0]);
 
@@ -4522,14 +4522,14 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
  *     # Array strides to get to next feature or example
  *     cdef int row_stride = X.strides[0]
  *     cdef int elem_stride = X.strides[1]             # <<<<<<<<<<<<<<
- * 
+ *
  *     cdef double *w_data_ptr = <double *>w.data
  */
   __pyx_v_elem_stride = (__pyx_v_X->strides[1]);
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":256
  *     cdef int elem_stride = X.strides[1]
- * 
+ *
  *     cdef double *w_data_ptr = <double *>w.data             # <<<<<<<<<<<<<<
  *     cdef double *X_data_ptr = <double *>X.data
  *     cdef double *Y_data_ptr = <double *>Y.data
@@ -4537,11 +4537,11 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
   __pyx_v_w_data_ptr = ((double *)__pyx_v_w->data);
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":257
- * 
+ *
  *     cdef double *w_data_ptr = <double *>w.data
  *     cdef double *X_data_ptr = <double *>X.data             # <<<<<<<<<<<<<<
  *     cdef double *Y_data_ptr = <double *>Y.data
- * 
+ *
  */
   __pyx_v_X_data_ptr = ((double *)__pyx_v_X->data);
 
@@ -4549,7 +4549,7 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
  *     cdef double *w_data_ptr = <double *>w.data
  *     cdef double *X_data_ptr = <double *>X.data
  *     cdef double *Y_data_ptr = <double *>Y.data             # <<<<<<<<<<<<<<
- * 
+ *
  *     # Use index array for fast shuffling
  */
   __pyx_v_Y_data_ptr = ((double *)__pyx_v_Y->data);
@@ -4581,7 +4581,7 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
  *     cdef np.ndarray[int, ndim=1, mode="c"] index = np.arange(n_samples,
  *                                                              dtype = np.int32)             # <<<<<<<<<<<<<<
  *     cdef int *index_data_ptr = <int *>index.data
- * 
+ *
  */
   __pyx_t_4 = __Pyx_GetName(__pyx_m, __pyx_n_s__np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 263; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
@@ -4614,13 +4614,13 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
  *     cdef np.ndarray[int, ndim=1, mode="c"] index = np.arange(n_samples,
  *                                                              dtype = np.int32)
  *     cdef int *index_data_ptr = <int *>index.data             # <<<<<<<<<<<<<<
- * 
+ *
  *     # helper variable
  */
   __pyx_v_index_data_ptr = ((int *)__pyx_v_index->data);
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":267
- * 
+ *
  *     # helper variable
  *     cdef int offset = 0             # <<<<<<<<<<<<<<
  *     cdef double wscale = 1.0
@@ -4732,7 +4732,7 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
  *     cdef unsigned int epoch = 0
  *     cdef unsigned int i = 0             # <<<<<<<<<<<<<<
  *     cdef int sample_idx = 0
- * 
+ *
  */
   __pyx_v_i = 0;
 
@@ -4740,13 +4740,13 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
  *     cdef unsigned int epoch = 0
  *     cdef unsigned int i = 0
  *     cdef int sample_idx = 0             # <<<<<<<<<<<<<<
- * 
+ *
  *     # q vector is only used for L1 regularization
  */
   __pyx_v_sample_idx = 0;
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":283
- * 
+ *
  *     # q vector is only used for L1 regularization
  *     cdef np.ndarray[double, ndim=1, mode="c"] q = None             # <<<<<<<<<<<<<<
  *     cdef double *q_data_ptr
@@ -4844,7 +4844,7 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
  *         q = np.zeros((n_features,), dtype = np.float64, order = "c")
  *         q_data_ptr = <double *> q.data             # <<<<<<<<<<<<<<
  *     cdef double u = 0.0
- * 
+ *
  */
     __pyx_v_q_data_ptr = ((double *)__pyx_v_q->data);
     goto __pyx_L6;
@@ -4855,17 +4855,17 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
  *         q = np.zeros((n_features,), dtype = np.float64, order = "c")
  *         q_data_ptr = <double *> q.data
  *     cdef double u = 0.0             # <<<<<<<<<<<<<<
- * 
+ *
  *     # computing eta0, the initial learning rate
  */
   __pyx_v_u = 0.0;
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":291
- * 
+ *
  *     # computing eta0, the initial learning rate
  *     cdef double typw = sqrt(1.0 / sqrt(alpha))             # <<<<<<<<<<<<<<
  *     cdef double eta0 = typw / max(1.0, loss.dloss(-typw, 1.0))
- * 
+ *
  */
   __pyx_v_typw = sqrt((1.0 / sqrt(__pyx_v_alpha)));
 
@@ -4873,13 +4873,13 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
  *     # computing eta0, the initial learning rate
  *     cdef double typw = sqrt(1.0 / sqrt(alpha))
  *     cdef double eta0 = typw / max(1.0, loss.dloss(-typw, 1.0))             # <<<<<<<<<<<<<<
- * 
+ *
  *     # initialize the 1 / t learning rate schedule from eta0
  */
   __pyx_v_eta0 = (__pyx_v_typw / __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_max(1.0, ((struct __pyx_vtabstruct_7scikits_5learn_12linear_model_8sgd_fast_LossFunction *)__pyx_v_loss->__pyx_vtab)->dloss(__pyx_v_loss, (-__pyx_v_typw), 1.0, 0)));
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":295
- * 
+ *
  *     # initialize the 1 / t learning rate schedule from eta0
  *     t = 1.0 / (eta0 * alpha)             # <<<<<<<<<<<<<<
  *     t_start = time()
@@ -5246,7 +5246,7 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
  *                 l1penalty(w_data_ptr, wscale, q_data_ptr, n_features, u)
  *             t += 1             # <<<<<<<<<<<<<<
  *             count += 1
- * 
+ *
  */
       __pyx_v_t += 1;
 
@@ -5254,14 +5254,14 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
  *                 l1penalty(w_data_ptr, wscale, q_data_ptr, n_features, u)
  *             t += 1
  *             count += 1             # <<<<<<<<<<<<<<
- * 
+ *
  *         # report epoche information
  */
       __pyx_v_count += 1;
     }
 
     /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":331
- * 
+ *
  *         # report epoche information
  *         if verbose > 0:             # <<<<<<<<<<<<<<
  *             wnorm = sqrt(np.dot(w, w) * wscale * wscale)
@@ -5359,7 +5359,7 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
  *                                                     intercept, count,
  *                                                     sumloss / count))             # <<<<<<<<<<<<<<
  *             print("Total training time: %.2f seconds." % (time()-t_start))
- * 
+ *
  */
       __pyx_t_2 = PyFloat_FromDouble((__pyx_v_sumloss / __pyx_v_count)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 337; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
@@ -5390,7 +5390,7 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
  *                                                     intercept, count,
  *                                                     sumloss / count))
  *             print("Total training time: %.2f seconds." % (time()-t_start))             # <<<<<<<<<<<<<<
- * 
+ *
  *         # floating-point under-/overflow check.
  */
       __pyx_t_2 = __Pyx_GetName(__pyx_m, __pyx_n_s__time); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 338; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -5411,7 +5411,7 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
     __pyx_L18:;
 
     /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":341
- * 
+ *
  *         # floating-point under-/overflow check.
  *         if np.any(np.isinf(w)) or np.any(np.isnan(w)) \             # <<<<<<<<<<<<<<
  *            or np.isnan(intercept) or np.isinf(intercept):
@@ -5454,7 +5454,7 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
  *         if np.any(np.isinf(w)) or np.any(np.isnan(w)) \
  *            or np.isnan(intercept) or np.isinf(intercept):             # <<<<<<<<<<<<<<
  *             raise ValueError("floating-point under-/overflow occured.")
- * 
+ *
  */
       __pyx_t_5 = __Pyx_GetName(__pyx_m, __pyx_n_s__np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_5);
@@ -5463,7 +5463,7 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
       /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":341
- * 
+ *
  *         # floating-point under-/overflow check.
  *         if np.any(np.isinf(w)) or np.any(np.isnan(w)) \             # <<<<<<<<<<<<<<
  *            or np.isnan(intercept) or np.isinf(intercept):
@@ -5501,7 +5501,7 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
  *         if np.any(np.isinf(w)) or np.any(np.isnan(w)) \
  *            or np.isnan(intercept) or np.isinf(intercept):             # <<<<<<<<<<<<<<
  *             raise ValueError("floating-point under-/overflow occured.")
- * 
+ *
  */
         __pyx_t_1 = __Pyx_GetName(__pyx_m, __pyx_n_s__np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 342; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_1);
@@ -5558,7 +5558,7 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
  *         if np.any(np.isinf(w)) or np.any(np.isnan(w)) \
  *            or np.isnan(intercept) or np.isinf(intercept):
  *             raise ValueError("floating-point under-/overflow occured.")             # <<<<<<<<<<<<<<
- * 
+ *
  *     w *= wscale
  */
       __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 343; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -5579,10 +5579,10 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":345
  *             raise ValueError("floating-point under-/overflow occured.")
- * 
+ *
  *     w *= wscale             # <<<<<<<<<<<<<<
  *     return w, intercept
- * 
+ *
  */
   __pyx_t_5 = PyFloat_FromDouble(__pyx_v_wscale); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 345; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
@@ -5614,11 +5614,11 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
   __pyx_t_1 = 0;
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":346
- * 
+ *
  *     w *= wscale
  *     return w, intercept             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_1 = PyFloat_FromDouble(__pyx_v_intercept); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 346; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -5675,11 +5675,11 @@ static PyObject *__pyx_pf_7scikits_5learn_12linear_model_8sgd_fast_plain_sgd(PyO
 }
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":349
- * 
- * 
+ *
+ *
  * cdef inline double max(double a, double b):             # <<<<<<<<<<<<<<
  *     return a if a >= b else b
- * 
+ *
  */
 
 static CYTHON_INLINE double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_max(double __pyx_v_a, double __pyx_v_b) {
@@ -5688,11 +5688,11 @@ static CYTHON_INLINE double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_max
   __Pyx_RefNannySetupContext("max");
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":350
- * 
+ *
  * cdef inline double max(double a, double b):
  *     return a if a >= b else b             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   if ((__pyx_v_a >= __pyx_v_b)) {
     __pyx_t_1 = __pyx_v_a;
@@ -5709,11 +5709,11 @@ static CYTHON_INLINE double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_max
 }
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":353
- * 
- * 
+ *
+ *
  * cdef inline double min(double a, double b):             # <<<<<<<<<<<<<<
  *     return a if a <= b else b
- * 
+ *
  */
 
 static CYTHON_INLINE double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_min(double __pyx_v_a, double __pyx_v_b) {
@@ -5722,11 +5722,11 @@ static CYTHON_INLINE double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_min
   __Pyx_RefNannySetupContext("min");
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":354
- * 
+ *
  * cdef inline double min(double a, double b):
  *     return a if a <= b else b             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   if ((__pyx_v_a <= __pyx_v_b)) {
     __pyx_t_1 = __pyx_v_a;
@@ -5743,8 +5743,8 @@ static CYTHON_INLINE double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_min
 }
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":357
- * 
- * 
+ *
+ *
  * cdef double dot(double *w_data_ptr, double *X_data_ptr,             # <<<<<<<<<<<<<<
  *                 int offset, unsigned int n_features):
  *     cdef double sum = 0.0
@@ -5781,7 +5781,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_dot(double *__py
  *     for j from 0 <= j < n_features:
  *         sum += w_data_ptr[j] * X_data_ptr[offset + j]             # <<<<<<<<<<<<<<
  *     return sum
- * 
+ *
  */
     __pyx_v_sum += ((__pyx_v_w_data_ptr[__pyx_v_j]) * (__pyx_v_X_data_ptr[(__pyx_v_offset + __pyx_v_j)]));
   }
@@ -5790,8 +5790,8 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_dot(double *__py
  *     for j from 0 <= j < n_features:
  *         sum += w_data_ptr[j] * X_data_ptr[offset + j]
  *     return sum             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __pyx_r = __pyx_v_sum;
   goto __pyx_L0;
@@ -5803,8 +5803,8 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_dot(double *__py
 }
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":366
- * 
- * 
+ *
+ *
  * cdef double add(double *w_data_ptr, double wscale, double *X_data_ptr,             # <<<<<<<<<<<<<<
  *                 int offset, unsigned int n_features, double c):
  *     """Scales example x by constant c and adds it to the weight vector w"""
@@ -5870,7 +5870,7 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_add(double *__py
  *         innerprod += (w_data_ptr[j] * val)
  *         xsqnorm += (val * val)             # <<<<<<<<<<<<<<
  *         w_data_ptr[j] += val * (c / wscale)
- * 
+ *
  */
     __pyx_v_xsqnorm += (__pyx_v_val * __pyx_v_val);
 
@@ -5878,18 +5878,18 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_add(double *__py
  *         innerprod += (w_data_ptr[j] * val)
  *         xsqnorm += (val * val)
  *         w_data_ptr[j] += val * (c / wscale)             # <<<<<<<<<<<<<<
- * 
+ *
  *     # TODO this is needed for PEGASOS only
  */
     (__pyx_v_w_data_ptr[__pyx_v_j]) += (__pyx_v_val * (__pyx_v_c / __pyx_v_wscale));
   }
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":381
- * 
+ *
  *     # TODO this is needed for PEGASOS only
  *     return (xsqnorm * c * c) + (2.0 * innerprod * wscale * c)             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __pyx_r = (((__pyx_v_xsqnorm * __pyx_v_c) * __pyx_v_c) + (((2.0 * __pyx_v_innerprod) * __pyx_v_wscale) * __pyx_v_c));
   goto __pyx_L0;
@@ -5901,8 +5901,8 @@ static  double __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_add(double *__py
 }
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":384
- * 
- * 
+ *
+ *
  * cdef void l1penalty(double *w_data_ptr, double wscale, double *q_data_ptr,             # <<<<<<<<<<<<<<
  *                     unsigned int n_features, double u):
  *     """Apply the L1 penalty to each updated feature
@@ -6009,8 +6009,8 @@ static  void __pyx_f_7scikits_5learn_12linear_model_8sgd_fast_l1penalty(double *
  *             w_data_ptr[j] = min(0.0, w_data_ptr[j] + ((u - q_data_ptr[j])
  *                                                         / wscale) )
  *         q_data_ptr[j] += (wscale * (w_data_ptr[j] - z))             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
     (__pyx_v_q_data_ptr[__pyx_v_j]) += (__pyx_v_wscale * ((__pyx_v_w_data_ptr[__pyx_v_j]) - __pyx_v_z));
   }
@@ -6059,7 +6059,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             cdef int copy_shape, i, ndim
  *             cdef int endian_detector = 1             # <<<<<<<<<<<<<<
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)
- * 
+ *
  */
   __pyx_v_endian_detector = 1;
 
@@ -6067,23 +6067,23 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             cdef int copy_shape, i, ndim
  *             cdef int endian_detector = 1
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
- * 
+ *
  *             ndim = PyArray_NDIM(self)
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":196
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)
- * 
+ *
  *             ndim = PyArray_NDIM(self)             # <<<<<<<<<<<<<<
- * 
+ *
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  */
   __pyx_v_ndim = PyArray_NDIM(((PyArrayObject *)__pyx_v_self));
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":198
  *             ndim = PyArray_NDIM(self)
- * 
+ *
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
  *                 copy_shape = 1
  *             else:
@@ -6092,7 +6092,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
   if (__pyx_t_1) {
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":199
- * 
+ *
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 copy_shape = 1             # <<<<<<<<<<<<<<
  *             else:
@@ -6107,7 +6107,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *                 copy_shape = 1
  *             else:
  *                 copy_shape = 0             # <<<<<<<<<<<<<<
- * 
+ *
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  */
     __pyx_v_copy_shape = 0;
@@ -6116,7 +6116,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":203
  *                 copy_shape = 0
- * 
+ *
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")
@@ -6125,11 +6125,11 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
   if (__pyx_t_1) {
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":204
- * 
+ *
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):             # <<<<<<<<<<<<<<
  *                 raise ValueError(u"ndarray is not C contiguous")
- * 
+ *
  */
     __pyx_t_2 = (!PyArray_CHKFLAGS(((PyArrayObject *)__pyx_v_self), NPY_C_CONTIGUOUS));
     __pyx_t_3 = __pyx_t_2;
@@ -6142,7 +6142,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")             # <<<<<<<<<<<<<<
- * 
+ *
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  */
     __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 205; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -6162,7 +6162,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":207
  *                 raise ValueError(u"ndarray is not C contiguous")
- * 
+ *
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")
@@ -6171,11 +6171,11 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
   if (__pyx_t_3) {
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":208
- * 
+ *
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):             # <<<<<<<<<<<<<<
  *                 raise ValueError(u"ndarray is not Fortran contiguous")
- * 
+ *
  */
     __pyx_t_1 = (!PyArray_CHKFLAGS(((PyArrayObject *)__pyx_v_self), NPY_F_CONTIGUOUS));
     __pyx_t_2 = __pyx_t_1;
@@ -6188,7 +6188,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")             # <<<<<<<<<<<<<<
- * 
+ *
  *             info.buf = PyArray_DATA(self)
  */
     __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 209; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -6208,7 +6208,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":211
  *                 raise ValueError(u"ndarray is not Fortran contiguous")
- * 
+ *
  *             info.buf = PyArray_DATA(self)             # <<<<<<<<<<<<<<
  *             info.ndim = ndim
  *             if copy_shape:
@@ -6216,7 +6216,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
   __pyx_v_info->buf = PyArray_DATA(((PyArrayObject *)__pyx_v_self));
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":212
- * 
+ *
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim             # <<<<<<<<<<<<<<
  *             if copy_shape:
@@ -6319,7 +6319,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)             # <<<<<<<<<<<<<<
  *             info.readonly = not PyArray_ISWRITEABLE(self)
- * 
+ *
  */
   __pyx_v_info->itemsize = PyArray_ITEMSIZE(((PyArrayObject *)__pyx_v_self));
 
@@ -6327,13 +6327,13 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)
  *             info.readonly = not PyArray_ISWRITEABLE(self)             # <<<<<<<<<<<<<<
- * 
+ *
  *             cdef int t
  */
   __pyx_v_info->readonly = (!PyArray_ISWRITEABLE(((PyArrayObject *)__pyx_v_self)));
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":229
- * 
+ *
  *             cdef int t
  *             cdef char* f = NULL             # <<<<<<<<<<<<<<
  *             cdef dtype descr = self.descr
@@ -6353,16 +6353,16 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":234
  *             cdef int offset
- * 
+ *
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)             # <<<<<<<<<<<<<<
- * 
+ *
  *             if not hasfields and not copy_shape:
  */
   __pyx_v_hasfields = PyDataType_HASFIELDS(__pyx_v_descr);
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":236
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)
- * 
+ *
  *             if not hasfields and not copy_shape:             # <<<<<<<<<<<<<<
  *                 # do not call releasebuffer
  *                 info.obj = None
@@ -6396,7 +6396,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             else:
  *                 # need to call releasebuffer
  *                 info.obj = self             # <<<<<<<<<<<<<<
- * 
+ *
  *             if not hasfields:
  */
     __Pyx_INCREF(__pyx_v_self);
@@ -6409,7 +6409,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":243
  *                 info.obj = self
- * 
+ *
  *             if not hasfields:             # <<<<<<<<<<<<<<
  *                 t = descr.type_num
  *                 if ((descr.byteorder == '>' and little_endian) or
@@ -6418,7 +6418,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
   if (__pyx_t_1) {
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":244
- * 
+ *
  *             if not hasfields:
  *                 t = descr.type_num             # <<<<<<<<<<<<<<
  *                 if ((descr.byteorder == '>' and little_endian) or
@@ -6785,7 +6785,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *                                       info.format + _buffer_format_string_len,
  *                                       &offset)             # <<<<<<<<<<<<<<
  *                 f[0] = 0 # Terminate format string
- * 
+ *
  */
     __pyx_t_9 = __pyx_f_5numpy__util_dtypestring(__pyx_v_descr, (__pyx_v_info->format + 1), (__pyx_v_info->format + 255), (&__pyx_v_offset)); if (unlikely(__pyx_t_9 == NULL)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 273; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_v_f = __pyx_t_9;
@@ -6794,7 +6794,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *                                       info.format + _buffer_format_string_len,
  *                                       &offset)
  *                 f[0] = 0 # Terminate format string             # <<<<<<<<<<<<<<
- * 
+ *
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  */
     (__pyx_v_f[0]) = 0;
@@ -6825,7 +6825,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":278
  *                 f[0] = 0 # Terminate format string
- * 
+ *
  *         def __releasebuffer__(ndarray self, Py_buffer* info):             # <<<<<<<<<<<<<<
  *             if PyArray_HASFIELDS(self):
  *                 stdlib.free(info.format)
@@ -6838,7 +6838,7 @@ static void __pyx_pf_5numpy_7ndarray___releasebuffer__(PyObject *__pyx_v_self, P
   __Pyx_INCREF((PyObject *)__pyx_v_self);
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":279
- * 
+ *
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):             # <<<<<<<<<<<<<<
  *                 stdlib.free(info.format)
@@ -6874,7 +6874,7 @@ static void __pyx_pf_5numpy_7ndarray___releasebuffer__(PyObject *__pyx_v_self, P
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 stdlib.free(info.strides)             # <<<<<<<<<<<<<<
  *                 # info.shape was stored after info.strides in the same block
- * 
+ *
  */
     free(__pyx_v_info->strides);
     goto __pyx_L6;
@@ -6887,10 +6887,10 @@ static void __pyx_pf_5numpy_7ndarray___releasebuffer__(PyObject *__pyx_v_self, P
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":755
  * ctypedef npy_cdouble     complex_t
- * 
+ *
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
  *     return PyArray_MultiIterNew(1, <void*>a)
- * 
+ *
  */
 
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__pyx_v_a) {
@@ -6899,10 +6899,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1");
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":756
- * 
+ *
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef inline object PyArray_MultiIterNew2(a, b):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -6926,10 +6926,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":758
  *     return PyArray_MultiIterNew(1, <void*>a)
- * 
+ *
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
- * 
+ *
  */
 
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__pyx_v_a, PyObject *__pyx_v_b) {
@@ -6938,10 +6938,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2");
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":759
- * 
+ *
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -6965,10 +6965,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":761
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
- * 
+ *
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
- * 
+ *
  */
 
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__pyx_v_a, PyObject *__pyx_v_b, PyObject *__pyx_v_c) {
@@ -6977,10 +6977,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3");
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":762
- * 
+ *
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -7004,10 +7004,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":764
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
- * 
+ *
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
- * 
+ *
  */
 
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__pyx_v_a, PyObject *__pyx_v_b, PyObject *__pyx_v_c, PyObject *__pyx_v_d) {
@@ -7016,10 +7016,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4");
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":765
- * 
+ *
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -7043,10 +7043,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":767
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
- * 
+ *
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
- * 
+ *
  */
 
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__pyx_v_a, PyObject *__pyx_v_b, PyObject *__pyx_v_c, PyObject *__pyx_v_d, PyObject *__pyx_v_e) {
@@ -7055,10 +7055,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5");
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":768
- * 
+ *
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:
  */
   __Pyx_XDECREF(__pyx_r);
@@ -7082,7 +7082,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":770
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
- * 
+ *
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:             # <<<<<<<<<<<<<<
  *     # Recursive utility function used in __getbuffer__ to get format
  *     # string. The new location in the format string is returned.
@@ -7129,13 +7129,13 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *     cdef int endian_detector = 1
  *     cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
  *     cdef tuple fields
- * 
+ *
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":781
  *     cdef tuple fields
- * 
+ *
  *     for childname in descr.names:             # <<<<<<<<<<<<<<
  *         fields = descr.fields[childname]
  *         child, new_offset = fields
@@ -7153,11 +7153,11 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_3 = 0;
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":782
- * 
+ *
  *     for childname in descr.names:
  *         fields = descr.fields[childname]             # <<<<<<<<<<<<<<
  *         child, new_offset = fields
- * 
+ *
  */
     __pyx_t_3 = PyObject_GetItem(__pyx_v_descr->fields, __pyx_v_childname); if (!__pyx_t_3) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 782; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
@@ -7170,7 +7170,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *     for childname in descr.names:
  *         fields = descr.fields[childname]
  *         child, new_offset = fields             # <<<<<<<<<<<<<<
- * 
+ *
  *         if (end - f) - (new_offset - offset[0]) < 15:
  */
     if (likely(((PyObject *)__pyx_v_fields) != Py_None) && likely(PyTuple_GET_SIZE(((PyObject *)__pyx_v_fields)) == 2)) {
@@ -7191,10 +7191,10 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":785
  *         child, new_offset = fields
- * 
+ *
  *         if (end - f) - (new_offset - offset[0]) < 15:             # <<<<<<<<<<<<<<
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
- * 
+ *
  */
     __pyx_t_4 = PyInt_FromLong((__pyx_v_end - __pyx_v_f)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 785; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
@@ -7215,10 +7215,10 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     if (__pyx_t_6) {
 
       /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":786
- * 
+ *
  *         if (end - f) - (new_offset - offset[0]) < 15:
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")             # <<<<<<<<<<<<<<
- * 
+ *
  *         if ((child.byteorder == '>' and little_endian) or
  */
       __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 786; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -7238,7 +7238,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":788
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
- * 
+ *
  *         if ((child.byteorder == '>' and little_endian) or             # <<<<<<<<<<<<<<
  *             (child.byteorder == '<' and not little_endian)):
  *             raise ValueError(u"Non-native byte order not supported")
@@ -7252,7 +7252,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     if (!__pyx_t_7) {
 
       /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":789
- * 
+ *
  *         if ((child.byteorder == '>' and little_endian) or
  *             (child.byteorder == '<' and not little_endian)):             # <<<<<<<<<<<<<<
  *             raise ValueError(u"Non-native byte order not supported")
@@ -7294,7 +7294,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_L6:;
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":800
- * 
+ *
  *         # Output padding bytes
  *         while offset[0] < new_offset:             # <<<<<<<<<<<<<<
  *             f[0] = 120 # "x"; pad byte
@@ -7324,7 +7324,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *             f[0] = 120 # "x"; pad byte
  *             f += 1             # <<<<<<<<<<<<<<
  *             offset[0] += 1
- * 
+ *
  */
       __pyx_v_f += 1;
 
@@ -7332,7 +7332,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *             f[0] = 120 # "x"; pad byte
  *             f += 1
  *             offset[0] += 1             # <<<<<<<<<<<<<<
- * 
+ *
  *         offset[0] += child.itemsize
  */
       (__pyx_v_offset[0]) += 1;
@@ -7340,16 +7340,16 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":805
  *             offset[0] += 1
- * 
+ *
  *         offset[0] += child.itemsize             # <<<<<<<<<<<<<<
- * 
+ *
  *         if not PyDataType_HASFIELDS(child):
  */
     (__pyx_v_offset[0]) += __pyx_v_child->elsize;
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":807
  *         offset[0] += child.itemsize
- * 
+ *
  *         if not PyDataType_HASFIELDS(child):             # <<<<<<<<<<<<<<
  *             t = child.type_num
  *             if end - f < 5:
@@ -7358,7 +7358,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     if (__pyx_t_6) {
 
       /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":808
- * 
+ *
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num             # <<<<<<<<<<<<<<
  *             if end - f < 5:
@@ -7375,7 +7375,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *             t = child.type_num
  *             if end - f < 5:             # <<<<<<<<<<<<<<
  *                 raise RuntimeError(u"Format string allocated too short.")
- * 
+ *
  */
       __pyx_t_6 = ((__pyx_v_end - __pyx_v_f) < 5);
       if (__pyx_t_6) {
@@ -7384,7 +7384,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *             t = child.type_num
  *             if end - f < 5:
  *                 raise RuntimeError(u"Format string allocated too short.")             # <<<<<<<<<<<<<<
- * 
+ *
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  */
         __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 810; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -7403,7 +7403,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __pyx_L10:;
 
       /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":813
- * 
+ *
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"             # <<<<<<<<<<<<<<
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"
@@ -7772,7 +7772,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)             # <<<<<<<<<<<<<<
  *     return f
- * 
+ *
  */
       __pyx_t_10 = __pyx_f_5numpy__util_dtypestring(__pyx_v_child, __pyx_v_f, __pyx_v_end, __pyx_v_offset); if (unlikely(__pyx_t_10 == NULL)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 836; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __pyx_v_f = __pyx_t_10;
@@ -7785,8 +7785,8 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)
  *     return f             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __pyx_r = __pyx_v_f;
   goto __pyx_L0;
@@ -7812,8 +7812,8 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
 }
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":952
- * 
- * 
+ *
+ *
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
  *      cdef PyObject* baseptr
  *      if base is None:
@@ -7873,7 +7873,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  *          baseptr = <PyObject*>base
  *      Py_XDECREF(arr.base)             # <<<<<<<<<<<<<<
  *      arr.base = baseptr
- * 
+ *
  */
   Py_XDECREF(__pyx_v_arr->base);
 
@@ -7881,7 +7881,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  *          baseptr = <PyObject*>base
  *      Py_XDECREF(arr.base)
  *      arr.base = baseptr             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef inline object get_array_base(ndarray arr):
  */
   __pyx_v_arr->base = __pyx_v_baseptr;
@@ -7893,7 +7893,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":962
  *      arr.base = baseptr
- * 
+ *
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
  *     if arr.base is NULL:
  *         return None
@@ -7906,7 +7906,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __Pyx_INCREF((PyObject *)__pyx_v_arr);
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":963
- * 
+ *
  * cdef inline object get_array_base(ndarray arr):
  *     if arr.base is NULL:             # <<<<<<<<<<<<<<
  *         return None
@@ -9573,7 +9573,7 @@ PyMODINIT_FUNC PyInit_sgd_fast(void)
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":10
  * # License: BSD Style.
- * 
+ *
  * import numpy as np             # <<<<<<<<<<<<<<
  * import sys
  * from time import time
@@ -9584,11 +9584,11 @@ PyMODINIT_FUNC PyInit_sgd_fast(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/linear_model/sgd_fast.pyx":11
- * 
+ *
  * import numpy as np
  * import sys             # <<<<<<<<<<<<<<
  * from time import time
- * 
+ *
  */
   __pyx_t_1 = __Pyx_Import(((PyObject *)__pyx_n_s__sys), 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
@@ -9599,7 +9599,7 @@ PyMODINIT_FUNC PyInit_sgd_fast(void)
  * import numpy as np
  * import sys
  * from time import time             # <<<<<<<<<<<<<<
- * 
+ *
  * cimport numpy as np
  */
   __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -9892,7 +9892,7 @@ static size_t __Pyx_BufFmt_TypeCharToNativeSize(char ch, int is_complex) {
     default: {
       __Pyx_BufFmt_RaiseUnexpectedChar(ch);
       return 0;
-    }    
+    }
   }
 }
 
@@ -9936,7 +9936,7 @@ static size_t __Pyx_BufFmt_TypeCharToGroup(char ch, int is_complex) {
     default: {
       __Pyx_BufFmt_RaiseUnexpectedChar(ch);
       return 0;
-    }    
+    }
   }
 }
 
@@ -9973,7 +9973,7 @@ static int __Pyx_BufFmt_ProcessTypeChunk(__Pyx_BufFmt_Context* ctx) {
   do {
     __Pyx_StructField* field = ctx->head->field;
     __Pyx_TypeInfo* type = field->type;
-  
+
     if (ctx->packmode == '@' || ctx->packmode == '^') {
       size = __Pyx_BufFmt_TypeCharToNativeSize(ctx->enc_type, ctx->is_complex);
     } else {
@@ -9996,7 +9996,7 @@ static int __Pyx_BufFmt_ProcessTypeChunk(__Pyx_BufFmt_Context* ctx) {
         ctx->head->parent_offset = parent_offset;
         continue;
       }
-    
+
       __Pyx_BufFmt_RaiseExpected(ctx);
       return -1;
     }
@@ -10010,7 +10010,7 @@ static int __Pyx_BufFmt_ProcessTypeChunk(__Pyx_BufFmt_Context* ctx) {
     }
 
     ctx->fmt_offset += size;
-  
+
     --ctx->enc_count; /* Consume from buffer string */
 
     /* Done checking, move to next field, pushing or popping struct stack if needed */
@@ -10043,7 +10043,7 @@ static int __Pyx_BufFmt_ProcessTypeChunk(__Pyx_BufFmt_Context* ctx) {
   } while (ctx->enc_count);
   ctx->enc_type = 0;
   ctx->is_complex = 0;
-  return 0;    
+  return 0;
 }
 
 static int __Pyx_BufFmt_FirstPack(__Pyx_BufFmt_Context* ctx) {
@@ -10165,7 +10165,7 @@ static const char* __Pyx_BufFmt_CheckString(__Pyx_BufFmt_Context* ctx, const cha
             return NULL;
           }
         }
-      
+
     }
   }
 }
@@ -11216,19 +11216,19 @@ static PyTypeObject *__Pyx_ImportType(const char *module_name, const char *class
     if (!result)
         goto bad;
     if (!PyType_Check(result)) {
-        PyErr_Format(PyExc_TypeError, 
+        PyErr_Format(PyExc_TypeError,
             "%s.%s is not a type object",
             module_name, class_name);
         goto bad;
     }
     if (!strict && ((PyTypeObject *)result)->tp_basicsize > size) {
-        PyOS_snprintf(warning, sizeof(warning), 
+        PyOS_snprintf(warning, sizeof(warning),
             "%s.%s size changed, may indicate binary incompatibility",
             module_name, class_name);
         PyErr_WarnEx(NULL, warning, 0);
     }
     else if (((PyTypeObject *)result)->tp_basicsize != size) {
-        PyErr_Format(PyExc_ValueError, 
+        PyErr_Format(PyExc_ValueError,
             "%s.%s has the wrong size, try recompiling",
             module_name, class_name);
         goto bad;

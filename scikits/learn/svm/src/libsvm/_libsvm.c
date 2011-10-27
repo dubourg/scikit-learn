@@ -166,7 +166,7 @@
   #elif defined(_MSC_VER)
     #define CYTHON_INLINE __inline
   #else
-    #define CYTHON_INLINE 
+    #define CYTHON_INLINE
   #endif
 #endif
 
@@ -263,7 +263,7 @@ static CYTHON_INLINE size_t __Pyx_PyInt_AsSize_t(PyObject*);
 
 #ifdef __GNUC__
 /* Test for GCC > 2.95 */
-#if __GNUC__ > 2 ||               (__GNUC__ == 2 && (__GNUC_MINOR__ > 95)) 
+#if __GNUC__ > 2 ||               (__GNUC__ == 2 && (__GNUC_MINOR__ > 95))
 #define likely(x)   __builtin_expect(!!(x), 1)
 #define unlikely(x) __builtin_expect(!!(x), 0)
 #else /* __GNUC__ > 2 ... */
@@ -274,7 +274,7 @@ static CYTHON_INLINE size_t __Pyx_PyInt_AsSize_t(PyObject*);
 #define likely(x)   (x)
 #define unlikely(x) (x)
 #endif /* __GNUC__ */
-    
+
 static PyObject *__pyx_m;
 static PyObject *__pyx_b;
 static PyObject *__pyx_empty_tuple;
@@ -831,7 +831,7 @@ static PyArrayObject *__pyx_k_3;
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":82
  * # Wrapper functions
- * 
+ *
  * def libsvm_train (np.ndarray[np.float64_t, ndim=2, mode='c'] X,             # <<<<<<<<<<<<<<
  *                   np.ndarray[np.float64_t, ndim=1, mode='c'] Y,
  *                   int svm_type, int kernel_type, int degree, double gamma,
@@ -1199,8 +1199,8 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
   __pyx_bshape_0_sample_weight = __pyx_bstruct_sample_weight.shape[0];
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":160
- * 
- * 
+ *
+ *
  *     if len(sample_weight) == 0:             # <<<<<<<<<<<<<<
  *         sample_weight = np.ones(X.shape[0], dtype=np.float64)
  *     else:
@@ -1210,7 +1210,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
   if (__pyx_t_2) {
 
     /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":161
- * 
+ *
  *     if len(sample_weight) == 0:
  *         sample_weight = np.ones(X.shape[0], dtype=np.float64)             # <<<<<<<<<<<<<<
  *     else:
@@ -1283,7 +1283,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *                "sample_weight and X have incompatible shapes: " + \
  *                "sample_weight has %s samples while X has %s" % \
  *                (sample_weight.shape[0], X.shape[0])             # <<<<<<<<<<<<<<
- * 
+ *
  *     # set libsvm problem
  */
       __pyx_t_7 = __Pyx_PyInt_to_py_npy_intp((__pyx_v_sample_weight->dimensions[0])); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 166; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -1316,7 +1316,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *     # set libsvm problem
  *     problem = set_problem(X.data, Y.data, sample_weight.data,
  *                           X.shape, kernel_type)             # <<<<<<<<<<<<<<
- * 
+ *
  *     param = set_parameter(svm_type, kernel_type, degree, gamma, coef0,
  */
   __pyx_v_problem = set_problem(__pyx_v_X->data, __pyx_v_Y->data, __pyx_v_sample_weight->data, __pyx_v_X->dimensions, __pyx_v_kernel_type);
@@ -1325,13 +1325,13 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *                           nu, cache_size, C, eps, p, shrinking,
  *                           probability, <int> class_weight.shape[0],
  *                           class_weight_label.data, class_weight.data)             # <<<<<<<<<<<<<<
- * 
+ *
  *     # check parameters
  */
   __pyx_v_param = set_parameter(__pyx_v_svm_type, __pyx_v_kernel_type, __pyx_v_degree, __pyx_v_gamma, __pyx_v_coef0, __pyx_v_nu, __pyx_v_cache_size, __pyx_v_C, __pyx_v_eps, __pyx_v_p, __pyx_v_shrinking, __pyx_v_probability, ((int)(__pyx_v_class_weight->dimensions[0])), __pyx_v_class_weight_label->data, __pyx_v_class_weight->data);
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":178
- * 
+ *
  *     # check parameters
  *     if (param == NULL or problem == NULL):             # <<<<<<<<<<<<<<
  *         raise MemoryError("Seems we've run out of of memory")
@@ -1401,7 +1401,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *         free_problem(problem)
  *         free_param(param)             # <<<<<<<<<<<<<<
  *         raise ValueError(error_msg)
- * 
+ *
  */
     free_param(__pyx_v_param);
 
@@ -1409,7 +1409,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *         free_problem(problem)
  *         free_param(param)
  *         raise ValueError(error_msg)             # <<<<<<<<<<<<<<
- * 
+ *
  *     # this does the real work
  */
     __pyx_t_3 = __Pyx_PyBytes_FromString(__pyx_v_error_msg); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 184; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -1430,10 +1430,10 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
   __pyx_L8:;
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":187
- * 
+ *
  *     # this does the real work
  *     model = svm_train(problem, param)             # <<<<<<<<<<<<<<
- * 
+ *
  *     # from here until the end, we just copy the data returned by
  */
   __pyx_v_model = svm_train(__pyx_v_problem, __pyx_v_param);
@@ -1443,7 +1443,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *     # svm_train
  *     SV_len  = get_l(model)             # <<<<<<<<<<<<<<
  *     n_class = get_nr(model)
- * 
+ *
  */
   __pyx_v_SV_len = get_l(__pyx_v_model);
 
@@ -1451,7 +1451,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *     # svm_train
  *     SV_len  = get_l(model)
  *     n_class = get_nr(model)             # <<<<<<<<<<<<<<
- * 
+ *
  *     # copy model.sv_coef
  */
   __pyx_t_3 = __Pyx_PyInt_to_py_npy_intp(get_nr(__pyx_v_model)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 192; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -1465,7 +1465,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *     cdef np.ndarray[np.float64_t, ndim=2, mode='c'] sv_coef
  *     sv_coef = np.empty((n_class-1, SV_len), dtype=np.float64)             # <<<<<<<<<<<<<<
  *     copy_sv_coef (sv_coef.data, model)
- * 
+ *
  */
   __pyx_t_3 = __Pyx_GetName(__pyx_m, __pyx_n_s__np); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 196; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
@@ -1531,7 +1531,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *     cdef np.ndarray[np.float64_t, ndim=2, mode='c'] sv_coef
  *     sv_coef = np.empty((n_class-1, SV_len), dtype=np.float64)
  *     copy_sv_coef (sv_coef.data, model)             # <<<<<<<<<<<<<<
- * 
+ *
  *     # copy model.rho into the intercept
  */
   copy_sv_coef(__pyx_v_sv_coef->data, __pyx_v_model);
@@ -1541,7 +1541,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *     cdef np.ndarray[np.float64_t, ndim=1, mode='c'] intercept
  *     intercept = np.empty(n_class*(n_class-1)/2, dtype=np.float64)             # <<<<<<<<<<<<<<
  *     copy_intercept (intercept.data, model, intercept.shape)
- * 
+ *
  */
   __pyx_t_6 = __Pyx_GetName(__pyx_m, __pyx_n_s__np); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 202; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
@@ -1603,17 +1603,17 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *     cdef np.ndarray[np.float64_t, ndim=1, mode='c'] intercept
  *     intercept = np.empty(n_class*(n_class-1)/2, dtype=np.float64)
  *     copy_intercept (intercept.data, model, intercept.shape)             # <<<<<<<<<<<<<<
- * 
+ *
  *     cdef np.ndarray[np.int32_t, ndim=1, mode='c'] support
  */
   copy_intercept(__pyx_v_intercept->data, __pyx_v_model, __pyx_v_intercept->dimensions);
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":206
- * 
+ *
  *     cdef np.ndarray[np.int32_t, ndim=1, mode='c'] support
  *     support = np.empty (SV_len, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     copy_support (support.data, model)
- * 
+ *
  */
   __pyx_t_3 = __Pyx_GetName(__pyx_m, __pyx_n_s__np); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 206; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
@@ -1669,7 +1669,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *     cdef np.ndarray[np.int32_t, ndim=1, mode='c'] support
  *     support = np.empty (SV_len, dtype=np.int32)
  *     copy_support (support.data, model)             # <<<<<<<<<<<<<<
- * 
+ *
  *     # copy model.SV
  */
   copy_support(__pyx_v_support->data, __pyx_v_model);
@@ -1755,7 +1755,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *     else:
  *         support_vectors = np.empty((SV_len, X.shape[1]), dtype=np.float64)             # <<<<<<<<<<<<<<
  *         copy_SV(support_vectors.data, model, support_vectors.shape)
- * 
+ *
  */
     __pyx_t_4 = __Pyx_GetName(__pyx_m, __pyx_n_s__np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 214; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
@@ -1821,7 +1821,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *     else:
  *         support_vectors = np.empty((SV_len, X.shape[1]), dtype=np.float64)
  *         copy_SV(support_vectors.data, model, support_vectors.shape)             # <<<<<<<<<<<<<<
- * 
+ *
  *     # copy model.nSV
  */
     copy_SV(__pyx_v_support_vectors->data, __pyx_v_model, __pyx_v_support_vectors->dimensions);
@@ -1833,7 +1833,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *     cdef np.ndarray[np.int32_t, ndim=1, mode='c'] n_class_SV
  *     n_class_SV = np.empty(n_class, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     copy_nSV(n_class_SV.data, model)
- * 
+ *
  */
   __pyx_t_6 = __Pyx_GetName(__pyx_m, __pyx_n_s__np); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 220; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
@@ -1887,7 +1887,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *     cdef np.ndarray[np.int32_t, ndim=1, mode='c'] n_class_SV
  *     n_class_SV = np.empty(n_class, dtype=np.int32)
  *     copy_nSV(n_class_SV.data, model)             # <<<<<<<<<<<<<<
- * 
+ *
  *     # copy label
  */
   copy_nSV(__pyx_v_n_class_SV->data, __pyx_v_model);
@@ -1897,7 +1897,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *     cdef np.ndarray[np.int32_t, ndim=1, mode='c'] label
  *     label = np.empty((n_class), dtype=np.int32)             # <<<<<<<<<<<<<<
  *     copy_label(label.data, model)
- * 
+ *
  */
   __pyx_t_4 = __Pyx_GetName(__pyx_m, __pyx_n_s__np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 225; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
@@ -1951,7 +1951,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *     cdef np.ndarray[np.int32_t, ndim=1, mode='c'] label
  *     label = np.empty((n_class), dtype=np.int32)
  *     copy_label(label.data, model)             # <<<<<<<<<<<<<<
- * 
+ *
  *     # copy probabilities
  */
   copy_label(__pyx_v_label->data, __pyx_v_model);
@@ -2097,7 +2097,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *         probB = np.empty(n_class*(n_class-1)/2, dtype=np.float64)
  *         copy_probA(probA.data, model, probA.shape)             # <<<<<<<<<<<<<<
  *         copy_probB(probB.data, model, probB.shape)
- * 
+ *
  */
     copy_probA(__pyx_v_probA->data, __pyx_v_model, __pyx_v_probA->dimensions);
 
@@ -2105,7 +2105,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *         probB = np.empty(n_class*(n_class-1)/2, dtype=np.float64)
  *         copy_probA(probA.data, model, probA.shape)
  *         copy_probB(probB.data, model, probB.shape)             # <<<<<<<<<<<<<<
- * 
+ *
  *     # memory deallocation
  */
     copy_probB(__pyx_v_probB->data, __pyx_v_model, __pyx_v_probB->dimensions);
@@ -2114,7 +2114,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
   __pyx_L10:;
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":239
- * 
+ *
  *     # memory deallocation
  *     svm_free_and_destroy_model(&model)             # <<<<<<<<<<<<<<
  *     free_problem(problem)
@@ -2127,7 +2127,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *     svm_free_and_destroy_model(&model)
  *     free_problem(problem)             # <<<<<<<<<<<<<<
  *     free_param(param)
- * 
+ *
  */
   free_problem(__pyx_v_problem);
 
@@ -2135,26 +2135,26 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
  *     svm_free_and_destroy_model(&model)
  *     free_problem(problem)
  *     free_param(param)             # <<<<<<<<<<<<<<
- * 
+ *
  *     return support, support_vectors, n_class_SV, sv_coef, intercept, label, \
  */
   free_param(__pyx_v_param);
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":243
  *     free_param(param)
- * 
+ *
  *     return support, support_vectors, n_class_SV, sv_coef, intercept, label, \             # <<<<<<<<<<<<<<
  *            probA, probB
- * 
+ *
  */
   __Pyx_XDECREF(__pyx_r);
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":244
- * 
+ *
  *     return support, support_vectors, n_class_SV, sv_coef, intercept, label, \
  *            probA, probB             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __pyx_t_7 = PyTuple_New(8); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 243; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
@@ -2248,8 +2248,8 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_train(PyObject *__pyx_self, PyObject *
 }
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":247
- * 
- * 
+ *
+ *
  * def libsvm_predict (np.ndarray[np.float64_t, ndim=2, mode='c'] T,             # <<<<<<<<<<<<<<
  *                     np.ndarray[np.float64_t, ndim=2, mode='c'] SV,
  *                     np.ndarray[np.float64_t, ndim=2, mode='c'] sv_coef,
@@ -2673,7 +2673,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_predict(PyObject *__pyx_self, PyObject
  *                           nu, cache_size, C, eps, p, shrinking,
  *                           probability, <int> class_weight.shape[0],
  *                           class_weight_label.data, class_weight.data)             # <<<<<<<<<<<<<<
- * 
+ *
  *     model = set_model(param, <int> nSV.shape[0], SV.data, SV.shape,
  */
   __pyx_v_param = set_parameter(__pyx_v_svm_type, __pyx_v_kernel_type, __pyx_v_degree, __pyx_v_gamma, __pyx_v_coef0, __pyx_v_nu, __pyx_v_cache_size, __pyx_v_C, __pyx_v_eps, __pyx_v_p, __pyx_v_shrinking, __pyx_v_probability, ((int)(__pyx_v_class_weight->dimensions[0])), __pyx_v_class_weight_label->data, __pyx_v_class_weight->data);
@@ -2682,13 +2682,13 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_predict(PyObject *__pyx_self, PyObject
  *                       support.data, support.shape, sv_coef.strides,
  *                       sv_coef.data, intercept.data, nSV.data,
  *                       label.data, probA.data, probB.data)             # <<<<<<<<<<<<<<
- * 
+ *
  *     #TODO: use check_model
  */
   __pyx_v_model = set_model(__pyx_v_param, ((int)(__pyx_v_nSV->dimensions[0])), __pyx_v_SV->data, __pyx_v_SV->dimensions, __pyx_v_support->data, __pyx_v_support->dimensions, __pyx_v_sv_coef->strides, __pyx_v_sv_coef->data, __pyx_v_intercept->data, __pyx_v_nSV->data, __pyx_v_label->data, __pyx_v_probA->data, __pyx_v_probB->data);
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":301
- * 
+ *
  *     #TODO: use check_model
  *     dec_values = np.empty(T.shape[0])             # <<<<<<<<<<<<<<
  *     if copy_predict(T.data, model, T.shape, dec_values.data) < 0:
@@ -2780,7 +2780,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_predict(PyObject *__pyx_self, PyObject
  *     free_model(model)
  *     free_param(param)             # <<<<<<<<<<<<<<
  *     return dec_values
- * 
+ *
  */
   free_param(__pyx_v_param);
 
@@ -2788,8 +2788,8 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_predict(PyObject *__pyx_self, PyObject
  *     free_model(model)
  *     free_param(param)
  *     return dec_values             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(((PyObject *)__pyx_v_dec_values));
@@ -2852,8 +2852,8 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_predict(PyObject *__pyx_self, PyObject
 }
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":310
- * 
- * 
+ *
+ *
  * def libsvm_predict_proba (np.ndarray[np.float64_t, ndim=2, mode='c'] T,             # <<<<<<<<<<<<<<
  *                             np.ndarray[np.float64_t, ndim=2, mode='c'] SV,
  *                             np.ndarray[np.float64_t, ndim=2, mode='c'] sv_coef,
@@ -3282,7 +3282,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_predict_proba(PyObject *__pyx_self, Py
  *                           coef0, nu, cache_size, C, eps, p, shrinking,
  *                           probability, <int> class_weight.shape[0], class_weight_label.data,
  *                           class_weight.data)             # <<<<<<<<<<<<<<
- * 
+ *
  *     model = set_model(param, <int> nSV.shape[0], SV.data, SV.shape,
  */
   __pyx_v_param = set_parameter(__pyx_v_svm_type, __pyx_v_kernel_type, __pyx_v_degree, __pyx_v_gamma, __pyx_v_coef0, __pyx_v_nu, __pyx_v_cache_size, __pyx_v_C, __pyx_v_eps, __pyx_v_p, __pyx_v_shrinking, __pyx_v_probability, ((int)(__pyx_v_class_weight->dimensions[0])), __pyx_v_class_weight_label->data, __pyx_v_class_weight->data);
@@ -3291,14 +3291,14 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_predict_proba(PyObject *__pyx_self, Py
  *                       support.data, support.shape, sv_coef.strides,
  *                       sv_coef.data, intercept.data, nSV.data,
  *                       label.data, probA.data, probB.data)             # <<<<<<<<<<<<<<
- * 
+ *
  *     cdef np.npy_intp n_class = get_nr(model)
  */
   __pyx_v_model = set_model(__pyx_v_param, ((int)(__pyx_v_nSV->dimensions[0])), __pyx_v_SV->data, __pyx_v_SV->dimensions, __pyx_v_support->data, __pyx_v_support->dimensions, __pyx_v_sv_coef->strides, __pyx_v_sv_coef->data, __pyx_v_intercept->data, __pyx_v_nSV->data, __pyx_v_label->data, __pyx_v_probA->data, __pyx_v_probB->data);
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":365
  *                       label.data, probA.data, probB.data)
- * 
+ *
  *     cdef np.npy_intp n_class = get_nr(model)             # <<<<<<<<<<<<<<
  *     dec_values = np.empty((T.shape[0], n_class), dtype=np.float64)
  *     if copy_predict_proba(T.data, model, T.shape, dec_values.data) < 0:
@@ -3306,7 +3306,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_predict_proba(PyObject *__pyx_self, Py
   __pyx_v_n_class = get_nr(__pyx_v_model);
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":366
- * 
+ *
  *     cdef np.npy_intp n_class = get_nr(model)
  *     dec_values = np.empty((T.shape[0], n_class), dtype=np.float64)             # <<<<<<<<<<<<<<
  *     if copy_predict_proba(T.data, model, T.shape, dec_values.data) < 0:
@@ -3418,7 +3418,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_predict_proba(PyObject *__pyx_self, Py
  *     free_model(model)
  *     free_param(param)             # <<<<<<<<<<<<<<
  *     return dec_values
- * 
+ *
  */
   free_param(__pyx_v_param);
 
@@ -3426,8 +3426,8 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_predict_proba(PyObject *__pyx_self, Py
  *     free_model(model)
  *     free_param(param)
  *     return dec_values             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(((PyObject *)__pyx_v_dec_values));
@@ -3492,8 +3492,8 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_predict_proba(PyObject *__pyx_self, Py
 }
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":375
- * 
- * 
+ *
+ *
  * def libsvm_decision_function (np.ndarray[np.float64_t, ndim=2, mode='c'] T,             # <<<<<<<<<<<<<<
  *                             np.ndarray[np.float64_t, ndim=2, mode='c'] SV,
  *                             np.ndarray[np.float64_t, ndim=2, mode='c'] sv_coef,
@@ -3922,7 +3922,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_decision_function(PyObject *__pyx_self
  *                           coef0, nu, cache_size, C, eps, p, shrinking,
  *                           probability, <int> class_weight.shape[0], class_weight_label.data,
  *                           class_weight.data)             # <<<<<<<<<<<<<<
- * 
+ *
  *     model = set_model(param, <int> nSV.shape[0], SV.data, SV.shape,
  */
   __pyx_v_param = set_parameter(__pyx_v_svm_type, __pyx_v_kernel_type, __pyx_v_degree, __pyx_v_gamma, __pyx_v_coef0, __pyx_v_nu, __pyx_v_cache_size, __pyx_v_C, __pyx_v_eps, __pyx_v_p, __pyx_v_shrinking, __pyx_v_probability, ((int)(__pyx_v_class_weight->dimensions[0])), __pyx_v_class_weight_label->data, __pyx_v_class_weight->data);
@@ -3931,14 +3931,14 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_decision_function(PyObject *__pyx_self
  *                       support.data, support.shape, sv_coef.strides,
  *                       sv_coef.data, intercept.data, nSV.data,
  *                       label.data, probA.data, probB.data)             # <<<<<<<<<<<<<<
- * 
+ *
  *     if svm_type > 1:
  */
   __pyx_v_model = set_model(__pyx_v_param, ((int)(__pyx_v_nSV->dimensions[0])), __pyx_v_SV->data, __pyx_v_SV->dimensions, __pyx_v_support->data, __pyx_v_support->dimensions, __pyx_v_sv_coef->strides, __pyx_v_sv_coef->data, __pyx_v_intercept->data, __pyx_v_nSV->data, __pyx_v_label->data, __pyx_v_probA->data, __pyx_v_probB->data);
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":412
  *                       label.data, probA.data, probB.data)
- * 
+ *
  *     if svm_type > 1:             # <<<<<<<<<<<<<<
  *         n_class = 1
  *     else:
@@ -3947,7 +3947,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_decision_function(PyObject *__pyx_self
   if (__pyx_t_1) {
 
     /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":413
- * 
+ *
  *     if svm_type > 1:
  *         n_class = 1             # <<<<<<<<<<<<<<
  *     else:
@@ -3963,7 +3963,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_decision_function(PyObject *__pyx_self
  *     else:
  *         n_class = get_nr(model)             # <<<<<<<<<<<<<<
  *         n_class = n_class * (n_class - 1) / 2
- * 
+ *
  */
     __pyx_v_n_class = get_nr(__pyx_v_model);
 
@@ -3971,7 +3971,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_decision_function(PyObject *__pyx_self
  *     else:
  *         n_class = get_nr(model)
  *         n_class = n_class * (n_class - 1) / 2             # <<<<<<<<<<<<<<
- * 
+ *
  *     dec_values = np.empty((T.shape[0], n_class), dtype=np.float64)
  */
     __pyx_v_n_class = __Pyx_div_long((__pyx_v_n_class * (__pyx_v_n_class - 1)), 2);
@@ -3980,7 +3980,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_decision_function(PyObject *__pyx_self
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":418
  *         n_class = n_class * (n_class - 1) / 2
- * 
+ *
  *     dec_values = np.empty((T.shape[0], n_class), dtype=np.float64)             # <<<<<<<<<<<<<<
  *     if copy_predict_values(T.data, model, T.shape, dec_values.data, n_class) < 0:
  *         raise MemoryError("We've run out of of memory")
@@ -4046,7 +4046,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_decision_function(PyObject *__pyx_self
   __pyx_t_6 = 0;
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":419
- * 
+ *
  *     dec_values = np.empty((T.shape[0], n_class), dtype=np.float64)
  *     if copy_predict_values(T.data, model, T.shape, dec_values.data, n_class) < 0:             # <<<<<<<<<<<<<<
  *         raise MemoryError("We've run out of of memory")
@@ -4091,7 +4091,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_decision_function(PyObject *__pyx_self
  *     free_model(model)
  *     free_param(param)             # <<<<<<<<<<<<<<
  *     return dec_values
- * 
+ *
  */
   free_param(__pyx_v_param);
 
@@ -4099,7 +4099,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_decision_function(PyObject *__pyx_self
  *     free_model(model)
  *     free_param(param)
  *     return dec_values             # <<<<<<<<<<<<<<
- * 
+ *
  * def set_verbosity_wrap(int verbosity):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -4166,7 +4166,7 @@ static PyObject *__pyx_pf_7_libsvm_libsvm_decision_function(PyObject *__pyx_self
 
 /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":426
  *     return dec_values
- * 
+ *
  * def set_verbosity_wrap(int verbosity):             # <<<<<<<<<<<<<<
  *     """
  *     Control verbosity of libsvm library
@@ -4242,7 +4242,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             cdef int copy_shape, i, ndim
  *             cdef int endian_detector = 1             # <<<<<<<<<<<<<<
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)
- * 
+ *
  */
   __pyx_v_endian_detector = 1;
 
@@ -4250,23 +4250,23 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             cdef int copy_shape, i, ndim
  *             cdef int endian_detector = 1
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
- * 
+ *
  *             ndim = PyArray_NDIM(self)
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":196
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)
- * 
+ *
  *             ndim = PyArray_NDIM(self)             # <<<<<<<<<<<<<<
- * 
+ *
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  */
   __pyx_v_ndim = PyArray_NDIM(((PyArrayObject *)__pyx_v_self));
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":198
  *             ndim = PyArray_NDIM(self)
- * 
+ *
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
  *                 copy_shape = 1
  *             else:
@@ -4275,7 +4275,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
   if (__pyx_t_1) {
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":199
- * 
+ *
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 copy_shape = 1             # <<<<<<<<<<<<<<
  *             else:
@@ -4290,7 +4290,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *                 copy_shape = 1
  *             else:
  *                 copy_shape = 0             # <<<<<<<<<<<<<<
- * 
+ *
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  */
     __pyx_v_copy_shape = 0;
@@ -4299,7 +4299,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":203
  *                 copy_shape = 0
- * 
+ *
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")
@@ -4308,11 +4308,11 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
   if (__pyx_t_1) {
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":204
- * 
+ *
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):             # <<<<<<<<<<<<<<
  *                 raise ValueError(u"ndarray is not C contiguous")
- * 
+ *
  */
     __pyx_t_2 = (!PyArray_CHKFLAGS(((PyArrayObject *)__pyx_v_self), NPY_C_CONTIGUOUS));
     __pyx_t_3 = __pyx_t_2;
@@ -4325,7 +4325,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")             # <<<<<<<<<<<<<<
- * 
+ *
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  */
     __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 205; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -4345,7 +4345,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":207
  *                 raise ValueError(u"ndarray is not C contiguous")
- * 
+ *
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")
@@ -4354,11 +4354,11 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
   if (__pyx_t_3) {
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":208
- * 
+ *
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):             # <<<<<<<<<<<<<<
  *                 raise ValueError(u"ndarray is not Fortran contiguous")
- * 
+ *
  */
     __pyx_t_1 = (!PyArray_CHKFLAGS(((PyArrayObject *)__pyx_v_self), NPY_F_CONTIGUOUS));
     __pyx_t_2 = __pyx_t_1;
@@ -4371,7 +4371,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")             # <<<<<<<<<<<<<<
- * 
+ *
  *             info.buf = PyArray_DATA(self)
  */
     __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 209; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -4391,7 +4391,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":211
  *                 raise ValueError(u"ndarray is not Fortran contiguous")
- * 
+ *
  *             info.buf = PyArray_DATA(self)             # <<<<<<<<<<<<<<
  *             info.ndim = ndim
  *             if copy_shape:
@@ -4399,7 +4399,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
   __pyx_v_info->buf = PyArray_DATA(((PyArrayObject *)__pyx_v_self));
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":212
- * 
+ *
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim             # <<<<<<<<<<<<<<
  *             if copy_shape:
@@ -4502,7 +4502,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)             # <<<<<<<<<<<<<<
  *             info.readonly = not PyArray_ISWRITEABLE(self)
- * 
+ *
  */
   __pyx_v_info->itemsize = PyArray_ITEMSIZE(((PyArrayObject *)__pyx_v_self));
 
@@ -4510,13 +4510,13 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)
  *             info.readonly = not PyArray_ISWRITEABLE(self)             # <<<<<<<<<<<<<<
- * 
+ *
  *             cdef int t
  */
   __pyx_v_info->readonly = (!PyArray_ISWRITEABLE(((PyArrayObject *)__pyx_v_self)));
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":229
- * 
+ *
  *             cdef int t
  *             cdef char* f = NULL             # <<<<<<<<<<<<<<
  *             cdef dtype descr = self.descr
@@ -4536,16 +4536,16 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":234
  *             cdef int offset
- * 
+ *
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)             # <<<<<<<<<<<<<<
- * 
+ *
  *             if not hasfields and not copy_shape:
  */
   __pyx_v_hasfields = PyDataType_HASFIELDS(__pyx_v_descr);
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":236
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)
- * 
+ *
  *             if not hasfields and not copy_shape:             # <<<<<<<<<<<<<<
  *                 # do not call releasebuffer
  *                 info.obj = None
@@ -4579,7 +4579,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             else:
  *                 # need to call releasebuffer
  *                 info.obj = self             # <<<<<<<<<<<<<<
- * 
+ *
  *             if not hasfields:
  */
     __Pyx_INCREF(__pyx_v_self);
@@ -4592,7 +4592,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":243
  *                 info.obj = self
- * 
+ *
  *             if not hasfields:             # <<<<<<<<<<<<<<
  *                 t = descr.type_num
  *                 if ((descr.byteorder == '>' and little_endian) or
@@ -4601,7 +4601,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
   if (__pyx_t_1) {
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":244
- * 
+ *
  *             if not hasfields:
  *                 t = descr.type_num             # <<<<<<<<<<<<<<
  *                 if ((descr.byteorder == '>' and little_endian) or
@@ -4968,7 +4968,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *                                       info.format + _buffer_format_string_len,
  *                                       &offset)             # <<<<<<<<<<<<<<
  *                 f[0] = 0 # Terminate format string
- * 
+ *
  */
     __pyx_t_9 = __pyx_f_5numpy__util_dtypestring(__pyx_v_descr, (__pyx_v_info->format + 1), (__pyx_v_info->format + 255), (&__pyx_v_offset)); if (unlikely(__pyx_t_9 == NULL)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 273; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_v_f = __pyx_t_9;
@@ -4977,7 +4977,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *                                       info.format + _buffer_format_string_len,
  *                                       &offset)
  *                 f[0] = 0 # Terminate format string             # <<<<<<<<<<<<<<
- * 
+ *
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  */
     (__pyx_v_f[0]) = 0;
@@ -5008,7 +5008,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":278
  *                 f[0] = 0 # Terminate format string
- * 
+ *
  *         def __releasebuffer__(ndarray self, Py_buffer* info):             # <<<<<<<<<<<<<<
  *             if PyArray_HASFIELDS(self):
  *                 stdlib.free(info.format)
@@ -5021,7 +5021,7 @@ static void __pyx_pf_5numpy_7ndarray___releasebuffer__(PyObject *__pyx_v_self, P
   __Pyx_INCREF((PyObject *)__pyx_v_self);
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":279
- * 
+ *
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):             # <<<<<<<<<<<<<<
  *                 stdlib.free(info.format)
@@ -5057,7 +5057,7 @@ static void __pyx_pf_5numpy_7ndarray___releasebuffer__(PyObject *__pyx_v_self, P
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 stdlib.free(info.strides)             # <<<<<<<<<<<<<<
  *                 # info.shape was stored after info.strides in the same block
- * 
+ *
  */
     free(__pyx_v_info->strides);
     goto __pyx_L6;
@@ -5070,10 +5070,10 @@ static void __pyx_pf_5numpy_7ndarray___releasebuffer__(PyObject *__pyx_v_self, P
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":755
  * ctypedef npy_cdouble     complex_t
- * 
+ *
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
  *     return PyArray_MultiIterNew(1, <void*>a)
- * 
+ *
  */
 
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__pyx_v_a) {
@@ -5082,10 +5082,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1");
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":756
- * 
+ *
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef inline object PyArray_MultiIterNew2(a, b):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -5109,10 +5109,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":758
  *     return PyArray_MultiIterNew(1, <void*>a)
- * 
+ *
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
- * 
+ *
  */
 
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__pyx_v_a, PyObject *__pyx_v_b) {
@@ -5121,10 +5121,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2");
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":759
- * 
+ *
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -5148,10 +5148,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":761
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
- * 
+ *
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
- * 
+ *
  */
 
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__pyx_v_a, PyObject *__pyx_v_b, PyObject *__pyx_v_c) {
@@ -5160,10 +5160,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3");
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":762
- * 
+ *
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -5187,10 +5187,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":764
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
- * 
+ *
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
- * 
+ *
  */
 
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__pyx_v_a, PyObject *__pyx_v_b, PyObject *__pyx_v_c, PyObject *__pyx_v_d) {
@@ -5199,10 +5199,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4");
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":765
- * 
+ *
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -5226,10 +5226,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":767
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
- * 
+ *
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
- * 
+ *
  */
 
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__pyx_v_a, PyObject *__pyx_v_b, PyObject *__pyx_v_c, PyObject *__pyx_v_d, PyObject *__pyx_v_e) {
@@ -5238,10 +5238,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5");
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":768
- * 
+ *
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:
  */
   __Pyx_XDECREF(__pyx_r);
@@ -5265,7 +5265,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":770
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
- * 
+ *
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:             # <<<<<<<<<<<<<<
  *     # Recursive utility function used in __getbuffer__ to get format
  *     # string. The new location in the format string is returned.
@@ -5312,13 +5312,13 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *     cdef int endian_detector = 1
  *     cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
  *     cdef tuple fields
- * 
+ *
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":781
  *     cdef tuple fields
- * 
+ *
  *     for childname in descr.names:             # <<<<<<<<<<<<<<
  *         fields = descr.fields[childname]
  *         child, new_offset = fields
@@ -5336,11 +5336,11 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_3 = 0;
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":782
- * 
+ *
  *     for childname in descr.names:
  *         fields = descr.fields[childname]             # <<<<<<<<<<<<<<
  *         child, new_offset = fields
- * 
+ *
  */
     __pyx_t_3 = PyObject_GetItem(__pyx_v_descr->fields, __pyx_v_childname); if (!__pyx_t_3) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 782; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
@@ -5353,7 +5353,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *     for childname in descr.names:
  *         fields = descr.fields[childname]
  *         child, new_offset = fields             # <<<<<<<<<<<<<<
- * 
+ *
  *         if (end - f) - (new_offset - offset[0]) < 15:
  */
     if (likely(((PyObject *)__pyx_v_fields) != Py_None) && likely(PyTuple_GET_SIZE(((PyObject *)__pyx_v_fields)) == 2)) {
@@ -5374,10 +5374,10 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":785
  *         child, new_offset = fields
- * 
+ *
  *         if (end - f) - (new_offset - offset[0]) < 15:             # <<<<<<<<<<<<<<
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
- * 
+ *
  */
     __pyx_t_4 = PyInt_FromLong((__pyx_v_end - __pyx_v_f)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 785; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
@@ -5398,10 +5398,10 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     if (__pyx_t_6) {
 
       /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":786
- * 
+ *
  *         if (end - f) - (new_offset - offset[0]) < 15:
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")             # <<<<<<<<<<<<<<
- * 
+ *
  *         if ((child.byteorder == '>' and little_endian) or
  */
       __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 786; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -5421,7 +5421,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":788
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
- * 
+ *
  *         if ((child.byteorder == '>' and little_endian) or             # <<<<<<<<<<<<<<
  *             (child.byteorder == '<' and not little_endian)):
  *             raise ValueError(u"Non-native byte order not supported")
@@ -5435,7 +5435,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     if (!__pyx_t_7) {
 
       /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":789
- * 
+ *
  *         if ((child.byteorder == '>' and little_endian) or
  *             (child.byteorder == '<' and not little_endian)):             # <<<<<<<<<<<<<<
  *             raise ValueError(u"Non-native byte order not supported")
@@ -5477,7 +5477,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_L6:;
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":800
- * 
+ *
  *         # Output padding bytes
  *         while offset[0] < new_offset:             # <<<<<<<<<<<<<<
  *             f[0] = 120 # "x"; pad byte
@@ -5507,7 +5507,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *             f[0] = 120 # "x"; pad byte
  *             f += 1             # <<<<<<<<<<<<<<
  *             offset[0] += 1
- * 
+ *
  */
       __pyx_v_f += 1;
 
@@ -5515,7 +5515,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *             f[0] = 120 # "x"; pad byte
  *             f += 1
  *             offset[0] += 1             # <<<<<<<<<<<<<<
- * 
+ *
  *         offset[0] += child.itemsize
  */
       (__pyx_v_offset[0]) += 1;
@@ -5523,16 +5523,16 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":805
  *             offset[0] += 1
- * 
+ *
  *         offset[0] += child.itemsize             # <<<<<<<<<<<<<<
- * 
+ *
  *         if not PyDataType_HASFIELDS(child):
  */
     (__pyx_v_offset[0]) += __pyx_v_child->elsize;
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":807
  *         offset[0] += child.itemsize
- * 
+ *
  *         if not PyDataType_HASFIELDS(child):             # <<<<<<<<<<<<<<
  *             t = child.type_num
  *             if end - f < 5:
@@ -5541,7 +5541,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     if (__pyx_t_6) {
 
       /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":808
- * 
+ *
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num             # <<<<<<<<<<<<<<
  *             if end - f < 5:
@@ -5558,7 +5558,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *             t = child.type_num
  *             if end - f < 5:             # <<<<<<<<<<<<<<
  *                 raise RuntimeError(u"Format string allocated too short.")
- * 
+ *
  */
       __pyx_t_6 = ((__pyx_v_end - __pyx_v_f) < 5);
       if (__pyx_t_6) {
@@ -5567,7 +5567,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *             t = child.type_num
  *             if end - f < 5:
  *                 raise RuntimeError(u"Format string allocated too short.")             # <<<<<<<<<<<<<<
- * 
+ *
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  */
         __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 810; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -5586,7 +5586,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __pyx_L10:;
 
       /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":813
- * 
+ *
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"             # <<<<<<<<<<<<<<
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"
@@ -5955,7 +5955,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)             # <<<<<<<<<<<<<<
  *     return f
- * 
+ *
  */
       __pyx_t_10 = __pyx_f_5numpy__util_dtypestring(__pyx_v_child, __pyx_v_f, __pyx_v_end, __pyx_v_offset); if (unlikely(__pyx_t_10 == NULL)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 836; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __pyx_v_f = __pyx_t_10;
@@ -5968,8 +5968,8 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)
  *     return f             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __pyx_r = __pyx_v_f;
   goto __pyx_L0;
@@ -5995,8 +5995,8 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
 }
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":952
- * 
- * 
+ *
+ *
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
  *      cdef PyObject* baseptr
  *      if base is None:
@@ -6056,7 +6056,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  *          baseptr = <PyObject*>base
  *      Py_XDECREF(arr.base)             # <<<<<<<<<<<<<<
  *      arr.base = baseptr
- * 
+ *
  */
   Py_XDECREF(__pyx_v_arr->base);
 
@@ -6064,7 +6064,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  *          baseptr = <PyObject*>base
  *      Py_XDECREF(arr.base)
  *      arr.base = baseptr             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef inline object get_array_base(ndarray arr):
  */
   __pyx_v_arr->base = __pyx_v_baseptr;
@@ -6076,7 +6076,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":962
  *      arr.base = baseptr
- * 
+ *
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
  *     if arr.base is NULL:
  *         return None
@@ -6089,7 +6089,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __Pyx_INCREF((PyObject *)__pyx_v_arr);
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":963
- * 
+ *
  * cdef inline object get_array_base(ndarray arr):
  *     if arr.base is NULL:             # <<<<<<<<<<<<<<
  *         return None
@@ -6329,10 +6329,10 @@ PyMODINIT_FUNC PyInit__libsvm(void)
 
   /* "/home/fabian/dev/scikit-learn/scikits/learn/svm/src/libsvm/_libsvm.pyx":33
  * """
- * 
+ *
  * import  numpy as np             # <<<<<<<<<<<<<<
  * cimport numpy as np
- * 
+ *
  */
   __pyx_t_1 = __Pyx_Import(((PyObject *)__pyx_n_s__numpy), 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
@@ -6406,7 +6406,7 @@ PyMODINIT_FUNC PyInit__libsvm(void)
  *                   np.ndarray[np.float64_t, ndim=1, mode='c']
  *                       sample_weight=np.empty(0),             # <<<<<<<<<<<<<<
  *                   int shrinking=0, int probability=0):
- * 
+ *
  */
   __pyx_t_1 = __Pyx_GetName(__pyx_m, __pyx_n_s__np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 92; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
@@ -6473,7 +6473,7 @@ PyMODINIT_FUNC PyInit__libsvm(void)
   __Pyx_DECREF(((PyObject *)__pyx_t_3)); __pyx_t_3 = 0;
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/stdlib.pxd":2
- * 
+ *
  * cdef extern from "stdlib.h" nogil:             # <<<<<<<<<<<<<<
  *     void free(void *ptr)
  *     void *malloc(size_t size)
@@ -6752,7 +6752,7 @@ static size_t __Pyx_BufFmt_TypeCharToNativeSize(char ch, int is_complex) {
     default: {
       __Pyx_BufFmt_RaiseUnexpectedChar(ch);
       return 0;
-    }    
+    }
   }
 }
 
@@ -6796,7 +6796,7 @@ static size_t __Pyx_BufFmt_TypeCharToGroup(char ch, int is_complex) {
     default: {
       __Pyx_BufFmt_RaiseUnexpectedChar(ch);
       return 0;
-    }    
+    }
   }
 }
 
@@ -6833,7 +6833,7 @@ static int __Pyx_BufFmt_ProcessTypeChunk(__Pyx_BufFmt_Context* ctx) {
   do {
     __Pyx_StructField* field = ctx->head->field;
     __Pyx_TypeInfo* type = field->type;
-  
+
     if (ctx->packmode == '@' || ctx->packmode == '^') {
       size = __Pyx_BufFmt_TypeCharToNativeSize(ctx->enc_type, ctx->is_complex);
     } else {
@@ -6856,7 +6856,7 @@ static int __Pyx_BufFmt_ProcessTypeChunk(__Pyx_BufFmt_Context* ctx) {
         ctx->head->parent_offset = parent_offset;
         continue;
       }
-    
+
       __Pyx_BufFmt_RaiseExpected(ctx);
       return -1;
     }
@@ -6870,7 +6870,7 @@ static int __Pyx_BufFmt_ProcessTypeChunk(__Pyx_BufFmt_Context* ctx) {
     }
 
     ctx->fmt_offset += size;
-  
+
     --ctx->enc_count; /* Consume from buffer string */
 
     /* Done checking, move to next field, pushing or popping struct stack if needed */
@@ -6903,7 +6903,7 @@ static int __Pyx_BufFmt_ProcessTypeChunk(__Pyx_BufFmt_Context* ctx) {
   } while (ctx->enc_count);
   ctx->enc_type = 0;
   ctx->is_complex = 0;
-  return 0;    
+  return 0;
 }
 
 static int __Pyx_BufFmt_FirstPack(__Pyx_BufFmt_Context* ctx) {
@@ -7025,7 +7025,7 @@ static const char* __Pyx_BufFmt_CheckString(__Pyx_BufFmt_Context* ctx, const cha
             return NULL;
           }
         }
-      
+
     }
   }
 }
@@ -7952,19 +7952,19 @@ static PyTypeObject *__Pyx_ImportType(const char *module_name, const char *class
     if (!result)
         goto bad;
     if (!PyType_Check(result)) {
-        PyErr_Format(PyExc_TypeError, 
+        PyErr_Format(PyExc_TypeError,
             "%s.%s is not a type object",
             module_name, class_name);
         goto bad;
     }
     if (!strict && ((PyTypeObject *)result)->tp_basicsize > size) {
-        PyOS_snprintf(warning, sizeof(warning), 
+        PyOS_snprintf(warning, sizeof(warning),
             "%s.%s size changed, may indicate binary incompatibility",
             module_name, class_name);
         PyErr_WarnEx(NULL, warning, 0);
     }
     else if (((PyTypeObject *)result)->tp_basicsize != size) {
-        PyErr_Format(PyExc_ValueError, 
+        PyErr_Format(PyExc_ValueError,
             "%s.%s has the wrong size, try recompiling",
             module_name, class_name);
         goto bad;

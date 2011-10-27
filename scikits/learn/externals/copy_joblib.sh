@@ -7,7 +7,7 @@ mkdir -p tmp/bin
 export PYTHONPATH=$(pwd)/tmp/lib/python2.6/site-packages:$(pwd)/tmp/lib/python2.5/site-packages
 easy_install -Zeab tmp joblib
 old_pwd=$(pwd)
-#cd /home/varoquau/dev/joblib/ 
+#cd /home/varoquau/dev/joblib/
 cd tmp/joblib/
 python setup.py install --prefix $old_pwd/tmp
 cd $old_pwd

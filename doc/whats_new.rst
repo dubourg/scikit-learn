@@ -37,7 +37,7 @@ applications to real-world datasets.
     </div>
 
 
-|center-div| |banner1| |banner2| |banner3| |banner4| |end-div| 
+|center-div| |banner1| |banner2| |banner3| |banner4| |end-div|
 
 
 Changelog
@@ -63,7 +63,7 @@ Changelog
     multi_class in :class:`svm.LinearSVC`)
 
   - New features and performance improvements of text feature
-    extraction. 
+    extraction.
 
   - Improved sparse matrix support, both in main classes
     (:class:`grid_search.GridSearchCV`) as in modules
@@ -252,7 +252,7 @@ Changelog
 
 Major changes in this release include:
 
-    - Coordinate Descent algorithm (Lasso, ElasticNet) refactoring & 
+    - Coordinate Descent algorithm (Lasso, ElasticNet) refactoring &
       speed improvements (roughly 100x times faster).
 
     - Coordinate Descent Refactoring (and bug fixing) for consistency
@@ -276,8 +276,8 @@ Major changes in this release include:
 
     - Documentation improvements (both docstring and rst).
 
-    - Improvement of the build system to (optionally) link with MKL. 
- Also, provide a lite BLAS implementation in case no system-wide BLAS is 
+    - Improvement of the build system to (optionally) link with MKL.
+ Also, provide a lite BLAS implementation in case no system-wide BLAS is
  found.
 
     - Lots of new examples.
@@ -288,7 +288,7 @@ Major changes in this release include:
 Authors
 -------
 
-The committer list for this release is the following (preceded by number 
+The committer list for this release is the following (preceded by number
 of commits):
 
     * 143  Fabian Pedregosa

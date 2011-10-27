@@ -15,7 +15,7 @@ The expected usage of the datasets are the following:
 
 That is, a dataset is not only data, but also some meta-data. The goal of this
 proposal is to propose common practices for organizing the data, in a way which
-is both straightforward, and does not prevent specific usage of the data. 
+is both straightforward, and does not prevent specific usage of the data.
 
 Organization
 ------------

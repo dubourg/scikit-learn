@@ -114,7 +114,7 @@ struct problem * set_problem(char *X,char *Y, npy_intp *dims, double bias)
     problem->y = (int *) Y;
     problem->x = dense_to_sparse((double *) X, dims, bias);
     problem->bias = bias;
-    if (problem->x == NULL) { 
+    if (problem->x == NULL) {
         free(problem);
         return NULL;
     }
@@ -166,7 +166,7 @@ struct parameter * set_parameter(int solver_type, double eps, double C, npy_intp
     return param;
 }
 
-struct model * set_model(struct parameter *param, char *coef, npy_intp *dims, 
+struct model * set_model(struct parameter *param, char *coef, npy_intp *dims,
                          char *label, double bias)
 {
     npy_intp len_w = dims[0] * dims[1];
@@ -175,7 +175,7 @@ struct model * set_model(struct parameter *param, char *coef, npy_intp *dims,
 
     if (m == 1) m = 2; /* liblinear collapses the weight vector in the case of two classes */
     model = (struct model *)      malloc(sizeof(struct model));
-    model->w =       (double *)   malloc( len_w * sizeof(double)); 
+    model->w =       (double *)   malloc( len_w * sizeof(double));
     model->label =   (int *)      malloc( m * sizeof(int));
 
     memcpy(model->label, label, m * sizeof(int));
@@ -183,7 +183,7 @@ struct model * set_model(struct parameter *param, char *coef, npy_intp *dims,
 
     model->nr_feature = bias > 0 ? k - 1 : k;
     model->nr_class = m;
-	
+
     model->param = *param;
     model->bias = bias;
 
@@ -193,8 +193,8 @@ struct model * set_model(struct parameter *param, char *coef, npy_intp *dims,
 
 void copy_w(char *data, struct model *model, int len)
 {
-    memcpy(data, model->w, len * sizeof(double)); 
-    
+    memcpy(data, model->w, len * sizeof(double));
+
 }
 
 double get_bias(struct model *model)
@@ -257,7 +257,7 @@ int csr_copy_predict(npy_intp n_features, npy_intp *data_size, char *data,
     return 0;
 }
 
-int copy_predict_values (char *predict, struct model *model_, 
+int copy_predict_values (char *predict, struct model *model_,
                          npy_intp *predict_dims, char *dec_values, int nr_class)
 {
     npy_intp i;
@@ -266,7 +266,7 @@ int copy_predict_values (char *predict, struct model *model_,
     if (predict_nodes == NULL)
         return -1;
     for(i=0; i<predict_dims[0]; ++i) {
-        predict_values(model_, predict_nodes[i], 
+        predict_values(model_, predict_nodes[i],
                        ((double *) dec_values) + i*nr_class);
         free(predict_nodes[i]);
     }
@@ -321,9 +321,9 @@ int copy_prob_predict(char *predict, struct model *model_, npy_intp *predict_dim
 }
 
 
-int csr_copy_predict_proba(npy_intp n_features, npy_intp *data_size, 
+int csr_copy_predict_proba(npy_intp n_features, npy_intp *data_size,
                            char *data, npy_intp *index_size,
-                           char *index, npy_intp *indptr_shape, 
+                           char *index, npy_intp *indptr_shape,
                            char *indptr, struct model *model_,
                            char *dec_values)
 {
@@ -333,8 +333,8 @@ int csr_copy_predict_proba(npy_intp n_features, npy_intp *data_size,
     double *tx = (double *) dec_values;
 
     predict_nodes = csr_to_sparse((double *) data, index_size,
-                                  (int *) index, indptr_shape, 
-                                  (int *) indptr, model_->bias, 
+                                  (int *) index, indptr_shape,
+                                  (int *) indptr, model_->bias,
                                   n_features);
     if (predict_nodes == NULL)
         return -1;

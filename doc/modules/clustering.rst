@@ -46,7 +46,7 @@ will have difficulties scaling to thousands of samples.
  * :ref:`example_cluster_plot_affinity_propagation.py`: Affinity
    Propagation on a synthetic 2D datasets with 3 classes.
 
- * :ref:`example_applications_stock_market.py` Affinity Propagation on Financial 
+ * :ref:`example_applications_stock_market.py` Affinity Propagation on Financial
    time series to find groups of companies
 
 Mean Shift
@@ -87,7 +87,7 @@ dimensional space. It is especially efficient if the affinity matrix is
 sparse and the `pyamg <http://code.google.com/p/pyamg/>`_ module is
 installed. SpectralClustering requires the number of clusters to be
 specified. It works well for a small number of clusters but is not
-advised when using many clusters. 
+advised when using many clusters.
 
 For two clusters, it solves a convex relaxation of the `normalised
 cuts <http://www.cs.berkeley.edu/~malik/papers/SM-ncut.pdf>`_ problem on
@@ -106,7 +106,7 @@ function of the gradient of the image.
 
 .. topic:: Examples:
 
- * :ref:`example_cluster_plot_lena_segmentation.py`: Spectral clustering 
+ * :ref:`example_cluster_plot_lena_segmentation.py`: Spectral clustering
    to split the image of lena in regions.
 
  * :ref:`example_cluster_plot_segmentation_toy.py`: Segmenting objects

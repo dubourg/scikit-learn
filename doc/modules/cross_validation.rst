@@ -45,7 +45,7 @@ The *Leave-One-Out* (or LOO) is a simple cross-validation. Each learning
 set is created by taking all the samples except one, the test set being the
 sample left out. Thus, for *n* samples, we have *n* different learning sets and
 *n* different tests set. This cross-validation procedure does not waste much
-data as only one sample is removed from the learning set. 
+data as only one sample is removed from the learning set.
 
 
 
@@ -137,7 +137,7 @@ K-fold
 The *K-fold* divides all the samples in *K* groups of samples, called folds (if
 :math:`K = n`, we retrieve the *LOO*), of equal sizes (if possible). The
 prediction function is learned using *K - 1* folds, and the fold left out is
-used for test. 
+used for test.
 
 
 Example of 2-fold:

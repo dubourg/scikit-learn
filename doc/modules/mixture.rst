@@ -10,7 +10,7 @@ supported), to sample them, and to estimate them from data using
 Expectation Maximization algorithm.  It can also draw confidence
 ellipsoides for multivariate models, and compute the Bayesian
 Information Criterion to assess the number of clusters in the data.
-    
+
 For the moment, only Gaussian Mixture Models (GMM) are
 implemented. These are a class of probabilistic models describing the
 data as drawn from a mixture of Gaussian probability
@@ -25,9 +25,9 @@ GMM classifier
 The :class:`GMM` object implements a :meth:`GMM.fit` method to learn a
 Gaussian Mixture Models from train data. Given test data, it can assign
 to each sample the class of the Gaussian it mostly probably belong to
-using the :meth:`GMM.predict` method. 
+using the :meth:`GMM.predict` method.
 
-..  
+..
     Alternatively, the probability of each
     sample beloning to the various Gaussians may be retrieved using the
     :meth:`GMM.predict_proba` method.
@@ -45,6 +45,6 @@ using the :meth:`GMM.predict` method.
     * See :ref:`example_mixture_plot_gmm.py` for an example on plotting the
       confidence ellipsoids.
 
-    * See :ref:`example_mixture_plot_gmm_pdf.py` for an example on plotting the 
+    * See :ref:`example_mixture_plot_gmm_pdf.py` for an example on plotting the
       density estimation.
 

@@ -143,7 +143,7 @@
 #elif _WIN32
 #define INLINE __inline
 #else
-#define INLINE 
+#define INLINE
 #endif
 
 typedef struct {PyObject **p; char *s; long n; char is_unicode; char intern; char is_identifier;} __Pyx_StringTabEntry; /*proto*/
@@ -206,7 +206,7 @@ static INLINE size_t __Pyx_PyInt_AsSize_t(PyObject*);
 
 #ifdef __GNUC__
 /* Test for GCC > 2.95 */
-#if __GNUC__ > 2 ||               (__GNUC__ == 2 && (__GNUC_MINOR__ > 95)) 
+#if __GNUC__ > 2 ||               (__GNUC__ == 2 && (__GNUC_MINOR__ > 95))
 #define likely(x)   __builtin_expect(!!(x), 1)
 #define unlikely(x) __builtin_expect(!!(x), 0)
 #else /* __GNUC__ > 2 ... */
@@ -217,7 +217,7 @@ static INLINE size_t __Pyx_PyInt_AsSize_t(PyObject*);
 #define likely(x)   (x)
 #define unlikely(x) (x)
 #endif /* __GNUC__ */
-    
+
 static PyObject *__pyx_m;
 static PyObject *__pyx_b;
 static PyObject *__pyx_empty_tuple;
@@ -393,7 +393,7 @@ static PyObject *__Pyx_GetName(PyObject *dict, PyObject *name); /*proto*/
     static INLINE __pyx_t_float_complex __pyx_t_float_complex_from_parts(float x, float y) {
       return x + y*(__pyx_t_float_complex)_Complex_I;
     }
-    
+
     #define __pyx_t_float_complex_is_zero(a) ((a) == 0)
     #define __pyx_t_float_complex_eq(a, b) ((a) == (b))
     #define __pyx_t_float_complex_add(a, b) ((a)+(b))
@@ -408,7 +408,7 @@ static PyObject *__Pyx_GetName(PyObject *dict, PyObject *name); /*proto*/
     static INLINE __pyx_t_float_complex __pyx_t_float_complex_from_parts(float x, float y) {
       __pyx_t_float_complex c; c.real = x; c.imag = y; return c;
     }
-    
+
     static INLINE int __pyx_t_float_complex_is_zero(__pyx_t_float_complex a) {
        return (a.real == 0) & (a.imag == 0);
     }
@@ -461,7 +461,7 @@ static PyObject *__Pyx_GetName(PyObject *dict, PyObject *name); /*proto*/
     static INLINE __pyx_t_double_complex __pyx_t_double_complex_from_parts(double x, double y) {
       return x + y*(__pyx_t_double_complex)_Complex_I;
     }
-    
+
     #define __pyx_t_double_complex_is_zero(a) ((a) == 0)
     #define __pyx_t_double_complex_eq(a, b) ((a) == (b))
     #define __pyx_t_double_complex_add(a, b) ((a)+(b))
@@ -476,7 +476,7 @@ static PyObject *__Pyx_GetName(PyObject *dict, PyObject *name); /*proto*/
     static INLINE __pyx_t_double_complex __pyx_t_double_complex_from_parts(double x, double y) {
       __pyx_t_double_complex c; c.real = x; c.imag = y; return c;
     }
-    
+
     static INLINE int __pyx_t_double_complex_is_zero(__pyx_t_double_complex a) {
        return (a.real == 0) & (a.imag == 0);
     }
@@ -529,7 +529,7 @@ static PyObject *__Pyx_GetName(PyObject *dict, PyObject *name); /*proto*/
     static INLINE __pyx_t_long__double_complex __pyx_t_long__double_complex_from_parts(long double x, long double y) {
       return x + y*(__pyx_t_long__double_complex)_Complex_I;
     }
-    
+
     #define __pyx_t_long__double_complex_is_zero(a) ((a) == 0)
     #define __pyx_t_long__double_complex_eq(a, b) ((a) == (b))
     #define __pyx_t_long__double_complex_add(a, b) ((a)+(b))
@@ -544,7 +544,7 @@ static PyObject *__Pyx_GetName(PyObject *dict, PyObject *name); /*proto*/
     static INLINE __pyx_t_long__double_complex __pyx_t_long__double_complex_from_parts(long double x, long double y) {
       __pyx_t_long__double_complex c; c.real = x; c.imag = y; return c;
     }
-    
+
     static INLINE int __pyx_t_long__double_complex_is_zero(__pyx_t_long__double_complex a) {
        return (a.real == 0) & (a.imag == 0);
     }
@@ -841,7 +841,7 @@ static PyObject *__pyx_pf_14_preprocessing_normalize_axis1_sparse(PyObject *__py
  * def normalize_axis1_sparse(X):
  *     cdef unsigned int n_samples = X.shape[0]             # <<<<<<<<<<<<<<
  *     cdef unsigned int n_features = X.shape[1]
- * 
+ *
  */
   __pyx_t_1 = PyObject_GetAttr(__pyx_v_X, __pyx_kp_shape); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 20; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
@@ -856,7 +856,7 @@ static PyObject *__pyx_pf_14_preprocessing_normalize_axis1_sparse(PyObject *__py
  * def normalize_axis1_sparse(X):
  *     cdef unsigned int n_samples = X.shape[0]
  *     cdef unsigned int n_features = X.shape[1]             # <<<<<<<<<<<<<<
- * 
+ *
  *     cdef np.ndarray[DOUBLE, ndim=1] X_data = X.data
  */
   __pyx_t_1 = PyObject_GetAttr(__pyx_v_X, __pyx_kp_shape); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -870,7 +870,7 @@ static PyObject *__pyx_pf_14_preprocessing_normalize_axis1_sparse(PyObject *__py
 
   /* "/home/mathieu/Desktop/projects/scikit-learn/scikits/learn/preprocessing/sparse/src/_preprocessing.pyx":23
  *     cdef unsigned int n_features = X.shape[1]
- * 
+ *
  *     cdef np.ndarray[DOUBLE, ndim=1] X_data = X.data             # <<<<<<<<<<<<<<
  *     cdef np.ndarray[INTEGER, ndim=1] X_indices = X.indices
  *     cdef np.ndarray[INTEGER, ndim=1] X_indptr = X.indptr
@@ -893,11 +893,11 @@ static PyObject *__pyx_pf_14_preprocessing_normalize_axis1_sparse(PyObject *__py
   __pyx_t_1 = 0;
 
   /* "/home/mathieu/Desktop/projects/scikit-learn/scikits/learn/preprocessing/sparse/src/_preprocessing.pyx":24
- * 
+ *
  *     cdef np.ndarray[DOUBLE, ndim=1] X_data = X.data
  *     cdef np.ndarray[INTEGER, ndim=1] X_indices = X.indices             # <<<<<<<<<<<<<<
  *     cdef np.ndarray[INTEGER, ndim=1] X_indptr = X.indptr
- * 
+ *
  */
   __pyx_t_1 = PyObject_GetAttr(__pyx_v_X, __pyx_kp_indices); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
@@ -920,7 +920,7 @@ static PyObject *__pyx_pf_14_preprocessing_normalize_axis1_sparse(PyObject *__py
  *     cdef np.ndarray[DOUBLE, ndim=1] X_data = X.data
  *     cdef np.ndarray[INTEGER, ndim=1] X_indices = X.indices
  *     cdef np.ndarray[INTEGER, ndim=1] X_indptr = X.indptr             # <<<<<<<<<<<<<<
- * 
+ *
  *     # the column indices for row i are stored in indices[indptr[i]:indices[i+1]]
  */
   __pyx_t_1 = PyObject_GetAttr(__pyx_v_X, __pyx_kp_indptr); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 25; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -942,29 +942,29 @@ static PyObject *__pyx_pf_14_preprocessing_normalize_axis1_sparse(PyObject *__py
 
   /* "/home/mathieu/Desktop/projects/scikit-learn/scikits/learn/preprocessing/sparse/src/_preprocessing.pyx":33
  *     cdef double sum_
- * 
+ *
  *     for i in xrange(n_samples):             # <<<<<<<<<<<<<<
  *         sum_ = 0.0
- * 
+ *
  */
   for (__pyx_t_2 = 0; __pyx_t_2 < __pyx_v_n_samples; __pyx_t_2+=1) {
     __pyx_v_i = __pyx_t_2;
 
     /* "/home/mathieu/Desktop/projects/scikit-learn/scikits/learn/preprocessing/sparse/src/_preprocessing.pyx":34
- * 
+ *
  *     for i in xrange(n_samples):
  *         sum_ = 0.0             # <<<<<<<<<<<<<<
- * 
+ *
  *         for j in xrange(X_indptr[i], X_indptr[i+1]):
  */
     __pyx_v_sum_ = 0.0;
 
     /* "/home/mathieu/Desktop/projects/scikit-learn/scikits/learn/preprocessing/sparse/src/_preprocessing.pyx":36
  *         sum_ = 0.0
- * 
+ *
  *         for j in xrange(X_indptr[i], X_indptr[i+1]):             # <<<<<<<<<<<<<<
  *             sum_ += X_data[j]
- * 
+ *
  */
     __pyx_t_6 = __pyx_v_i;
     __pyx_t_7 = (__pyx_v_i + 1);
@@ -972,10 +972,10 @@ static PyObject *__pyx_pf_14_preprocessing_normalize_axis1_sparse(PyObject *__py
       __pyx_v_j = __pyx_t_8;
 
       /* "/home/mathieu/Desktop/projects/scikit-learn/scikits/learn/preprocessing/sparse/src/_preprocessing.pyx":37
- * 
+ *
  *         for j in xrange(X_indptr[i], X_indptr[i+1]):
  *             sum_ += X_data[j]             # <<<<<<<<<<<<<<
- * 
+ *
  *         for j in xrange(X_indptr[i], X_indptr[i+1]):
  */
       __pyx_t_9 = __pyx_v_j;
@@ -984,10 +984,10 @@ static PyObject *__pyx_pf_14_preprocessing_normalize_axis1_sparse(PyObject *__py
 
     /* "/home/mathieu/Desktop/projects/scikit-learn/scikits/learn/preprocessing/sparse/src/_preprocessing.pyx":39
  *             sum_ += X_data[j]
- * 
+ *
  *         for j in xrange(X_indptr[i], X_indptr[i+1]):             # <<<<<<<<<<<<<<
  *             X_data[j] /= sum_
- * 
+ *
  */
     __pyx_t_8 = __pyx_v_i;
     __pyx_t_10 = (__pyx_v_i + 1);
@@ -995,10 +995,10 @@ static PyObject *__pyx_pf_14_preprocessing_normalize_axis1_sparse(PyObject *__py
       __pyx_v_j = __pyx_t_11;
 
       /* "/home/mathieu/Desktop/projects/scikit-learn/scikits/learn/preprocessing/sparse/src/_preprocessing.pyx":40
- * 
+ *
  *         for j in xrange(X_indptr[i], X_indptr[i+1]):
  *             X_data[j] /= sum_             # <<<<<<<<<<<<<<
- * 
+ *
  * @cython.boundscheck(False)
  */
       __pyx_t_12 = __pyx_v_j;
@@ -1086,7 +1086,7 @@ static PyObject *__pyx_pf_14_preprocessing_normalize_length_axis1_sparse(PyObjec
  * def normalize_length_axis1_sparse(X):
  *     cdef unsigned int n_samples = X.shape[0]             # <<<<<<<<<<<<<<
  *     cdef unsigned int n_features = X.shape[1]
- * 
+ *
  */
   __pyx_t_1 = PyObject_GetAttr(__pyx_v_X, __pyx_kp_shape); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
@@ -1101,7 +1101,7 @@ static PyObject *__pyx_pf_14_preprocessing_normalize_length_axis1_sparse(PyObjec
  * def normalize_length_axis1_sparse(X):
  *     cdef unsigned int n_samples = X.shape[0]
  *     cdef unsigned int n_features = X.shape[1]             # <<<<<<<<<<<<<<
- * 
+ *
  *     cdef np.ndarray[DOUBLE, ndim=1] X_data = X.data
  */
   __pyx_t_1 = PyObject_GetAttr(__pyx_v_X, __pyx_kp_shape); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -1115,7 +1115,7 @@ static PyObject *__pyx_pf_14_preprocessing_normalize_length_axis1_sparse(PyObjec
 
   /* "/home/mathieu/Desktop/projects/scikit-learn/scikits/learn/preprocessing/sparse/src/_preprocessing.pyx":49
  *     cdef unsigned int n_features = X.shape[1]
- * 
+ *
  *     cdef np.ndarray[DOUBLE, ndim=1] X_data = X.data             # <<<<<<<<<<<<<<
  *     cdef np.ndarray[INTEGER, ndim=1] X_indices = X.indices
  *     cdef np.ndarray[INTEGER, ndim=1] X_indptr = X.indptr
@@ -1138,11 +1138,11 @@ static PyObject *__pyx_pf_14_preprocessing_normalize_length_axis1_sparse(PyObjec
   __pyx_t_1 = 0;
 
   /* "/home/mathieu/Desktop/projects/scikit-learn/scikits/learn/preprocessing/sparse/src/_preprocessing.pyx":50
- * 
+ *
  *     cdef np.ndarray[DOUBLE, ndim=1] X_data = X.data
  *     cdef np.ndarray[INTEGER, ndim=1] X_indices = X.indices             # <<<<<<<<<<<<<<
  *     cdef np.ndarray[INTEGER, ndim=1] X_indptr = X.indptr
- * 
+ *
  */
   __pyx_t_1 = PyObject_GetAttr(__pyx_v_X, __pyx_kp_indices); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
@@ -1165,7 +1165,7 @@ static PyObject *__pyx_pf_14_preprocessing_normalize_length_axis1_sparse(PyObjec
  *     cdef np.ndarray[DOUBLE, ndim=1] X_data = X.data
  *     cdef np.ndarray[INTEGER, ndim=1] X_indices = X.indices
  *     cdef np.ndarray[INTEGER, ndim=1] X_indptr = X.indptr             # <<<<<<<<<<<<<<
- * 
+ *
  *     cdef unsigned int i
  */
   __pyx_t_1 = PyObject_GetAttr(__pyx_v_X, __pyx_kp_indptr); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -1187,29 +1187,29 @@ static PyObject *__pyx_pf_14_preprocessing_normalize_length_axis1_sparse(PyObjec
 
   /* "/home/mathieu/Desktop/projects/scikit-learn/scikits/learn/preprocessing/sparse/src/_preprocessing.pyx":57
  *     cdef double sum_
- * 
+ *
  *     for i in xrange(n_samples):             # <<<<<<<<<<<<<<
  *         sum_ = 0.0
- * 
+ *
  */
   for (__pyx_t_2 = 0; __pyx_t_2 < __pyx_v_n_samples; __pyx_t_2+=1) {
     __pyx_v_i = __pyx_t_2;
 
     /* "/home/mathieu/Desktop/projects/scikit-learn/scikits/learn/preprocessing/sparse/src/_preprocessing.pyx":58
- * 
+ *
  *     for i in xrange(n_samples):
  *         sum_ = 0.0             # <<<<<<<<<<<<<<
- * 
+ *
  *         for j in xrange(X_indptr[i], X_indptr[i+1]):
  */
     __pyx_v_sum_ = 0.0;
 
     /* "/home/mathieu/Desktop/projects/scikit-learn/scikits/learn/preprocessing/sparse/src/_preprocessing.pyx":60
  *         sum_ = 0.0
- * 
+ *
  *         for j in xrange(X_indptr[i], X_indptr[i+1]):             # <<<<<<<<<<<<<<
  *             sum_ += (X_data[j] * X_data[j])
- * 
+ *
  */
     __pyx_t_6 = __pyx_v_i;
     __pyx_t_7 = (__pyx_v_i + 1);
@@ -1217,10 +1217,10 @@ static PyObject *__pyx_pf_14_preprocessing_normalize_length_axis1_sparse(PyObjec
       __pyx_v_j = __pyx_t_8;
 
       /* "/home/mathieu/Desktop/projects/scikit-learn/scikits/learn/preprocessing/sparse/src/_preprocessing.pyx":61
- * 
+ *
  *         for j in xrange(X_indptr[i], X_indptr[i+1]):
  *             sum_ += (X_data[j] * X_data[j])             # <<<<<<<<<<<<<<
- * 
+ *
  *         sum_ = sqrt(sum_)
  */
       __pyx_t_9 = __pyx_v_j;
@@ -1230,19 +1230,19 @@ static PyObject *__pyx_pf_14_preprocessing_normalize_length_axis1_sparse(PyObjec
 
     /* "/home/mathieu/Desktop/projects/scikit-learn/scikits/learn/preprocessing/sparse/src/_preprocessing.pyx":63
  *             sum_ += (X_data[j] * X_data[j])
- * 
+ *
  *         sum_ = sqrt(sum_)             # <<<<<<<<<<<<<<
- * 
+ *
  *         for j in xrange(X_indptr[i], X_indptr[i+1]):
  */
     __pyx_v_sum_ = sqrt(__pyx_v_sum_);
 
     /* "/home/mathieu/Desktop/projects/scikit-learn/scikits/learn/preprocessing/sparse/src/_preprocessing.pyx":65
  *         sum_ = sqrt(sum_)
- * 
+ *
  *         for j in xrange(X_indptr[i], X_indptr[i+1]):             # <<<<<<<<<<<<<<
  *             X_data[j] /= sum_
- * 
+ *
  */
     __pyx_t_8 = __pyx_v_i;
     __pyx_t_11 = (__pyx_v_i + 1);
@@ -1250,10 +1250,10 @@ static PyObject *__pyx_pf_14_preprocessing_normalize_length_axis1_sparse(PyObjec
       __pyx_v_j = __pyx_t_12;
 
       /* "/home/mathieu/Desktop/projects/scikit-learn/scikits/learn/preprocessing/sparse/src/_preprocessing.pyx":66
- * 
+ *
  *         for j in xrange(X_indptr[i], X_indptr[i+1]):
  *             X_data[j] /= sum_             # <<<<<<<<<<<<<<
- * 
+ *
  */
       __pyx_t_13 = __pyx_v_j;
       *__Pyx_BufPtrStrided1d(__pyx_t_14_preprocessing_DOUBLE *, __pyx_bstruct_X_data.buf, __pyx_t_13, __pyx_bstride_0_X_data) /= __pyx_v_sum_;
@@ -1325,7 +1325,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             cdef int copy_shape, i, ndim
  *             cdef int endian_detector = 1             # <<<<<<<<<<<<<<
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)
- * 
+ *
  */
   __pyx_v_endian_detector = 1;
 
@@ -1333,23 +1333,23 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             cdef int copy_shape, i, ndim
  *             cdef int endian_detector = 1
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
- * 
+ *
  *             ndim = PyArray_NDIM(self)
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":74
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)
- * 
+ *
  *             ndim = PyArray_NDIM(self)             # <<<<<<<<<<<<<<
- * 
+ *
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  */
   __pyx_v_ndim = PyArray_NDIM(((PyArrayObject *)__pyx_v_self));
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":76
  *             ndim = PyArray_NDIM(self)
- * 
+ *
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
  *                 copy_shape = 1
  *             else:
@@ -1358,7 +1358,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
   if (__pyx_t_1) {
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":77
- * 
+ *
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 copy_shape = 1             # <<<<<<<<<<<<<<
  *             else:
@@ -1373,7 +1373,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *                 copy_shape = 1
  *             else:
  *                 copy_shape = 0             # <<<<<<<<<<<<<<
- * 
+ *
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  */
     __pyx_v_copy_shape = 0;
@@ -1382,7 +1382,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":81
  *                 copy_shape = 0
- * 
+ *
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):
  *                 raise ValueError("ndarray is not C contiguous")
@@ -1390,11 +1390,11 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
   if (((__pyx_v_flags & PyBUF_C_CONTIGUOUS) == PyBUF_C_CONTIGUOUS)) {
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":82
- * 
+ *
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):             # <<<<<<<<<<<<<<
  *                 raise ValueError("ndarray is not C contiguous")
- * 
+ *
  */
     __pyx_t_1 = (!PyArray_CHKFLAGS(((PyArrayObject *)__pyx_v_self), NPY_C_CONTIGUOUS));
   } else {
@@ -1406,7 +1406,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):
  *                 raise ValueError("ndarray is not C contiguous")             # <<<<<<<<<<<<<<
- * 
+ *
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  */
     __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -1426,7 +1426,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":85
  *                 raise ValueError("ndarray is not C contiguous")
- * 
+ *
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):
  *                 raise ValueError("ndarray is not Fortran contiguous")
@@ -1434,11 +1434,11 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
   if (((__pyx_v_flags & PyBUF_F_CONTIGUOUS) == PyBUF_F_CONTIGUOUS)) {
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":86
- * 
+ *
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):             # <<<<<<<<<<<<<<
  *                 raise ValueError("ndarray is not Fortran contiguous")
- * 
+ *
  */
     __pyx_t_1 = (!PyArray_CHKFLAGS(((PyArrayObject *)__pyx_v_self), NPY_F_CONTIGUOUS));
   } else {
@@ -1450,7 +1450,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):
  *                 raise ValueError("ndarray is not Fortran contiguous")             # <<<<<<<<<<<<<<
- * 
+ *
  *             info.buf = PyArray_DATA(self)
  */
     __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 87; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -1470,7 +1470,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":89
  *                 raise ValueError("ndarray is not Fortran contiguous")
- * 
+ *
  *             info.buf = PyArray_DATA(self)             # <<<<<<<<<<<<<<
  *             info.ndim = ndim
  *             if copy_shape:
@@ -1478,7 +1478,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
   __pyx_v_info->buf = PyArray_DATA(((PyArrayObject *)__pyx_v_self));
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":90
- * 
+ *
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim             # <<<<<<<<<<<<<<
  *             if copy_shape:
@@ -1580,7 +1580,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)             # <<<<<<<<<<<<<<
  *             info.readonly = not PyArray_ISWRITEABLE(self)
- * 
+ *
  */
   __pyx_v_info->itemsize = PyArray_ITEMSIZE(((PyArrayObject *)__pyx_v_self));
 
@@ -1588,13 +1588,13 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)
  *             info.readonly = not PyArray_ISWRITEABLE(self)             # <<<<<<<<<<<<<<
- * 
+ *
  *             cdef int t
  */
   __pyx_v_info->readonly = (!PyArray_ISWRITEABLE(((PyArrayObject *)__pyx_v_self)));
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":107
- * 
+ *
  *             cdef int t
  *             cdef char* f = NULL             # <<<<<<<<<<<<<<
  *             cdef dtype descr = self.descr
@@ -1614,16 +1614,16 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":112
  *             cdef int offset
- * 
+ *
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)             # <<<<<<<<<<<<<<
- * 
+ *
  *             if not hasfields and not copy_shape:
  */
   __pyx_v_hasfields = PyDataType_HASFIELDS(__pyx_v_descr);
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":114
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)
- * 
+ *
  *             if not hasfields and not copy_shape:             # <<<<<<<<<<<<<<
  *                 # do not call releasebuffer
  *                 info.obj = None
@@ -1655,7 +1655,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *             else:
  *                 # need to call releasebuffer
  *                 info.obj = self             # <<<<<<<<<<<<<<
- * 
+ *
  *             if not hasfields:
  */
     __Pyx_INCREF(__pyx_v_self);
@@ -1668,7 +1668,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":121
  *                 info.obj = self
- * 
+ *
  *             if not hasfields:             # <<<<<<<<<<<<<<
  *                 t = descr.type_num
  *                 if ((descr.byteorder == '>' and little_endian) or
@@ -1677,7 +1677,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
   if (__pyx_t_1) {
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":122
- * 
+ *
  *             if not hasfields:
  *                 t = descr.type_num             # <<<<<<<<<<<<<<
  *                 if ((descr.byteorder == '>' and little_endian) or
@@ -2008,7 +2008,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *                                       info.format + _buffer_format_string_len,
  *                                       &offset)             # <<<<<<<<<<<<<<
  *                 f[0] = 0 # Terminate format string
- * 
+ *
  */
     __pyx_t_7 = __pyx_f_5numpy__util_dtypestring(__pyx_v_descr, (__pyx_v_info->format + 1), (__pyx_v_info->format + 255), (&__pyx_v_offset)); if (unlikely(__pyx_t_7 == NULL)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 151; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_v_f = __pyx_t_7;
@@ -2017,7 +2017,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
  *                                       info.format + _buffer_format_string_len,
  *                                       &offset)
  *                 f[0] = 0 # Terminate format string             # <<<<<<<<<<<<<<
- * 
+ *
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  */
     (__pyx_v_f[0]) = 0;
@@ -2047,7 +2047,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyObject *__pyx_v_self, Py_buf
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":156
  *                 f[0] = 0 # Terminate format string
- * 
+ *
  *         def __releasebuffer__(ndarray self, Py_buffer* info):             # <<<<<<<<<<<<<<
  *             if PyArray_HASFIELDS(self):
  *                 stdlib.free(info.format)
@@ -2060,7 +2060,7 @@ static void __pyx_pf_5numpy_7ndarray___releasebuffer__(PyObject *__pyx_v_self, P
   __Pyx_SetupRefcountContext("__releasebuffer__");
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":157
- * 
+ *
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):             # <<<<<<<<<<<<<<
  *                 stdlib.free(info.format)
@@ -2096,7 +2096,7 @@ static void __pyx_pf_5numpy_7ndarray___releasebuffer__(PyObject *__pyx_v_self, P
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 stdlib.free(info.strides)             # <<<<<<<<<<<<<<
  *                 # info.shape was stored after info.strides in the same block
- * 
+ *
  */
     free(__pyx_v_info->strides);
     goto __pyx_L6;
@@ -2108,7 +2108,7 @@ static void __pyx_pf_5numpy_7ndarray___releasebuffer__(PyObject *__pyx_v_self, P
 
 /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":277
  * ctypedef npy_cdouble     complex_t
- * 
+ *
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:             # <<<<<<<<<<<<<<
  *     # Recursive utility function used in __getbuffer__ to get format
  *     # string. The new location in the format string is returned.
@@ -2143,7 +2143,7 @@ static INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx_v_desc
  *     cdef tuple i
  *     cdef int endian_detector = 1             # <<<<<<<<<<<<<<
  *     cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)
- * 
+ *
  */
   __pyx_v_endian_detector = 1;
 
@@ -2151,14 +2151,14 @@ static INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx_v_desc
  *     cdef tuple i
  *     cdef int endian_detector = 1
  *     cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
- * 
+ *
  *     for i in descr.fields.itervalues():
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":287
  *     cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)
- * 
+ *
  *     for i in descr.fields.itervalues():             # <<<<<<<<<<<<<<
  *         child = i[0]
  *         new_offset = i[1]
@@ -2196,11 +2196,11 @@ static INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx_v_desc
     __pyx_t_3 = 0;
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":288
- * 
+ *
  *     for i in descr.fields.itervalues():
  *         child = i[0]             # <<<<<<<<<<<<<<
  *         new_offset = i[1]
- * 
+ *
  */
     __pyx_1 = __Pyx_GetItemInt_Tuple(((PyObject *)__pyx_v_i), 0, sizeof(long), PyInt_FromLong); if (!__pyx_1) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 288; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_1);
@@ -2213,7 +2213,7 @@ static INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx_v_desc
  *     for i in descr.fields.itervalues():
  *         child = i[0]
  *         new_offset = i[1]             # <<<<<<<<<<<<<<
- * 
+ *
  *         if (end - f) - (new_offset - offset[0]) < 15:
  */
     __pyx_1 = __Pyx_GetItemInt_Tuple(((PyObject *)__pyx_v_i), 1, sizeof(long), PyInt_FromLong); if (!__pyx_1) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 289; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2224,10 +2224,10 @@ static INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx_v_desc
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":291
  *         new_offset = i[1]
- * 
+ *
  *         if (end - f) - (new_offset - offset[0]) < 15:             # <<<<<<<<<<<<<<
  *             raise RuntimeError("Format string allocated too short, see comment in numpy.pxd")
- * 
+ *
  */
     __pyx_t_3 = PyInt_FromLong((__pyx_v_end - __pyx_v_f)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 291; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
@@ -2248,10 +2248,10 @@ static INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx_v_desc
     if (__pyx_t_6) {
 
       /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":292
- * 
+ *
  *         if (end - f) - (new_offset - offset[0]) < 15:
  *             raise RuntimeError("Format string allocated too short, see comment in numpy.pxd")             # <<<<<<<<<<<<<<
- * 
+ *
  *         if ((child.byteorder == '>' and little_endian) or
  */
       __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 292; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2271,7 +2271,7 @@ static INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx_v_desc
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":294
  *             raise RuntimeError("Format string allocated too short, see comment in numpy.pxd")
- * 
+ *
  *         if ((child.byteorder == '>' and little_endian) or             # <<<<<<<<<<<<<<
  *             (child.byteorder == '<' and not little_endian)):
  *             raise ValueError("Non-native byte order not supported")
@@ -2284,7 +2284,7 @@ static INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx_v_desc
     if (!__pyx_t_6) {
 
       /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":295
- * 
+ *
  *         if ((child.byteorder == '>' and little_endian) or
  *             (child.byteorder == '<' and not little_endian)):             # <<<<<<<<<<<<<<
  *             raise ValueError("Non-native byte order not supported")
@@ -2324,7 +2324,7 @@ static INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx_v_desc
     __pyx_L6:;
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":306
- * 
+ *
  *         # Output padding bytes
  *         while offset[0] < new_offset:             # <<<<<<<<<<<<<<
  *             f[0] = 120 # "x"; pad byte
@@ -2354,7 +2354,7 @@ static INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx_v_desc
  *             f[0] = 120 # "x"; pad byte
  *             f += 1             # <<<<<<<<<<<<<<
  *             offset[0] += 1
- * 
+ *
  */
       __pyx_v_f += 1;
 
@@ -2362,7 +2362,7 @@ static INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx_v_desc
  *             f[0] = 120 # "x"; pad byte
  *             f += 1
  *             offset[0] += 1             # <<<<<<<<<<<<<<
- * 
+ *
  *         offset[0] += child.itemsize
  */
       (__pyx_v_offset[0]) += 1;
@@ -2370,16 +2370,16 @@ static INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx_v_desc
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":311
  *             offset[0] += 1
- * 
+ *
  *         offset[0] += child.itemsize             # <<<<<<<<<<<<<<
- * 
+ *
  *         if not PyDataType_HASFIELDS(child):
  */
     (__pyx_v_offset[0]) += __pyx_v_child->elsize;
 
     /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":313
  *         offset[0] += child.itemsize
- * 
+ *
  *         if not PyDataType_HASFIELDS(child):             # <<<<<<<<<<<<<<
  *             t = child.type_num
  *             if end - f < 5:
@@ -2388,7 +2388,7 @@ static INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx_v_desc
     if (__pyx_t_8) {
 
       /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":314
- * 
+ *
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num             # <<<<<<<<<<<<<<
  *             if end - f < 5:
@@ -2405,7 +2405,7 @@ static INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx_v_desc
  *             t = child.type_num
  *             if end - f < 5:             # <<<<<<<<<<<<<<
  *                 raise RuntimeError("Format string allocated too short.")
- * 
+ *
  */
       __pyx_t_8 = ((__pyx_v_end - __pyx_v_f) < 5);
       if (__pyx_t_8) {
@@ -2414,7 +2414,7 @@ static INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx_v_desc
  *             t = child.type_num
  *             if end - f < 5:
  *                 raise RuntimeError("Format string allocated too short.")             # <<<<<<<<<<<<<<
- * 
+ *
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  */
         __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 316; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2433,7 +2433,7 @@ static INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx_v_desc
       __pyx_L10:;
 
       /* "/usr/lib/pymodules/python2.6/Cython/Includes/numpy.pxd":319
- * 
+ *
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"             # <<<<<<<<<<<<<<
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"
@@ -2802,7 +2802,7 @@ static INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx_v_desc
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)             # <<<<<<<<<<<<<<
  *     return f
- * 
+ *
  */
       __pyx_t_9 = __pyx_f_5numpy__util_dtypestring(__pyx_v_child, __pyx_v_f, __pyx_v_end, __pyx_v_offset); if (unlikely(__pyx_t_9 == NULL)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 342; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __pyx_v_f = __pyx_t_9;
@@ -2815,7 +2815,7 @@ static INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx_v_desc
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)
  *     return f             # <<<<<<<<<<<<<<
- * 
+ *
  */
   __pyx_r = __pyx_v_f;
   goto __pyx_L0;
@@ -2971,7 +2971,7 @@ PyMODINIT_FUNC PyInit__preprocessing(void)
   /*--- Execution code ---*/
 
   /* "/home/mathieu/Desktop/projects/scikit-learn/scikits/learn/preprocessing/sparse/src/_preprocessing.pyx":6
- * 
+ *
  * cimport numpy as np
  * import numpy as np             # <<<<<<<<<<<<<<
  * import numpy.linalg as linalg
@@ -2987,7 +2987,7 @@ PyMODINIT_FUNC PyInit__preprocessing(void)
  * import numpy as np
  * import numpy.linalg as linalg             # <<<<<<<<<<<<<<
  * cimport cython
- * 
+ *
  */
   __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 7; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(((PyObject *)__pyx_t_1));
@@ -3001,7 +3001,7 @@ PyMODINIT_FUNC PyInit__preprocessing(void)
   __Pyx_DECREF(__pyx_1); __pyx_1 = 0;
 
   /* "/usr/lib/pymodules/python2.6/Cython/Includes/stdlib.pxd":2
- * 
+ *
  * cdef extern from "stdlib.h" nogil:             # <<<<<<<<<<<<<<
  *     void free(void *ptr)
  *     void *malloc(size_t size)
@@ -3164,7 +3164,7 @@ static size_t __Pyx_BufFmt_TypeCharToNativeSize(char ch, int is_complex) {
     default: {
       __Pyx_BufFmt_RaiseUnexpectedChar(ch);
       return 0;
-    }    
+    }
   }
 }
 
@@ -3208,7 +3208,7 @@ static size_t __Pyx_BufFmt_TypeCharToGroup(char ch, int is_complex) {
     default: {
       __Pyx_BufFmt_RaiseUnexpectedChar(ch);
       return 0;
-    }    
+    }
   }
 }
 
@@ -3245,7 +3245,7 @@ static int __Pyx_BufFmt_ProcessTypeChunk(__Pyx_BufFmt_Context* ctx) {
   do {
     __Pyx_StructField* field = ctx->head->field;
     __Pyx_TypeInfo* type = field->type;
-  
+
     if (ctx->packmode == '@' || ctx->packmode == '^') {
       size = __Pyx_BufFmt_TypeCharToNativeSize(ctx->enc_type, ctx->is_complex);
     } else {
@@ -3268,7 +3268,7 @@ static int __Pyx_BufFmt_ProcessTypeChunk(__Pyx_BufFmt_Context* ctx) {
         ctx->head->parent_offset = parent_offset;
         continue;
       }
-    
+
       __Pyx_BufFmt_RaiseExpected(ctx);
       return -1;
     }
@@ -3282,7 +3282,7 @@ static int __Pyx_BufFmt_ProcessTypeChunk(__Pyx_BufFmt_Context* ctx) {
     }
 
     ctx->fmt_offset += size;
-  
+
     --ctx->enc_count; /* Consume from buffer string */
 
     /* Done checking, move to next field, pushing or popping struct stack if needed */
@@ -3315,7 +3315,7 @@ static int __Pyx_BufFmt_ProcessTypeChunk(__Pyx_BufFmt_Context* ctx) {
   } while (ctx->enc_count);
   ctx->enc_type = 0;
   ctx->is_complex = 0;
-  return 0;    
+  return 0;
 }
 
 static int __Pyx_BufFmt_FirstPack(__Pyx_BufFmt_Context* ctx) {
@@ -3437,7 +3437,7 @@ static const char* __Pyx_BufFmt_CheckString(__Pyx_BufFmt_Context* ctx, const cha
             return NULL;
           }
         }
-      
+
     }
   }
 }
@@ -3978,13 +3978,13 @@ static PyTypeObject *__Pyx_ImportType(const char *module_name, const char *class
     if (!result)
         goto bad;
     if (!PyType_Check(result)) {
-        PyErr_Format(PyExc_TypeError, 
+        PyErr_Format(PyExc_TypeError,
             "%s.%s is not a type object",
             module_name, class_name);
         goto bad;
     }
     if (((PyTypeObject *)result)->tp_basicsize != size) {
-        PyErr_Format(PyExc_ValueError, 
+        PyErr_Format(PyExc_ValueError,
             "%s.%s does not appear to be the correct type object",
             module_name, class_name);
         goto bad;

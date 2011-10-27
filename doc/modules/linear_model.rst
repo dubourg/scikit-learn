@@ -184,7 +184,7 @@ The advantages of LARS are:
     also is more stable.
 
   - It is easily modified to produce solutions for other estimators,
-    like the Lasso. 
+    like the Lasso.
 
   - It is effective in contexts where p >> n (i.e., when the number of
     dimensions is significantly greater than the number of points)
@@ -232,7 +232,7 @@ The LARS algorithm provides the full path of the coefficients along
 the regularization parameter almost for free, thus a common operation
 consist of retrieving the path with function :func:`lars_path`
 
- 
+
 
 Mathematical formulation
 ------------------------
@@ -284,7 +284,7 @@ Bayesian Ridge Regression
 :ref:`ordinary_least_squares`, by adding the following prior on
 :math:`\beta`:
 
-.. math:: p(\beta|\lambda) =  
+.. math:: p(\beta|\lambda) =
     \mathcal{N}(\beta|0,\lambda^{-1}\bold{I_{p}})
 
 The resulting model is called *Bayesian Ridge Regression*, it is
@@ -305,7 +305,7 @@ There is also a Gamma prior for :math:`\lambda` and :math:`\alpha`:
 
 .. math:: g(\lambda|\lambda_1,\lambda_2) = \frac{\lambda_2^{\lambda_1}}
     {\Gamma(\lambda_1)} \lambda^{\lambda_1-1} e^{-\lambda_2 {\lambda}}
-    
+
 By default :math:`\alpha_1 = \alpha_2 =  \lambda_1 = \lambda_2 = 1.e^{-6}`, *i.e.*
  very slightly informative priors.
 
@@ -348,7 +348,7 @@ Regression* is more robust to ill-posed problem.
 
 .. topic:: References
 
-  * More details can be found in the article `Bayesian Interpolation <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.27.9072&rep=rep1&type=pdf>`_ 
+  * More details can be found in the article `Bayesian Interpolation <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.27.9072&rep=rep1&type=pdf>`_
     by MacKay, David J. C.
 
 
@@ -372,7 +372,7 @@ There is also a Gamma prior for :math:`\lambda` and :math:`\alpha`:
 
 .. math:: g(\lambda|\lambda_1,\lambda_2) = \frac{\lambda_2^{\lambda_1}}
     {\Gamma(\lambda_1)} \lambda^{\lambda_1-1} e^{-\lambda_2 {\lambda}}
-    
+
 By default :math:`\alpha_1 = \alpha_2 =  \lambda_1 = \lambda_2 = 1.e-6`, *i.e.*
  very slightly informative priors.
 
@@ -433,9 +433,9 @@ Logisitic regression
 If the task at hand is to do choose which class a sample belongs to given
 a finite (hopefuly small) set of choices, the learning problem is a
 classification, rather than regression. Linear models can be used for
-such a decision, but it is best to use what is called a 
-`logistic regression <http://en.wikipedia.org/wiki/Logistic_regression>`__, 
-that doesn't try to minimize the sum of square residuals, as in regression, 
+such a decision, but it is best to use what is called a
+`logistic regression <http://en.wikipedia.org/wiki/Logistic_regression>`__,
+that doesn't try to minimize the sum of square residuals, as in regression,
 but rather a "hit or miss" cost.
 
 The :class:`LogisticRegression` class can be used to do L1 or L2 penalized
@@ -450,14 +450,14 @@ logistic regression, in order to have sparse predicting weights.
 Stochastic Gradient Descent - SGD
 =================================
 
-Stochastic gradient descent is a simple yet very efficient approach 
-to fit linear models. It is particulary useful when the number of samples 
+Stochastic gradient descent is a simple yet very efficient approach
+to fit linear models. It is particulary useful when the number of samples
 (and the number of features) is very large.
 
 
-The classes :class:`SGDClassifier` and :class:`SGDRegressor` provide 
-functionality to fit linear models for classification and regression 
-using different (convex) loss functions and different penalties. 
+The classes :class:`SGDClassifier` and :class:`SGDRegressor` provide
+functionality to fit linear models for classification and regression
+using different (convex) loss functions and different penalties.
 
 .. topic:: References
 
