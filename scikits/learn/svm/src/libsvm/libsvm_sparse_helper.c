@@ -15,7 +15,7 @@ struct svm_csr_node **csr_to_libsvm (double *values, npy_intp *n_indices,
 
     for (i=0; i<n_indptr[0]-1; ++i) {
         n = indptr[i+1] - indptr[i]; /* count elements in row i */
-        sparse[i] = (struct svm_csr_node *) malloc ((n+1) * 
+        sparse[i] = (struct svm_csr_node *) malloc ((n+1) *
                                  sizeof(struct svm_csr_node));
         temp = sparse[i];
         for (j=0; j<n; ++j) {
@@ -66,7 +66,7 @@ struct svm_parameter * set_parameter(int svm_type, int kernel_type, int degree,
  * TODO: precomputed kernel.
  */
 struct svm_csr_problem * csr_set_problem (char *values, npy_intp *n_indices,
-		char *indices, npy_intp *n_indptr, char *indptr, char *Y, 
+		char *indices, npy_intp *n_indptr, char *indptr, char *Y,
                 char *sample_weight, int kernel_type) {
 
     struct svm_csr_problem *problem;
@@ -245,7 +245,7 @@ void copy_intercept(char *data, struct svm_csr_model *model, npy_intp *dims)
 
 
 /*
- * Some helpers to convert from libsvm sparse data structures 
+ * Some helpers to convert from libsvm sparse data structures
  * model->sv_coef is a double **, whereas data is just a double *,
  * so we have to do some stupid copying.
  */
@@ -273,7 +273,7 @@ void copy_nSV(char *data, struct svm_csr_model *model)
     memcpy(data, model->nSV, model->nr_class * sizeof(int));
 }
 
-/* 
+/*
  * same as above with model->label
  * TODO: maybe merge into the previous?
  */
@@ -294,7 +294,7 @@ void copy_probB(char *data, struct svm_csr_model *model, npy_intp * dims)
 }
 
 
-/* 
+/*
  * Some free routines. Some of them are nontrivial since a lot of
  * sharing happens across objects (they *must* be called in the
  * correct order)

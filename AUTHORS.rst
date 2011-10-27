@@ -50,7 +50,7 @@ People
 
   * `Gael Varoquaux <http://gael-varoquaux.info/blog/>`_
 
-  * `Jake VanderPlas <http://www.astro.washington.edu/users/vanderplas/>`_ 
+  * `Jake VanderPlas <http://www.astro.washington.edu/users/vanderplas/>`_
     contributed the BallTree module in February 2010.
 
   * `Alexandre Gramfort

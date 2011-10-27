@@ -86,6 +86,6 @@ function :func:`knn_brute`.
      <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.91.8209&rep=rep1&type=pdf>`_,
      Omohundro, S.M., International Computer Science Institute
      Technical Report
-     
+
 
 

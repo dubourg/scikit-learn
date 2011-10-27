@@ -9,10 +9,10 @@
  * BallTree_Point
  *  This is a point class for use with the templated Ball
  *  Tree code, which is implemented with an internal reference
- *  to a PyArray object. 
+ *  to a PyArray object.
  *
  * It can be initialized either with a PyObject pointer to a
- *  numpy array, or with 
+ *  numpy array, or with
  ************************************************************/
 
 class BallTree_Point{
@@ -20,7 +20,7 @@ class BallTree_Point{
   typedef double value_type;
 
   BallTree_Point(npy_intp size)
-    : base_arr_(PyArray_SimpleNew(1,&size,NPY_DOUBLE) ), 
+    : base_arr_(PyArray_SimpleNew(1,&size,NPY_DOUBLE) ),
       data_ptr_(0), inc_(1), size_(size)
   {
     data_ptr_ = (double*)PyArray_DATA(base_arr_);
@@ -36,19 +36,19 @@ class BallTree_Point{
       Py_INCREF(base_arr);
   }
 
-  BallTree_Point(PyObject* base_arr) 
+  BallTree_Point(PyObject* base_arr)
     : base_arr_(base_arr), data_ptr_(0), inc_(0), size_(0)
   {
     if(base_arr_==0)
       return;
     Py_INCREF(base_arr_);
     int nd = PyArray_NDIM(base_arr_);
-    
+
     if( PyArray_TYPE(base_arr_)!=NPY_DOUBLE ){
       Py_DECREF(base_arr_);
       throw std::exception();
     }
-    
+
     if(nd==1)
       {
 	size_ = PyArray_DIMS(base_arr_)[0];
@@ -61,14 +61,14 @@ class BallTree_Point{
 	throw std::exception();
       }
   }
-  
+
   BallTree_Point(const BallTree_Point& BTP)
-    : base_arr_(BTP.base_arr_), data_ptr_(BTP.data_ptr_), 
+    : base_arr_(BTP.base_arr_), data_ptr_(BTP.data_ptr_),
       inc_(BTP.inc_), size_(BTP.size_)
   {
     Py_INCREF(base_arr_);
   }
-  
+
   ~BallTree_Point(){
     if(base_arr_==NULL){
       if(size_>0)

@@ -1,14 +1,14 @@
  Optical Recognition of Handwritten Digits Data Set
 
-Data Set Characteristics:  
-        
+Data Set Characteristics:
+
 Source
 -------
 
 Creator: E. Alpaydin (alpaydin '@' boun.edu.tr)
 Date: July; 1998
 
-This is a copy of the test set of the UCI ML hand-written digits datasets 
+This is a copy of the test set of the UCI ML hand-written digits datasets
 
 The data set contains images of hand-written digits: 10 classes where
 each class refers to a digit.
@@ -38,7 +38,7 @@ References
   - Ken Tang and Ponnuthurai N. Suganthan and Xi Yao and A. Kai Qin.
     Linear dimensionalityreduction using relevance weighted LDA. School of
     Electrical and Electronic Engineering Nanyang Technological University.
-    2005. 
+    2005.
   - Claudio Gentile. A New Approximate Maximal Margin Classification
     Algorithm. NIPS. 2000.
   - ...
@@ -50,6 +50,6 @@ Number of Attributes: 64
 
 Attribute Information: 8x8 image of integer pixels in the range 0..16.
 
-Missing Attribute Values: None 
+Missing Attribute Values: None
 
 

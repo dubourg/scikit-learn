@@ -24,7 +24,7 @@ IRC
 Some devs like to hang out on channel #learn on irc.freenode.net
 
 If you do not have an irc client or are behind a firewall this web
-client works fine: http://webchat.freenode.net 
+client works fine: http://webchat.freenode.net
 
 
 .. _documentation_resources:

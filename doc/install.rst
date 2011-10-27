@@ -30,7 +30,7 @@ Installing an official release
 Installing from source
 ----------------------
 
-Installing from source requires you to have installed numpy, 
+Installing from source requires you to have installed numpy,
 scipy, setuptools, python development headers and a working C++
 compiler. Under debian-like systems you can get all this by executing
 with root privileges::
@@ -83,7 +83,7 @@ Third party distributions of scikits.learn
 ==========================================
 
 Some third-party distributions are now providing versions of
-scikits.learn integrated with their package-management systems. 
+scikits.learn integrated with their package-management systems.
 
 These can make installation and upgrading much easier for users since
 the integration includes the ability to automatically install

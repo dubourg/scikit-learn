@@ -6,7 +6,7 @@ This project is a community effort, and everyone is welcomed to
 contribute.
 
 
-Submitting a bug report 
+Submitting a bug report
 =========================
 
 In case you experience difficulties using the package, do not hesitate
@@ -29,7 +29,7 @@ or if you have write privileges::
     git clone git@github.com:scikit-learn/scikit-learn.git
 
 You can also check out the sources online in the web page
-http://github.com/scikit-learn/scikit-learn 
+http://github.com/scikit-learn/scikit-learn
 
 If you run the development version, it is cumbersome to re-install the
 package each time you update the sources. It is thus preferred that
@@ -49,9 +49,9 @@ The prefered way to contribute to `scikit-learn` is to fork the main
 repository on
 `github <http://github.com/scikit-learn/scikit-learn/>`__:
 
- 1. `Create an account <https://github.com/signup/free>`_ on 
+ 1. `Create an account <https://github.com/signup/free>`_ on
     github if you don't have one already.
- 
+
  2. Fork the `scikit-learn repo
     <http://github.com/scikit-learn/scikit-learn>`__: click on the 'Fork'
     button, at the top, center of the page. This creates a copy of
@@ -76,7 +76,7 @@ go the web page of the repo, and click on 'Pull request' to send us a
 pull request. Send us a mail with your pull request, and we can look at
 your changes, and integrate them.
 
-**Before asking for a pull or a review**, be sure to read the 
+**Before asking for a pull or a review**, be sure to read the
 `coding-guidelines`_ (below).
 
 Also, make sure that your code is tested, and that all the tests for the
@@ -167,10 +167,10 @@ In addition, we add the following guidelines:
 
     * Use relative imports for references inside scikits.learn.
 
-    * **Please don't use `import *` in any case**. It is considered harmful 
+    * **Please don't use `import *` in any case**. It is considered harmful
       by the `official Python recommandations
       <http://docs.python.org/howto/doanddont.html#from-module-import>`_.
-      It makes the code harder to read as the origin of symbols is no 
+      It makes the code harder to read as the origin of symbols is no
       longer explicitely referenced, but most important, it prevents
       using a static analysis tool like `pyflakes
       <http://www.divmod.org/trac/wiki/DivmodPyflakes>`_ to automatically
@@ -212,7 +212,7 @@ multiple interfaces):
 
 	new_data = obj.transform(data)
 
-    When fitting and transforming can be performed much more efficiently 
+    When fitting and transforming can be performed much more efficiently
     together than separately, implements::
 
     new_data = obj.fit_transform(data)
@@ -257,7 +257,7 @@ The arguments in given at instanciation of an estimator should all
 correspond to hyper parameters describing the model or the optimisation
 problem that estimator tries to solve. They should however not be
 parameters of the estimation routine: these are passed directly to the
-`fit` method. 
+`fit` method.
 
 In addition, **every keyword argument given to the `__init__` should
 correspond to an attribute on the instance**. The scikit relies on this

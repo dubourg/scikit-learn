@@ -7,7 +7,7 @@
 #include "csgraph.h"
 %}
 
-%include "csgraph.h" 
+%include "csgraph.h"
 
 INSTANTIATE_INDEX(cs_graph_components)
 /* -*- C -*- */
@@ -19,6 +19,6 @@ INSTANTIATE_INDEX(cs_graph_components)
 #include "csgraph.h"
 %}
 
-%include "csgraph.h" 
+%include "csgraph.h"
 
 INSTANTIATE_INDEX(cs_graph_components)

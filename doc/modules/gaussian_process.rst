@@ -14,7 +14,7 @@ been extended to *probabilistic classification*, but in the present
 implementation, this is only a post-processing of the *regression* exercise.
 
 The advantages of Gaussian Processes for Machine Learning are:
-      
+
     - The prediction interpolates the observations (at least for regular
       correlation models).
 
@@ -65,7 +65,7 @@ parameters or alternatively it uses the given parameters.
 
     >>> import numpy as np
     >>> from scikits.learn import gaussian_process
-    >>> def f(x): 
+    >>> def f(x):
     ...	    return x * np.sin(x)
     >>> X = np.atleast_2d([1., 3., 5., 6., 7., 8.]).T
     >>> y = f(X).ravel()
@@ -266,18 +266,18 @@ Processes for Machine Learning, please refer to the references below:
     * `DACE, A Matlab Kriging Toolbox
       <http://www2.imm.dtu.dk/~hbn/dace/>`_ S Lophaven, HB Nielsen, J
       Sondergaard 2002
-      
+
 
     * `Screening, predicting, and computer experiments
       <http://www.jstor.org/pss/1269548>`_ WJ Welch, RJ Buck, J Sacks,
       HP Wynn, TJ Mitchell, and MD Morris Technometrics 34(1) 15--25,
       1992
-      
+
 
     * `Gaussian Processes for Machine Learning
       <http://www.gaussianprocess.org/gpml/chapters/RW.pdf>`_ CE
       Rasmussen, CKI Williams MIT Press, 2006 (Ed. T Diettrich)
-      
+
 
     * `The design and analysis of computer experiments
       <http://www.stat.osu.edu/~comp_exp/book.html>`_ TJ Santner, BJ
@@ -331,4 +331,4 @@ toolbox.
     * `DACE, A Matlab Kriging Toolbox
       <http://www2.imm.dtu.dk/~hbn/dace/>`_ S Lophaven, HB Nielsen, J
       Sondergaard 2002,
-      
+

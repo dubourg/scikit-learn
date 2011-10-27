@@ -129,7 +129,7 @@ two classes, only one model is trained.
     >>> dec = lin_clf.decision_function([[1]])
     >>> dec.shape[1]
     4
-    
+
 
 See :ref:`svm_mathematical_formulation` for a complete description of
 the decision function.
